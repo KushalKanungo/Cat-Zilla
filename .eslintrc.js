@@ -23,9 +23,6 @@ module.exports = {
         sourceType: "module",
     },
     rules: {
-        camelcase: "error",
-        snake_case: "off",
-        PascalCase: "warn",
-        UPPER_CASE: "error",
+        indent: ['warn', 2]
     },
 };

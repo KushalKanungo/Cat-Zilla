@@ -1,0 +1,1840 @@
+[
+  {
+    "id": 0,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>According to the author, wise and moral decisions are guided by …</p>",
+    "passage": "<b> </b><b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b>\r<br>\r<br>What does it take to be a good person? What makes someone a good doctor, therapist or parent? What guides policy-makers to make wise and moral decisions? Many believe that empathy — the capacity to experience the feelings of others, and particularly others’ suffering — is essential to all of these roles. I argue that this is a mistake, often a tragic one.\r<br>\r<br>Empathy acts like a spotlight, focusing one's attention on a single individual in the here and now. This can have positive effects, but it can also lead to short-sighted and unfair moral actions. And it is subject to bias — both laboratory studies and anecdotal experiences show that empathy flows most for those who look like us, who are attractive and who are non-threatening and familiar. \r<br>\r<br>When we appreciate that skin color does not determine who we should care about, for example, or that a crisis such as climate change has great significance — even though it is an abstract threat — we are transcending empathy. A good policy maker makes decisions using reason, aspiring toward the sort of fairness and impartiality empathy doesn't provide. Empathy isn’t just a reflex, of course. We can choose to empathize and stir empathy for others. But this flexibility can be a curse. Our empathy can be exploited by others, as when cynical politicians tell stories of victims of rape or assault and use our empathy for these victims to stoke hatred against vulnerable groups, such as undocumented immigrants. \r<br>\r<br>For those in the helping professions, compassion and understanding are critically important. But not empathy — feeling the suffering of others too acutely leads to exhaustion, burnout and ineffective work. No good therapist is awash with anxiety when working with an anxious patient. Some distance is required. The essayist Leslie Jamison has a great description of this, in writing about a good doctor who helped her: “His calmness didn’t make me feel <span style=\"font-family: MS Gothic;\"></span>abandoned, it made me feel secure,\" she wrote. \"I wanted to look at him and see the opposite of my fear, not its echo.”</span> <span style=\"font-family: MS Gothic;\"></span> Or consider a parent dealing with a teenager who is panicked because she left her homework to the last minute. It’s hardly good parenting to panic along with her. Good parents care for their children and understand them, but don’t necessarily absorb their suffering. \r<br>\r<br>Rationality alone isn’t enough to be a good person; you also need some sort of motivation. But compassion — caring for others without feeling their pain — does the trick quite nicely. Empathy and compassion are distinct: Recent neuroscience studies, including some fascinating work on the power of meditation, show that compassion is distinct from empathy, with all its benefits and few of its costs. Many of life’s deepest pleasures, such as engagement with novels, movies and television, require empathic connection. Empathy has its place. But when it comes to being a good person, there are better alternatives.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Empathy, rationality and compassion.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Rationality, guided by a genuine motivational factor.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Rationality, fairness and impartiality.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>Both empathy and compassion in equal measure.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "Which of the following is TRUE about empathy?",
+    "passage": "<b> </b><b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b>\r<br>\r<br>What does it take to be a good person? What makes someone a good doctor, therapist or parent? What guides policy-makers to make wise and moral decisions? Many believe that empathy — the capacity to experience the feelings of others, and particularly others’ suffering — is essential to all of these roles. I argue that this is a mistake, often a tragic one.\r<br>\r<br>Empathy acts like a spotlight, focusing one's attention on a single individual in the here and now. This can have positive effects, but it can also lead to short-sighted and unfair moral actions. And it is subject to bias — both laboratory studies and anecdotal experiences show that empathy flows most for those who look like us, who are attractive and who are non-threatening and familiar. \r<br>\r<br>When we appreciate that skin color does not determine who we should care about, for example, or that a crisis such as climate change has great significance — even though it is an abstract threat — we are transcending empathy. A good policy maker makes decisions using reason, aspiring toward the sort of fairness and impartiality empathy doesn't provide. Empathy isn’t just a reflex, of course. We can choose to empathize and stir empathy for others. But this flexibility can be a curse. Our empathy can be exploited by others, as when cynical politicians tell stories of victims of rape or assault and use our empathy for these victims to stoke hatred against vulnerable groups, such as undocumented immigrants. \r<br>\r<br>For those in the helping professions, compassion and understanding are critically important. But not empathy — feeling the suffering of others too acutely leads to exhaustion, burnout and ineffective work. No good therapist is awash with anxiety when working with an anxious patient. Some distance is required. The essayist Leslie Jamison has a great description of this, in writing about a good doctor who helped her: “His calmness didn’t make me feel <span style=\"font-family: MS Gothic;\"></span>abandoned, it made me feel secure,\" she wrote. \"I wanted to look at him and see the opposite of my fear, not its echo.”</span> <span style=\"font-family: MS Gothic;\"></span> Or consider a parent dealing with a teenager who is panicked because she left her homework to the last minute. It’s hardly good parenting to panic along with her. Good parents care for their children and understand them, but don’t necessarily absorb their suffering. \r<br>\r<br>Rationality alone isn’t enough to be a good person; you also need some sort of motivation. But compassion — caring for others without feeling their pain — does the trick quite nicely. Empathy and compassion are distinct: Recent neuroscience studies, including some fascinating work on the power of meditation, show that compassion is distinct from empathy, with all its benefits and few of its costs. Many of life’s deepest pleasures, such as engagement with novels, movies and television, require empathic connection. Empathy has its place. But when it comes to being a good person, there are better alternatives.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "Decisions based on empathy are potentially prejudicial to others and ill-considered.",
+        "isCorrect": true
+      },
+      {
+        "id": 1,
+        "value": "Empathy is an involuntary emotion that enables one to put oneself in another’s shoes.",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "Empathy forms an irreplaceable part of helping professions like nursing and counselling.",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "Only when empathy is combined with rationality can we lend wise help to those in \tneed.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>Which of the following best describes what the passage is trying to convey?</p>",
+    "passage": "<b> </b><b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b>\r<br>\r<br>What does it take to be a good person? What makes someone a good doctor, therapist or parent? What guides policy-makers to make wise and moral decisions? Many believe that empathy — the capacity to experience the feelings of others, and particularly others’ suffering — is essential to all of these roles. I argue that this is a mistake, often a tragic one.\r<br>\r<br>Empathy acts like a spotlight, focusing one's attention on a single individual in the here and now. This can have positive effects, but it can also lead to short-sighted and unfair moral actions. And it is subject to bias — both laboratory studies and anecdotal experiences show that empathy flows most for those who look like us, who are attractive and who are non-threatening and familiar. \r<br>\r<br>When we appreciate that skin color does not determine who we should care about, for example, or that a crisis such as climate change has great significance — even though it is an abstract threat — we are transcending empathy. A good policy maker makes decisions using reason, aspiring toward the sort of fairness and impartiality empathy doesn't provide. Empathy isn’t just a reflex, of course. We can choose to empathize and stir empathy for others. But this flexibility can be a curse. Our empathy can be exploited by others, as when cynical politicians tell stories of victims of rape or assault and use our empathy for these victims to stoke hatred against vulnerable groups, such as undocumented immigrants. \r<br>\r<br>For those in the helping professions, compassion and understanding are critically important. But not empathy — feeling the suffering of others too acutely leads to exhaustion, burnout and ineffective work. No good therapist is awash with anxiety when working with an anxious patient. Some distance is required. The essayist Leslie Jamison has a great description of this, in writing about a good doctor who helped her: “His calmness didn’t make me feel <span style=\"font-family: MS Gothic;\"></span>abandoned, it made me feel secure,\" she wrote. \"I wanted to look at him and see the opposite of my fear, not its echo.”</span> <span style=\"font-family: MS Gothic;\"></span> Or consider a parent dealing with a teenager who is panicked because she left her homework to the last minute. It’s hardly good parenting to panic along with her. Good parents care for their children and understand them, but don’t necessarily absorb their suffering. \r<br>\r<br>Rationality alone isn’t enough to be a good person; you also need some sort of motivation. But compassion — caring for others without feeling their pain — does the trick quite nicely. Empathy and compassion are distinct: Recent neuroscience studies, including some fascinating work on the power of meditation, show that compassion is distinct from empathy, with all its benefits and few of its costs. Many of life’s deepest pleasures, such as engagement with novels, movies and television, require empathic connection. Empathy has its place. But when it comes to being a good person, there are better alternatives.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Reason, rather than empathy, should guide action as it aspires to fairness and impartiality.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 1,
+        "value": "<p>The terms empathy and compassion are often incorrectly used interchangeably.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>It is not just empathy that embodies humaneness, but also compassion and reason.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>There are many alternatives available to shaping yourself into a better fellow human.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>According to the author, when do we “transcend empathy” (Paragraph 3)?</p>",
+    "passage": "<b> </b><b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b>\r<br>\r<br>What does it take to be a good person? What makes someone a good doctor, therapist or parent? What guides policy-makers to make wise and moral decisions? Many believe that empathy — the capacity to experience the feelings of others, and particularly others’ suffering — is essential to all of these roles. I argue that this is a mistake, often a tragic one.\r<br>\r<br>Empathy acts like a spotlight, focusing one's attention on a single individual in the here and now. This can have positive effects, but it can also lead to short-sighted and unfair moral actions. And it is subject to bias — both laboratory studies and anecdotal experiences show that empathy flows most for those who look like us, who are attractive and who are non-threatening and familiar. \r<br>\r<br>When we appreciate that skin color does not determine who we should care about, for example, or that a crisis such as climate change has great significance — even though it is an abstract threat — we are transcending empathy. A good policy maker makes decisions using reason, aspiring toward the sort of fairness and impartiality empathy doesn't provide. Empathy isn’t just a reflex, of course. We can choose to empathize and stir empathy for others. But this flexibility can be a curse. Our empathy can be exploited by others, as when cynical politicians tell stories of victims of rape or assault and use our empathy for these victims to stoke hatred against vulnerable groups, such as undocumented immigrants. \r<br>\r<br>For those in the helping professions, compassion and understanding are critically important. But not empathy — feeling the suffering of others too acutely leads to exhaustion, burnout and ineffective work. No good therapist is awash with anxiety when working with an anxious patient. Some distance is required. The essayist Leslie Jamison has a great description of this, in writing about a good doctor who helped her: “His calmness didn’t make me feel <span style=\"font-family: MS Gothic;\"></span>abandoned, it made me feel secure,\" she wrote. \"I wanted to look at him and see the opposite of my fear, not its echo.”</span> <span style=\"font-family: MS Gothic;\"></span> Or consider a parent dealing with a teenager who is panicked because she left her homework to the last minute. It’s hardly good parenting to panic along with her. Good parents care for their children and understand them, but don’t necessarily absorb their suffering. \r<br>\r<br>Rationality alone isn’t enough to be a good person; you also need some sort of motivation. But compassion — caring for others without feeling their pain — does the trick quite nicely. Empathy and compassion are distinct: Recent neuroscience studies, including some fascinating work on the power of meditation, show that compassion is distinct from empathy, with all its benefits and few of its costs. Many of life’s deepest pleasures, such as engagement with novels, movies and television, require empathic connection. Empathy has its place. But when it comes to being a good person, there are better alternatives.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>When we ‘feel with' another person, identify with them and sense the abstract threats they're experiencing.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>When we give up our sense of individuality and identify with those belonging to other groups, gender, tribes, nations, races or classes.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>When distinctions of ethnicity, religion and other identity badges determine our ability to experience the suffering of others.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>When we pay attention to the emotions of people who differ from us in terms of ethnicity, nationality and the like.</p>",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>The author suggests that confirming the limits, if any, of the human life span is:</p>",
+    "passage": "<b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b><br><br> <b><u>  </u></b><br>One of the biggest questions in ageing research is whether there is a ceiling on how long human beings can live. A recent study, published in Science, suggests there isn’t. The study measured the survival probabilities of 3,896 people in Italy aged 105 and older. It found that, while we are much more likely to die at 75 than at 55, once we reach about 105, the odds of death remain about the same each year of life.<br><br>This effect is often referred to as a “mortality plateau”. If it were impossible to live past a certain age, we would expect mortality rates to continue rising as people age, rather than plateau. The fact that the odds of dying don’t appear to increase past 105 suggests that we have not yet approached our maximum lifespan as a species. But is potentially living for over a century something we ought to look forward to? Here, philosophy can offer some important insights.<br><br>Of course, we still don’t know for sure that there is no ceiling. Some researchers argue that there is a natural “expiration date” for human beings, at about 125 years. Chiyo Miyako is currently the oldest known person in the world, at 117 years old. Jeanne Calment, who died in 1997, had the longest recorded lifespan, at 122 years.<br>In the UK, the number of people over the age of 100 has more than doubled since 2002, and could reach 36,000 by 2030. If there is a mortality plateau, by the year 2300 the oldest person alive could be about 150 years old.<br><br>Would a maximum lifespan of 150 make our lives better or just longer? One way of thinking about this is in terms of pleasure and pain: the more pleasure (and the less pain) we have over the course of our lives, the better our lives are. Other things being equal, a life which lasts 100 years is better than one that lasts 80 years, as long as the extra 20 years contain more pleasure than they do pain.<br><br>How likely an outcome is this? As people age, they are much more likely to develop degenerative conditions that could lead to a lower quality of life. But these conditions can be mitigated by a healthy lifestyle and adequate support services. While elderly life may be restricted in some ways, there is no reason that it cannot be, on balance, pleasurable.<br><br>The late philosopher Ronald Dworkin distinguished between “experiential interests” and “critical interests” to shed light on how people may view their life goals. Experiential interests are for things like pleasure – anything we enjoy. Critical interests are those that we value becoming a reality – essential to what we think constitutes a good life. This could be a parent’s interest in the happiness of their child, for example.<br><br>We can imagine a person having a critical interest in avoiding the perceived indignity of dementia, which may accompany extreme old age. We might think it would be better for this person, taking the whole of their life into account, if they had died prior to this period of decline.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>A fundamental aspect of understanding the process by which humans age.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 1,
+        "value": "<p>An unavoidable outcome of the various scientific studies that are ongoing.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Dependent on the number of years lived after reaching the “mortality plateau.”</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Never going to be easy as there are too many variables involved.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>In the author’s opinion, the human life span:</p>",
+    "passage": "<b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b><br><br> <b><u>  </u></b><br>One of the biggest questions in ageing research is whether there is a ceiling on how long human beings can live. A recent study, published in Science, suggests there isn’t. The study measured the survival probabilities of 3,896 people in Italy aged 105 and older. It found that, while we are much more likely to die at 75 than at 55, once we reach about 105, the odds of death remain about the same each year of life.<br><br>This effect is often referred to as a “mortality plateau”. If it were impossible to live past a certain age, we would expect mortality rates to continue rising as people age, rather than plateau. The fact that the odds of dying don’t appear to increase past 105 suggests that we have not yet approached our maximum lifespan as a species. But is potentially living for over a century something we ought to look forward to? Here, philosophy can offer some important insights.<br><br>Of course, we still don’t know for sure that there is no ceiling. Some researchers argue that there is a natural “expiration date” for human beings, at about 125 years. Chiyo Miyako is currently the oldest known person in the world, at 117 years old. Jeanne Calment, who died in 1997, had the longest recorded lifespan, at 122 years.<br>In the UK, the number of people over the age of 100 has more than doubled since 2002, and could reach 36,000 by 2030. If there is a mortality plateau, by the year 2300 the oldest person alive could be about 150 years old.<br><br>Would a maximum lifespan of 150 make our lives better or just longer? One way of thinking about this is in terms of pleasure and pain: the more pleasure (and the less pain) we have over the course of our lives, the better our lives are. Other things being equal, a life which lasts 100 years is better than one that lasts 80 years, as long as the extra 20 years contain more pleasure than they do pain.<br><br>How likely an outcome is this? As people age, they are much more likely to develop degenerative conditions that could lead to a lower quality of life. But these conditions can be mitigated by a healthy lifestyle and adequate support services. While elderly life may be restricted in some ways, there is no reason that it cannot be, on balance, pleasurable.<br><br>The late philosopher Ronald Dworkin distinguished between “experiential interests” and “critical interests” to shed light on how people may view their life goals. Experiential interests are for things like pleasure – anything we enjoy. Critical interests are those that we value becoming a reality – essential to what we think constitutes a good life. This could be a parent’s interest in the happiness of their child, for example.<br><br>We can imagine a person having a critical interest in avoiding the perceived indignity of dementia, which may accompany extreme old age. We might think it would be better for this person, taking the whole of their life into account, if they had died prior to this period of decline.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>must have a limit beyond which it cannot extend.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>is determined largely by healthy lifestyle and available support services.</p>",
+        "isCorrect": false
+      },
+      { "id": 2, "value": "<p>is unknown.</p>", "isCorrect": true },
+      {
+        "id": 3,
+        "value": "<p>is about 125 years.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>Which of the following best expresses the overall argument of the passage?</p>",
+    "passage": "<b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b><br><br> <b><u>  </u></b><br>One of the biggest questions in ageing research is whether there is a ceiling on how long human beings can live. A recent study, published in Science, suggests there isn’t. The study measured the survival probabilities of 3,896 people in Italy aged 105 and older. It found that, while we are much more likely to die at 75 than at 55, once we reach about 105, the odds of death remain about the same each year of life.<br><br>This effect is often referred to as a “mortality plateau”. If it were impossible to live past a certain age, we would expect mortality rates to continue rising as people age, rather than plateau. The fact that the odds of dying don’t appear to increase past 105 suggests that we have not yet approached our maximum lifespan as a species. But is potentially living for over a century something we ought to look forward to? Here, philosophy can offer some important insights.<br><br>Of course, we still don’t know for sure that there is no ceiling. Some researchers argue that there is a natural “expiration date” for human beings, at about 125 years. Chiyo Miyako is currently the oldest known person in the world, at 117 years old. Jeanne Calment, who died in 1997, had the longest recorded lifespan, at 122 years.<br>In the UK, the number of people over the age of 100 has more than doubled since 2002, and could reach 36,000 by 2030. If there is a mortality plateau, by the year 2300 the oldest person alive could be about 150 years old.<br><br>Would a maximum lifespan of 150 make our lives better or just longer? One way of thinking about this is in terms of pleasure and pain: the more pleasure (and the less pain) we have over the course of our lives, the better our lives are. Other things being equal, a life which lasts 100 years is better than one that lasts 80 years, as long as the extra 20 years contain more pleasure than they do pain.<br><br>How likely an outcome is this? As people age, they are much more likely to develop degenerative conditions that could lead to a lower quality of life. But these conditions can be mitigated by a healthy lifestyle and adequate support services. While elderly life may be restricted in some ways, there is no reason that it cannot be, on balance, pleasurable.<br><br>The late philosopher Ronald Dworkin distinguished between “experiential interests” and “critical interests” to shed light on how people may view their life goals. Experiential interests are for things like pleasure – anything we enjoy. Critical interests are those that we value becoming a reality – essential to what we think constitutes a good life. This could be a parent’s interest in the happiness of their child, for example.<br><br>We can imagine a person having a critical interest in avoiding the perceived indignity of dementia, which may accompany extreme old age. We might think it would be better for this person, taking the whole of their life into account, if they had died prior to this period of decline.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Essential interests must be met for a long life span to be useful.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Critical interests are more important than experiential interests to sustain a long life.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Avoiding indignities in the later stage of life is essential to a successful long life.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Philosophers offer insights on whether a long life makes our lives better or just longer.</p>",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>Which of the following, if true, casts the most serious doubt on the conclusion that '… we have not yet approached our maximum lifespan as a species' [Paragraph 2]?</p>",
+    "passage": "<b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b><br><br> <b><u>  </u></b><br>One of the biggest questions in ageing research is whether there is a ceiling on how long human beings can live. A recent study, published in Science, suggests there isn’t. The study measured the survival probabilities of 3,896 people in Italy aged 105 and older. It found that, while we are much more likely to die at 75 than at 55, once we reach about 105, the odds of death remain about the same each year of life.<br><br>This effect is often referred to as a “mortality plateau”. If it were impossible to live past a certain age, we would expect mortality rates to continue rising as people age, rather than plateau. The fact that the odds of dying don’t appear to increase past 105 suggests that we have not yet approached our maximum lifespan as a species. But is potentially living for over a century something we ought to look forward to? Here, philosophy can offer some important insights.<br><br>Of course, we still don’t know for sure that there is no ceiling. Some researchers argue that there is a natural “expiration date” for human beings, at about 125 years. Chiyo Miyako is currently the oldest known person in the world, at 117 years old. Jeanne Calment, who died in 1997, had the longest recorded lifespan, at 122 years.<br>In the UK, the number of people over the age of 100 has more than doubled since 2002, and could reach 36,000 by 2030. If there is a mortality plateau, by the year 2300 the oldest person alive could be about 150 years old.<br><br>Would a maximum lifespan of 150 make our lives better or just longer? One way of thinking about this is in terms of pleasure and pain: the more pleasure (and the less pain) we have over the course of our lives, the better our lives are. Other things being equal, a life which lasts 100 years is better than one that lasts 80 years, as long as the extra 20 years contain more pleasure than they do pain.<br><br>How likely an outcome is this? As people age, they are much more likely to develop degenerative conditions that could lead to a lower quality of life. But these conditions can be mitigated by a healthy lifestyle and adequate support services. While elderly life may be restricted in some ways, there is no reason that it cannot be, on balance, pleasurable.<br><br>The late philosopher Ronald Dworkin distinguished between “experiential interests” and “critical interests” to shed light on how people may view their life goals. Experiential interests are for things like pleasure – anything we enjoy. Critical interests are those that we value becoming a reality – essential to what we think constitutes a good life. This could be a parent’s interest in the happiness of their child, for example.<br><br>We can imagine a person having a critical interest in avoiding the perceived indignity of dementia, which may accompany extreme old age. We might think it would be better for this person, taking the whole of their life into account, if they had died prior to this period of decline.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>The years of birth of people who claimed to be more than a century old were largely speculative and based on their own unreliable memory.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 1,
+        "value": "<p>Studies on multiple species other than humans suggest that at the far end of their lifespan the probability of dying increases.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Studies on multiple species, including humans, have found that the probability of death slows, or even plateaus beyond the age of 105.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>A variety of factors including demography, ethnicity, lifestyle habits, genetics etc., have the effect of producing a slowing of apparent mortality at the end of the lifespan.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p><span style=\"color: #000000;\">In</span><span style=\"color: #000000;\"> paragraph 6, the interrogative: “How likely an outcome is this?” is:</span></p>",
+    "passage": "<b>The</b><b> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</b><br><br> <b><u>  </u></b><br>One of the biggest questions in ageing research is whether there is a ceiling on how long human beings can live. A recent study, published in Science, suggests there isn’t. The study measured the survival probabilities of 3,896 people in Italy aged 105 and older. It found that, while we are much more likely to die at 75 than at 55, once we reach about 105, the odds of death remain about the same each year of life.<br><br>This effect is often referred to as a “mortality plateau”. If it were impossible to live past a certain age, we would expect mortality rates to continue rising as people age, rather than plateau. The fact that the odds of dying don’t appear to increase past 105 suggests that we have not yet approached our maximum lifespan as a species. But is potentially living for over a century something we ought to look forward to? Here, philosophy can offer some important insights.<br><br>Of course, we still don’t know for sure that there is no ceiling. Some researchers argue that there is a natural “expiration date” for human beings, at about 125 years. Chiyo Miyako is currently the oldest known person in the world, at 117 years old. Jeanne Calment, who died in 1997, had the longest recorded lifespan, at 122 years.<br>In the UK, the number of people over the age of 100 has more than doubled since 2002, and could reach 36,000 by 2030. If there is a mortality plateau, by the year 2300 the oldest person alive could be about 150 years old.<br><br>Would a maximum lifespan of 150 make our lives better or just longer? One way of thinking about this is in terms of pleasure and pain: the more pleasure (and the less pain) we have over the course of our lives, the better our lives are. Other things being equal, a life which lasts 100 years is better than one that lasts 80 years, as long as the extra 20 years contain more pleasure than they do pain.<br><br>How likely an outcome is this? As people age, they are much more likely to develop degenerative conditions that could lead to a lower quality of life. But these conditions can be mitigated by a healthy lifestyle and adequate support services. While elderly life may be restricted in some ways, there is no reason that it cannot be, on balance, pleasurable.<br><br>The late philosopher Ronald Dworkin distinguished between “experiential interests” and “critical interests” to shed light on how people may view their life goals. Experiential interests are for things like pleasure – anything we enjoy. Critical interests are those that we value becoming a reality – essential to what we think constitutes a good life. This could be a parent’s interest in the happiness of their child, for example.<br><br>We can imagine a person having a critical interest in avoiding the perceived indignity of dementia, which may accompany extreme old age. We might think it would be better for this person, taking the whole of their life into account, if they had died prior to this period of decline.",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>a predictive question linking long life and pleasure.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>a rhetorical question to indicate the opposite.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>a query intended to lead from theory to rationale.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>a retort to the statement that having fun at a much older age is plausible.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "Based on information provided in the passage, we can infer that,",
+    "passage": "<p><strong>The</strong><strong> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</strong><br /><br />Faced with unfavourable, often seasonal, changes in climate or habitat quality, animals, from birds to butterflies and wildebeests to sea turtles, migrate vast distances—often thousands of miles—in search of more favourable conditions. They return the following year, in many cases to the exact location where their journey began. … We know that some species use the Earth’s magnetic field to navigate with GPS-like precision and others gaze skyward and guide their migration by the stars. We are just now learning that for some animals, the key to a successful migration is all in their heads—complex thought and memory are also necessary for a successful migration. For nearly a decade, we have studied the roles of cognition, learning and memory in the migration of a fairly atypical species—the painted turtle, common to neighbourhood ponds and roadside ditches.</p><p> </p><p>They’re not as charismatic as sea turtles, and they sure don’t travel as far … but what they lack in outward charisma they make up in tenacity. When these turtles take to land each summer, migrating to new habitats when their home ponds dry up, they face seemingly insurmountable odds: scorching heat, dehydration, the crushing tug of gravity, new predatory threats from both land and air, and the ever-present threat of vehicles when crossing a road. <br /><br />Painted turtles at our research site, which is on conservation land within a patchwork of old growth woodlands and agricultural fields, follow long, intricate routes with amazing precision—specific to within a few meters—to far-off, permanent water sources year after year, returning home again when the seasons next change. … To see just where this incredible migratory behaviour came from, we introduced into our site animals without any experience migrating there and monitored their ability to respond to seasonal changes in their habitats. Naive juveniles under four years old learned to navigate the complex paths just as precisely as experienced local turtles and were able to locate far-off water sources. Naive adults could not. <br /><br />How can a turtle possibly think its way through migration? They do it the same way that we do: they form and remember memories of space and place using the neurotransmitter acetylcholine. Acetylcholine has long been known to play a role in spatial memory in mammals. To test whether the turtle brain also works this way, we gave freely migrating turtles (both experienced adults and naive juveniles) mind-altering drugs that temporarily block acetylcholine in their brains.<br /><br />While the drugs were active and the turtles were without access to spatial memory, the adults with previous experience in the system wandered aimlessly and were unable to follow their traditional migration routes. As soon as the drugs wore off, they got right back on track and were able to successfully migrate to their winter home. And what about naive juvenile turtles? They were unaffected by the drug; they followed the paths perfectly whether on the drug or not. Why? They had no memory to disrupt! This demonstrates that adults use spatial memory to navigate during migration, and that they form these memories as juveniles prior to the age of four. This type of higher-order cognitive processing during migration has been previously attributed only to birds and mammals.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "Painted turtles use neither Earth’s magnetic field nor stars to migrate.",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "Painted turtles can’t navigate migratory path if the neurotransmitter acetylcholine is blocked.",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "Migration of naïve juveniles of painted turtles is still an unexplained phenomenon.",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "There is a critical learning period in which animals must learn to migrate.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>Which of the following is NOT true about migration?</p>",
+    "passage": "<p><strong>The</strong><strong> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</strong><br /><br />Faced with unfavourable, often seasonal, changes in climate or habitat quality, animals, from birds to butterflies and wildebeests to sea turtles, migrate vast distances—often thousands of miles—in search of more favourable conditions. They return the following year, in many cases to the exact location where their journey began. … We know that some species use the Earth’s magnetic field to navigate with GPS-like precision and others gaze skyward and guide their migration by the stars. We are just now learning that for some animals, the key to a successful migration is all in their heads—complex thought and memory are also necessary for a successful migration. For nearly a decade, we have studied the roles of cognition, learning and memory in the migration of a fairly atypical species—the painted turtle, common to neighbourhood ponds and roadside ditches.</p><p> </p><p>They’re not as charismatic as sea turtles, and they sure don’t travel as far … but what they lack in outward charisma they make up in tenacity. When these turtles take to land each summer, migrating to new habitats when their home ponds dry up, they face seemingly insurmountable odds: scorching heat, dehydration, the crushing tug of gravity, new predatory threats from both land and air, and the ever-present threat of vehicles when crossing a road. <br /><br />Painted turtles at our research site, which is on conservation land within a patchwork of old growth woodlands and agricultural fields, follow long, intricate routes with amazing precision—specific to within a few meters—to far-off, permanent water sources year after year, returning home again when the seasons next change. … To see just where this incredible migratory behaviour came from, we introduced into our site animals without any experience migrating there and monitored their ability to respond to seasonal changes in their habitats. Naive juveniles under four years old learned to navigate the complex paths just as precisely as experienced local turtles and were able to locate far-off water sources. Naive adults could not. <br /><br />How can a turtle possibly think its way through migration? They do it the same way that we do: they form and remember memories of space and place using the neurotransmitter acetylcholine. Acetylcholine has long been known to play a role in spatial memory in mammals. To test whether the turtle brain also works this way, we gave freely migrating turtles (both experienced adults and naive juveniles) mind-altering drugs that temporarily block acetylcholine in their brains.<br /><br />While the drugs were active and the turtles were without access to spatial memory, the adults with previous experience in the system wandered aimlessly and were unable to follow their traditional migration routes. As soon as the drugs wore off, they got right back on track and were able to successfully migrate to their winter home. And what about naive juvenile turtles? They were unaffected by the drug; they followed the paths perfectly whether on the drug or not. Why? They had no memory to disrupt! This demonstrates that adults use spatial memory to navigate during migration, and that they form these memories as juveniles prior to the age of four. This type of higher-order cognitive processing during migration has been previously attributed only to birds and mammals.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Every migrating species is endowed with special faculties in order to undertake migration.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Migration is an involuntary response to unfavourable changes in climate or habitual quality.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "value": "<p>Migration involves travelling long distances, often covering up to thousands of miles.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Migration mostly ends with the species returning to the exact location from where it started.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>What advantage did naïve juveniles have over naïve adults in the experiment?</p>",
+    "passage": "<p><strong>The</strong><strong> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</strong><br /><br />Faced with unfavourable, often seasonal, changes in climate or habitat quality, animals, from birds to butterflies and wildebeests to sea turtles, migrate vast distances—often thousands of miles—in search of more favourable conditions. They return the following year, in many cases to the exact location where their journey began. … We know that some species use the Earth’s magnetic field to navigate with GPS-like precision and others gaze skyward and guide their migration by the stars. We are just now learning that for some animals, the key to a successful migration is all in their heads—complex thought and memory are also necessary for a successful migration. For nearly a decade, we have studied the roles of cognition, learning and memory in the migration of a fairly atypical species—the painted turtle, common to neighbourhood ponds and roadside ditches.</p><p> </p><p>They’re not as charismatic as sea turtles, and they sure don’t travel as far … but what they lack in outward charisma they make up in tenacity. When these turtles take to land each summer, migrating to new habitats when their home ponds dry up, they face seemingly insurmountable odds: scorching heat, dehydration, the crushing tug of gravity, new predatory threats from both land and air, and the ever-present threat of vehicles when crossing a road. <br /><br />Painted turtles at our research site, which is on conservation land within a patchwork of old growth woodlands and agricultural fields, follow long, intricate routes with amazing precision—specific to within a few meters—to far-off, permanent water sources year after year, returning home again when the seasons next change. … To see just where this incredible migratory behaviour came from, we introduced into our site animals without any experience migrating there and monitored their ability to respond to seasonal changes in their habitats. Naive juveniles under four years old learned to navigate the complex paths just as precisely as experienced local turtles and were able to locate far-off water sources. Naive adults could not. <br /><br />How can a turtle possibly think its way through migration? They do it the same way that we do: they form and remember memories of space and place using the neurotransmitter acetylcholine. Acetylcholine has long been known to play a role in spatial memory in mammals. To test whether the turtle brain also works this way, we gave freely migrating turtles (both experienced adults and naive juveniles) mind-altering drugs that temporarily block acetylcholine in their brains.<br /><br />While the drugs were active and the turtles were without access to spatial memory, the adults with previous experience in the system wandered aimlessly and were unable to follow their traditional migration routes. As soon as the drugs wore off, they got right back on track and were able to successfully migrate to their winter home. And what about naive juvenile turtles? They were unaffected by the drug; they followed the paths perfectly whether on the drug or not. Why? They had no memory to disrupt! This demonstrates that adults use spatial memory to navigate during migration, and that they form these memories as juveniles prior to the age of four. This type of higher-order cognitive processing during migration has been previously attributed only to birds and mammals.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>The mind-altering drugs had no effect on naïve juvenile turtles.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Naïve juveniles were less than four years old.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "value": "<p>Efficiency of the cognitive mechanism in turtles decreases with aging.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Juveniles had no memory to disrupt while adults were blocked from theirs.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>All of the following aid animals in the process of migration EXCEPT:</p>",
+    "passage": "<p><strong>The</strong><strong> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</strong><br /><br />Faced with unfavourable, often seasonal, changes in climate or habitat quality, animals, from birds to butterflies and wildebeests to sea turtles, migrate vast distances—often thousands of miles—in search of more favourable conditions. They return the following year, in many cases to the exact location where their journey began. … We know that some species use the Earth’s magnetic field to navigate with GPS-like precision and others gaze skyward and guide their migration by the stars. We are just now learning that for some animals, the key to a successful migration is all in their heads—complex thought and memory are also necessary for a successful migration. For nearly a decade, we have studied the roles of cognition, learning and memory in the migration of a fairly atypical species—the painted turtle, common to neighbourhood ponds and roadside ditches.</p><p> </p><p>They’re not as charismatic as sea turtles, and they sure don’t travel as far … but what they lack in outward charisma they make up in tenacity. When these turtles take to land each summer, migrating to new habitats when their home ponds dry up, they face seemingly insurmountable odds: scorching heat, dehydration, the crushing tug of gravity, new predatory threats from both land and air, and the ever-present threat of vehicles when crossing a road. <br /><br />Painted turtles at our research site, which is on conservation land within a patchwork of old growth woodlands and agricultural fields, follow long, intricate routes with amazing precision—specific to within a few meters—to far-off, permanent water sources year after year, returning home again when the seasons next change. … To see just where this incredible migratory behaviour came from, we introduced into our site animals without any experience migrating there and monitored their ability to respond to seasonal changes in their habitats. Naive juveniles under four years old learned to navigate the complex paths just as precisely as experienced local turtles and were able to locate far-off water sources. Naive adults could not. <br /><br />How can a turtle possibly think its way through migration? They do it the same way that we do: they form and remember memories of space and place using the neurotransmitter acetylcholine. Acetylcholine has long been known to play a role in spatial memory in mammals. To test whether the turtle brain also works this way, we gave freely migrating turtles (both experienced adults and naive juveniles) mind-altering drugs that temporarily block acetylcholine in their brains.<br /><br />While the drugs were active and the turtles were without access to spatial memory, the adults with previous experience in the system wandered aimlessly and were unable to follow their traditional migration routes. As soon as the drugs wore off, they got right back on track and were able to successfully migrate to their winter home. And what about naive juvenile turtles? They were unaffected by the drug; they followed the paths perfectly whether on the drug or not. Why? They had no memory to disrupt! This demonstrates that adults use spatial memory to navigate during migration, and that they form these memories as juveniles prior to the age of four. This type of higher-order cognitive processing during migration has been previously attributed only to birds and mammals.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>Celestial Bodies</p>", "isCorrect": false },
+      {
+        "id": 1,
+        "value": "<p>Electromagnetic Field</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Mind-altering drugs</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>Learning and Memory</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>“The higher-order cognitive processing during migration…” [Last Paragraph] most likely refers to which of the following?</p>",
+    "passage": "<p><strong>The</strong><strong> passage below is accompanied by a set of 5 questions. Choose the best answer for each question.</strong><br /><br />Faced with unfavourable, often seasonal, changes in climate or habitat quality, animals, from birds to butterflies and wildebeests to sea turtles, migrate vast distances—often thousands of miles—in search of more favourable conditions. They return the following year, in many cases to the exact location where their journey began. … We know that some species use the Earth’s magnetic field to navigate with GPS-like precision and others gaze skyward and guide their migration by the stars. We are just now learning that for some animals, the key to a successful migration is all in their heads—complex thought and memory are also necessary for a successful migration. For nearly a decade, we have studied the roles of cognition, learning and memory in the migration of a fairly atypical species—the painted turtle, common to neighbourhood ponds and roadside ditches.</p><p> </p><p>They’re not as charismatic as sea turtles, and they sure don’t travel as far … but what they lack in outward charisma they make up in tenacity. When these turtles take to land each summer, migrating to new habitats when their home ponds dry up, they face seemingly insurmountable odds: scorching heat, dehydration, the crushing tug of gravity, new predatory threats from both land and air, and the ever-present threat of vehicles when crossing a road. <br /><br />Painted turtles at our research site, which is on conservation land within a patchwork of old growth woodlands and agricultural fields, follow long, intricate routes with amazing precision—specific to within a few meters—to far-off, permanent water sources year after year, returning home again when the seasons next change. … To see just where this incredible migratory behaviour came from, we introduced into our site animals without any experience migrating there and monitored their ability to respond to seasonal changes in their habitats. Naive juveniles under four years old learned to navigate the complex paths just as precisely as experienced local turtles and were able to locate far-off water sources. Naive adults could not. <br /><br />How can a turtle possibly think its way through migration? They do it the same way that we do: they form and remember memories of space and place using the neurotransmitter acetylcholine. Acetylcholine has long been known to play a role in spatial memory in mammals. To test whether the turtle brain also works this way, we gave freely migrating turtles (both experienced adults and naive juveniles) mind-altering drugs that temporarily block acetylcholine in their brains.<br /><br />While the drugs were active and the turtles were without access to spatial memory, the adults with previous experience in the system wandered aimlessly and were unable to follow their traditional migration routes. As soon as the drugs wore off, they got right back on track and were able to successfully migrate to their winter home. And what about naive juvenile turtles? They were unaffected by the drug; they followed the paths perfectly whether on the drug or not. Why? They had no memory to disrupt! This demonstrates that adults use spatial memory to navigate during migration, and that they form these memories as juveniles prior to the age of four. This type of higher-order cognitive processing during migration has been previously attributed only to birds and mammals.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>The ability to navigate with precision using natural markers.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>The ability to learn a skill during a critical learning period in life.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>The capability of complex thought and memory during migration.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>The ability to react to unfavourable changes in habitat quality.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>What</span> is the most pivotal research finding the author discusses in this passage? </span></p>",
+    "passage": "<p><strong> </strong><strong>The</strong><strong> passage below is accompanied by a set of 4 questions. Choose the best answer for each question.</strong><br /><br />Antarctic glaciers have been melting at an accelerating pace over the past four decades thanks to an influx of warm ocean water — a startling new finding that researchers say could mean sea levels are poised to rise more quickly than predicted in coming decades.</span><br /><br />The Antarctic lost 40 billion tons of melting ice to the ocean each year from 1979 to 1989.</span> That figure rose to 252 billion tons lost per year beginning in 2009, according to a study published in the Proceedings of the National Academy of Sciences. That means the region is losing six times as much ice as it was four decades ago, an unprecedented pace in the era of modern measurements. </span><br /><br />“I don’t want to be alarmist,” said Eric </span>Rignot</span>, an Earth-systems scientist for the University of California at Irvine and NASA who led the work. But he said the weaknesses that researchers have detected in East Antarctica — home to the largest ice sheet on the planet — deserve deeper study.</span><br /><br />The places undergoing changes in Antarctica are not limited to just a couple places,” </span>Rignot</span> said. “They seem to be more extensive than what we thought. That, to me, seems to be reason for concern.”</span><br /><br />The findings are the latest sign that the world could face catastrophic consequences if climate change continues unabated. In addition to more-frequent droughts, heat waves, severe storms and other extreme weather that could come with a continually warming Earth, scientists already have predicted that seas could rise nearly three feet globally by 2100 if the world does not sharply decrease its carbon output. But in recent years, there has been growing concern that the Antarctic could push that even higher.</span><br /><br />That kind of sea-level rise would result in the inundation of island communities around the globe, devastating wildlife habitats and threatening drinking-water supplies. Global sea levels have already risen seven to eight inches since 1900</span>.</span><br /><br />The ice of Antarctica contains 57.2 meters, or 187.66 feet, of potential sea-level rise. This massive body of ice flows out into the ocean through a complex array of partially submerged glaciers and thick floating expanses of ice called ice shelves.</span><br /><br />The outward ice flow is normal and natural, and it is typically offset by some 2 trillion tons of snowfall atop Antarctica each year, a process that on its own would leave Earth’s sea level relatively unchanged. However, if the ice flow speeds up, the ice sheet’s losses can outpace snowfall volume. When that happens, seas rise.</span><br /><br />That’s what the new research says is happening. Scientists came to that conclusion after systematically computing gains and losses across 65 sectors of Antarctica where large glaciers — or glaciers flowing into an ice shelf — reach the sea.</span><br /><br />West Antarctica is the continent’s major ice loser. The</span> research affirms that finding, detailing how a single glacier, Pine Island, has lost more than a trillion tons of ice since 1979. </span>Thwaites</span> Glacier, the biggest and potentially most vulnerable in the region, has lost 634 billion. The entire West Antarctic ice sheet is capable of driving a sea-level rise of 5.28 meters, or 17.32 feet, and is now losing 159 billion tons every year.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Climate change has long impacted Antarctica and continues to do so even today. </span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Climate change could have catastrophic effects that would destroy wildlife, deplete water supplies and inundate islands.</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Global sea levels that have already risen seven to eight inches since 1900 seas could rise nearly three feet globally by 2100 if the world </span>does</span> not reduce carbon output. </span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>If the </span>outward </span>ice flow in the Antarctic region </span>continues to </span>outpace </span>the </span>snowfall volume, </span>global</span> sea levels </span>are set </span>to rise faster than predicted.</span></p>",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>All of the following agree with the facts outlined in passage EXCEPT:</span></p>",
+    "passage": "<p><strong> </strong><strong>The</strong><strong> passage below is accompanied by a set of 4 questions. Choose the best answer for each question.</strong><br /><br />Antarctic glaciers have been melting at an accelerating pace over the past four decades thanks to an influx of warm ocean water — a startling new finding that researchers say could mean sea levels are poised to rise more quickly than predicted in coming decades.</span><br /><br />The Antarctic lost 40 billion tons of melting ice to the ocean each year from 1979 to 1989.</span> That figure rose to 252 billion tons lost per year beginning in 2009, according to a study published in the Proceedings of the National Academy of Sciences. That means the region is losing six times as much ice as it was four decades ago, an unprecedented pace in the era of modern measurements. </span><br /><br />“I don’t want to be alarmist,” said Eric </span>Rignot</span>, an Earth-systems scientist for the University of California at Irvine and NASA who led the work. But he said the weaknesses that researchers have detected in East Antarctica — home to the largest ice sheet on the planet — deserve deeper study.</span><br /><br />The places undergoing changes in Antarctica are not limited to just a couple places,” </span>Rignot</span> said. “They seem to be more extensive than what we thought. That, to me, seems to be reason for concern.”</span><br /><br />The findings are the latest sign that the world could face catastrophic consequences if climate change continues unabated. In addition to more-frequent droughts, heat waves, severe storms and other extreme weather that could come with a continually warming Earth, scientists already have predicted that seas could rise nearly three feet globally by 2100 if the world does not sharply decrease its carbon output. But in recent years, there has been growing concern that the Antarctic could push that even higher.</span><br /><br />That kind of sea-level rise would result in the inundation of island communities around the globe, devastating wildlife habitats and threatening drinking-water supplies. Global sea levels have already risen seven to eight inches since 1900</span>.</span><br /><br />The ice of Antarctica contains 57.2 meters, or 187.66 feet, of potential sea-level rise. This massive body of ice flows out into the ocean through a complex array of partially submerged glaciers and thick floating expanses of ice called ice shelves.</span><br /><br />The outward ice flow is normal and natural, and it is typically offset by some 2 trillion tons of snowfall atop Antarctica each year, a process that on its own would leave Earth’s sea level relatively unchanged. However, if the ice flow speeds up, the ice sheet’s losses can outpace snowfall volume. When that happens, seas rise.</span><br /><br />That’s what the new research says is happening. Scientists came to that conclusion after systematically computing gains and losses across 65 sectors of Antarctica where large glaciers — or glaciers flowing into an ice shelf — reach the sea.</span><br /><br />West Antarctica is the continent’s major ice loser. The</span> research affirms that finding, detailing how a single glacier, Pine Island, has lost more than a trillion tons of ice since 1979. </span>Thwaites</span> Glacier, the biggest and potentially most vulnerable in the region, has lost 634 billion. The entire West Antarctic ice sheet is capable of driving a sea-level rise of 5.28 meters, or 17.32 feet, and is now losing 159 billion tons every year.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Modern measurements have helped establish that Antarctica is currently losing at least six times as much ice as it was, four decades ago. </span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>The outward flow and melting of Antarctic ice shelves is a natural and normal phenomenon as long as it doesn't exceed the snowfall volume.</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>The warming of the Antarctic and the consequent rise in sea levels seen since 1900 are directly attributable to human activities.</span></p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>As per current estimates The </span>Thwaites</span> Glacier in West Antarctica has lost the most amount of ice so far. </span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>Based on the passage w</span>hat function do these sentences serve</span>: </span><br /><br /> “I don’t want to</span> be alarmist,” said Eric </span>Rignot</span>… bu</span>t he said the weaknesses that researchers have detected in East Antarctica — home to the largest ice sheet on the planet — deserve deeper study. [Paragraph 3]</span></p>",
+    "passage": "<p><strong> </strong><strong>The</strong><strong> passage below is accompanied by a set of 4 questions. Choose the best answer for each question.</strong><br /><br />Antarctic glaciers have been melting at an accelerating pace over the past four decades thanks to an influx of warm ocean water — a startling new finding that researchers say could mean sea levels are poised to rise more quickly than predicted in coming decades.</span><br /><br />The Antarctic lost 40 billion tons of melting ice to the ocean each year from 1979 to 1989.</span> That figure rose to 252 billion tons lost per year beginning in 2009, according to a study published in the Proceedings of the National Academy of Sciences. That means the region is losing six times as much ice as it was four decades ago, an unprecedented pace in the era of modern measurements. </span><br /><br />“I don’t want to be alarmist,” said Eric </span>Rignot</span>, an Earth-systems scientist for the University of California at Irvine and NASA who led the work. But he said the weaknesses that researchers have detected in East Antarctica — home to the largest ice sheet on the planet — deserve deeper study.</span><br /><br />The places undergoing changes in Antarctica are not limited to just a couple places,” </span>Rignot</span> said. “They seem to be more extensive than what we thought. That, to me, seems to be reason for concern.”</span><br /><br />The findings are the latest sign that the world could face catastrophic consequences if climate change continues unabated. In addition to more-frequent droughts, heat waves, severe storms and other extreme weather that could come with a continually warming Earth, scientists already have predicted that seas could rise nearly three feet globally by 2100 if the world does not sharply decrease its carbon output. But in recent years, there has been growing concern that the Antarctic could push that even higher.</span><br /><br />That kind of sea-level rise would result in the inundation of island communities around the globe, devastating wildlife habitats and threatening drinking-water supplies. Global sea levels have already risen seven to eight inches since 1900</span>.</span><br /><br />The ice of Antarctica contains 57.2 meters, or 187.66 feet, of potential sea-level rise. This massive body of ice flows out into the ocean through a complex array of partially submerged glaciers and thick floating expanses of ice called ice shelves.</span><br /><br />The outward ice flow is normal and natural, and it is typically offset by some 2 trillion tons of snowfall atop Antarctica each year, a process that on its own would leave Earth’s sea level relatively unchanged. However, if the ice flow speeds up, the ice sheet’s losses can outpace snowfall volume. When that happens, seas rise.</span><br /><br />That’s what the new research says is happening. Scientists came to that conclusion after systematically computing gains and losses across 65 sectors of Antarctica where large glaciers — or glaciers flowing into an ice shelf — reach the sea.</span><br /><br />West Antarctica is the continent’s major ice loser. The</span> research affirms that finding, detailing how a single glacier, Pine Island, has lost more than a trillion tons of ice since 1979. </span>Thwaites</span> Glacier, the biggest and potentially most vulnerable in the region, has lost 634 billion. The entire West Antarctic ice sheet is capable of driving a sea-level rise of 5.28 meters, or 17.32 feet, and is now losing 159 billion tons every year.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Weaken the central premise of the discussion. </span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Validate the central premise by way of an example.</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Add credibility to the discussion.</span></p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>Add narrative value to the central topic. </span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Reading Comprehension",
+    "question": "<p>All of the following would undermine the findings of the study EXCEPT:</p>",
+    "passage": "<p><strong> </strong><strong>The</strong><strong> passage below is accompanied by a set of 4 questions. Choose the best answer for each question.</strong><br /><br />Antarctic glaciers have been melting at an accelerating pace over the past four decades thanks to an influx of warm ocean water — a startling new finding that researchers say could mean sea levels are poised to rise more quickly than predicted in coming decades.</span><br /><br />The Antarctic lost 40 billion tons of melting ice to the ocean each year from 1979 to 1989.</span> That figure rose to 252 billion tons lost per year beginning in 2009, according to a study published in the Proceedings of the National Academy of Sciences. That means the region is losing six times as much ice as it was four decades ago, an unprecedented pace in the era of modern measurements. </span><br /><br />“I don’t want to be alarmist,” said Eric </span>Rignot</span>, an Earth-systems scientist for the University of California at Irvine and NASA who led the work. But he said the weaknesses that researchers have detected in East Antarctica — home to the largest ice sheet on the planet — deserve deeper study.</span><br /><br />The places undergoing changes in Antarctica are not limited to just a couple places,” </span>Rignot</span> said. “They seem to be more extensive than what we thought. That, to me, seems to be reason for concern.”</span><br /><br />The findings are the latest sign that the world could face catastrophic consequences if climate change continues unabated. In addition to more-frequent droughts, heat waves, severe storms and other extreme weather that could come with a continually warming Earth, scientists already have predicted that seas could rise nearly three feet globally by 2100 if the world does not sharply decrease its carbon output. But in recent years, there has been growing concern that the Antarctic could push that even higher.</span><br /><br />That kind of sea-level rise would result in the inundation of island communities around the globe, devastating wildlife habitats and threatening drinking-water supplies. Global sea levels have already risen seven to eight inches since 1900</span>.</span><br /><br />The ice of Antarctica contains 57.2 meters, or 187.66 feet, of potential sea-level rise. This massive body of ice flows out into the ocean through a complex array of partially submerged glaciers and thick floating expanses of ice called ice shelves.</span><br /><br />The outward ice flow is normal and natural, and it is typically offset by some 2 trillion tons of snowfall atop Antarctica each year, a process that on its own would leave Earth’s sea level relatively unchanged. However, if the ice flow speeds up, the ice sheet’s losses can outpace snowfall volume. When that happens, seas rise.</span><br /><br />That’s what the new research says is happening. Scientists came to that conclusion after systematically computing gains and losses across 65 sectors of Antarctica where large glaciers — or glaciers flowing into an ice shelf — reach the sea.</span><br /><br />West Antarctica is the continent’s major ice loser. The</span> research affirms that finding, detailing how a single glacier, Pine Island, has lost more than a trillion tons of ice since 1979. </span>Thwaites</span> Glacier, the biggest and potentially most vulnerable in the region, has lost 634 billion. The entire West Antarctic ice sheet is capable of driving a sea-level rise of 5.28 meters, or 17.32 feet, and is now losing 159 billion tons every year.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Carbon dioxide emissions increased exponentially from 1800 to 1900 and since the 1950s, they have become constant or actually declined.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Even if the outward ice flow is normal and natural over the next few years and the snowfall is consistent, internal weaknesses will continue to deepen in the Antarctic region having far reaching consequences.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "value": "<p>Research on the Antarctic region has always been debatable due to the lack of systematic access to the vast array of glaciers and ice shelves.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Even if sea levels rise by 2100 as predicted, the extent of damage to wildlife, habitat and the potential threat to water supply are often exaggerated and speculative projections made by researchers.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Verbal Reasoning",
+    "question": "<p><strong>The</strong><strong> passage given below is followed by four summaries. Choose the option that best captures the author’s position.</strong><br /><br />Last month, the Deep Carbon Observatory announced an astounding fact: the mass of the microbes living beneath Earth’s surface amounts to 15 to 23 billion tons of carbon, a sum some 245 to 385 times greater than the carbon mass of all humans. That’s amazing. A growing number of papers published in the last decade indicate that bacteria living – many of them in a hydrated, active state -- in sediments, in rocks, and in pockets and fissures buried deep underground are old beyond belief – 300 million years. They are not alive in the sense that the bacteria in your gut are alive. Rather, dried up and in suspended animation. To sum up, Earth’s crust appears to be simply lousy with idling, ancient bacteria parked in power-save mode, ready at nearly a moment’s notice to throw the gearshift into drive.</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>A number of papers claim the existence of an amazing mass of microbes as old as 300 million years living inside the earth ready to come to life at a moment’s notice.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>In a surprising announcement, the Deep Carbon Observatory said that the mass of subterranean microbes and their age were hundreds of times greater than those of all humans.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Inside the Earth, microbes approach immortality in a state of being almost dead, but slightly alive and ready for revivification at a moment’s notice.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Inside earth there is an amazing mass of ancient bacteria parked in suspended animation ready to spring to life even after millions of years.</p>",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Verbal Reasoning",
+    "question": "<p><strong>The</strong><strong> passage given below is followed by four summaries. Choose the option that best captures the author’s position.</strong><br /><br /><br />As a view within political philosophy, egalitarianism has to do both with how people are treated and with distributive justice. Civil rights movements reject certain types of social and political discrimination and demand that people be treated equally. Distributive justice is another form of egalitarianism that addresses life outcomes and the allocation of valuable things such as income, wealth, and other goods. Is egalitarianism about subjective feelings of well-being, about wealth and income, about a broader conception of resources, or some other alternative? This leads us to the question of whether an equal distribution of the preferred metric deals with the starting gate of each person’s life or with equality of life outcomes.</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>Definition of equality is muddled by lack of consensus among political philosophers, civil rights movements and by those insisting on distributive justice.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>Whether egalitarianism is equality of treatment in society, distributive justice or based on some other alternative leads to further questions that cannot be resolved.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>The ideal metric for egalitarianism and whether this metric should deal with equality during initial or later stage of a person’s life are contentious issues.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>In political philosophy, egalitarianism means equality at the beginning of each person’s life irrespective of life’s outcomes.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "MCQ",
+    "areaName": "Verbal Reasoning",
+    "question": "<b>The</b><b> passage given below is followed by four summaries. Choose the option that best captures the author’s position.</b><br><br>German sociologist Max Weber contextualised the role of journalism in relation to academic scholarship. He wrote: “Not everyone realizes that to write a really good piece of journalism is at least as demanding intellectually as the achievement of any scholar. This is particularly true when we recollect that it has to be written on the spot, to order, and that it must create an immediate effect, even though it is produced under completely different conditions from that of scholarly research. It is generally overlooked that a journalist’s actual responsibility is far greater than the scholar’s.” While many recognise the act of verification as the central function of journalism, very few recognise journalism’s role of bearing witness to events. It remains the voice of the people.",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "Few realize that journalism and academic scholarship are different in scope, responsibility and function.",
+        "isCorrect": true
+      },
+      {
+        "id": 1,
+        "value": "The role and responsibility of journalism is to report events instantly and act as a voice of the people.",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "Journalism and academic scholarship though intellectually demanding have different levels of responsibility.",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "Max Weber contextualizes journalism and academic scholarship at intellectual and functional levels.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "NE",
+    "areaName": "Verbal Reasoning",
+    "question": "<p><strong>The</strong><strong> four sentences labelled (1, 2, 3, 4) given in this question, when properly sequenced, form a coherent paragraph. Each sentence is labelled with a number. Decide on the proper sequence of order of the sentences and key in this sequence of four numbers as your answer.</strong><br /><br /><br /> 1. Moral order commonly designates a system of obligations that defines and organizes the proper—good, right, virtuous—relations among individuals and groups in a community.<br />2. But moral order is more than rules, expectations, and mutual obligations and includes those features of the world we designate as sacred and infuse with moral significance. <br />3. Moral order may be an unfamiliar concept. <br />4. These systems are expressed explicitly in rules, laws, and moral codes, as well as implicitly in the various roles, rites, and rituals of social life. <br /><br /> <br />[quizky-text]</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>3142</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>x</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>y</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>z</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 22,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "NE",
+    "areaName": "Verbal Reasoning",
+    "question": "<p><strong>The</strong><strong> four sentences </strong><strong>labelled</strong><strong> (1, 2, 3, 4) given in this question, when properly sequenced, form a coherent paragraph. Each sentence is </strong><strong>labelled</strong><strong> with a number. Decide on the proper sequence of order of the sentences and key in this sequence of four numbers as your answer.</strong><br /><br /><br /> 1. These mini-cultures, based on everything from ethnic identities to hobbies to life-stages, do indeed “identify and isolate an idea, issue, or group.” <br />2. Social critic Philip Rieff famously dubbed it an “anti-culture,” and its deficiencies, including its therapeutic ethos, partly account for the multitude of mini-cultures that have emerged from it.<br />3. The affiliations and ties provided by such mini-cultures are ultimately fragile and contingent. <br />4. The deep culture of modernity is almost an exclusive celebration of the autonomous individual loosed from all strong commitments and guided only by his or her appetites and preferences.<br /><br /> <br /><br /> <br />[quizky-text]</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>4213</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>x</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>y</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>z</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 23,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "NE",
+    "areaName": "Verbal Reasoning",
+    "question": "<p><strong>The</strong><strong> four sentences </strong><strong>labelled</strong><strong> (1, 2, 3, 4) given in this question, when properly sequenced, form a coherent paragraph. Each sentence is </strong><strong>labelled</strong><strong> with a number. Decide on the proper sequence of order of the sentences and key in this sequence of four numbers as your answer.</strong><br /><br /> <br />1. Free time is nothing more than a shadowy continuation of labor; or free time is mere recovery time. <br />2. The problem of figuring out when work is “over,” in an economy in which knowledge workers spend their job hours tweeting and their evening hours doing unpaid housework and child care, has never seemed more perplexing.<br />3. The category of “free” time is not only defined by its opposite, i.e., time “free” of work; but it is subordinated to it. <br />4. The sorry state of our leisure is a consequence of an economy in which we are never fully detached from the demands of work. <br /><br /> <br />[quizky-text]</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>4312</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>x</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>y</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>z</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 24,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "NE",
+    "areaName": "Verbal Reasoning",
+    "question": "<p><strong>Five sentences related to a topic are given below. Four of them can be put together to form a meaningful and coherent short paragraph. Identify the odd one out. Choose its number as your answer and key it in. </strong><br /><br /> <br /><br /> 1. Leopards have been stashing their prey in caves for millions of years, and cougars have made enough of a habit of stashing kills in hard-to-get places. <br />2. Carnivores are cast in the role of natural enemies of paleontologists.<br />3. Owls and other birds of prey, for example, have kept a long-running record of small mammals in the pellets they deposit.<br />4. The more paleontologists and anthropologists look at the fossil record, the more it’s apparent that meat-eating animals have helped make the fossil record we now study.<br />5. Even lions, who were thought to almost never accumulate bones, can sometimes stash impressive skeletal assemblages.<br /><br /> <br />[quizky-text]</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>2</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>x</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>y</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>z</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 25,
+    "subjectID": 203,
+    "subjectName": "Verbal Ability",
+    "quesType": "NE",
+    "areaName": "Verbal Reasoning",
+    "question": "<b>Five sentences related to a topic are given below. Four of them can be put together to form a meaningful and coherent short paragraph. Identify the odd one out. Choose its number as your answer and key it in.</b><br><br><br>\t<br>1.\tBecause of animal agriculture's leading role as a greenhouse gas emitter, the search for more sustainable protein sources could be one such alternative. <br>2.\tFood tech entrepreneurs are now producing increasingly better plant-based burgers, deli slices and nuggets that look and taste like meat, but with a much lower carbon footprint. <br>3.\tSome in the meat industry are embracing the new and investing in these alt-protein companies.<br>4.\tNew technologies, however, bring the risk of obsolescence, in turn leading to great resistance. <br>5.\tWith the climate crisis unfolding before our eyes, the race is on to find alternatives that will help humanity leave a smaller footprint on our planet.<br><br>\t<br><br>[quizky-text]",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "4", "isCorrect": true },
+      { "id": 1, "value": "x", "isCorrect": false },
+      { "id": 2, "value": "y", "isCorrect": false },
+      { "id": 3, "value": "z", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 26,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "NE",
+    "areaName": "Data Interpretation",
+    "question": "<p>What can be the maximum number of students who study all the three languages?</p>\n<p>             <em></em></p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p> </p>\n<p>[quizky-text]</p>",
+    "passage": "<p><span><strong>Refer to the data below and answer the questions that follow.</strong></span></p><p><span><br /></span></p><p><span>Polyglot Foreign Language Academy offers training for German, French and Spanish languages. Currently there are 400 students enrolled in the academy, who learn at least one of the three languages. The numbers of students who study German, French and Spanish are 100, 200 and 300 respectively.</span></p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>100</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>x</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>y</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>z</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 27,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "NE",
+    "areaName": "Data Interpretation",
+    "question": "<p>What can be the maximum number of students who study two languages?</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below</em></p>\n<p> </p>\n<p>[quizky-text]</p>",
+    "passage": "<p><span><strong>Refer to the data below and answer the questions that follow.</strong></span></p><p><span><br /></span></p><p><span>Polyglot Foreign Language Academy offers training for German, French and Spanish languages. Currently there are 400 students enrolled in the academy, who learn at least one of the three languages. The numbers of students who study German, French and Spanish are 100, 200 and 300 respectively.</span></p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>200</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>x</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>y</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>z</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 28,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "MCQ",
+    "areaName": "Data Interpretation",
+    "question": "<p><strong><span style=\"text-decoration: underline;\">Additional information for Q.3 and Q.4</span></strong></p>\n<p> </p>\n<p>Following table shows the break-up of the number of students who study exactly two languages:</p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636967187091826504_5026921.PNG\" alt=\"\" width=\"276\" height=\"113\" /></p>\n<p><span><br /></span></p>\n<p><span><br /></span></p>\n<p><span>How many students study all the three languages?  </span></p>",
+    "passage": "<p><span><strong>Refer to the data below and answer the questions that follow.</strong></span></p><p><span><br /></span></p><p><span>Polyglot Foreign Language Academy offers training for German, French and Spanish languages. Currently there are 400 students enrolled in the academy, who learn at least one of the three languages. The numbers of students who study German, French and Spanish are 100, 200 and 300 respectively.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>60</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>65</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>70</p>", "isCorrect": true },
+      {
+        "id": 3,
+        "value": "<p>Cannot be determined</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "MCQ",
+    "areaName": "Data Interpretation",
+    "question": "<p><strong><span>Additional information for Q.3 and Q.4</span></strong></p>\n<p> </p>\n<p>Following table shows the break-up of the number of students who study exactly two languages:</p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636967187091826504_5026921.PNG\" alt=\"\" width=\"276\" height=\"113\" /></p>\n<p> </p>\n<p>How many students study only one language?</p>",
+    "passage": "<p><span><strong>Refer to the data below and answer the questions that follow.</strong></span></p><p><span><br /></span></p><p><span>Polyglot Foreign Language Academy offers training for German, French and Spanish languages. Currently there are 400 students enrolled in the academy, who learn at least one of the three languages. The numbers of students who study German, French and Spanish are 100, 200 and 300 respectively.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>Less than 150</p>", "isCorrect": false },
+      {
+        "id": 1,
+        "value": "<p>Between 150 and 199 (both included)</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>Between 200 and 249 (both included)</p>",
+        "isCorrect": false
+      },
+      { "id": 3, "value": "<p>More than 250</p>", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 30,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "NE",
+    "areaName": "Data Interpretation",
+    "question": "<p>How many bottles of wine manufactured in the year 2011 were sold in the year 2012?</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p><em><br /></em></p>\n<p>[quizky-text]</p>",
+    "passage": "<p> </p><p>A winery manufactures wine which is sold in only one outlet. The wine bottles which are unsold in a year are again put for sale in the outlet for the next year and so on until all of them are sold.<br />The table below gives the partial data of the winery from 2010 to 2018.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736274081503_6971000.PNG\" alt=\"\" width=\"488\" height=\"248\" /></p><p>The table below gives the sale figures of the wine for nine years with respect to its year of manufacture.<br />The ‘–’ symbol indicates that no bottles remain to be sold in that year as the stock has been exhausted earlier year.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736412760938_6919315.PNG\" alt=\"\" width=\"553\" height=\"224\" /></p><p>Note: There were no outstanding bottles from previous years at the start of 2010.</p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>37</p>", "isCorrect": true },
+      {
+        "id": 1,
+        "value": "<p style=\"text-align: left;\">89</p>",
+        "isCorrect": false
+      },
+      { "id": 2, "value": "<p>114</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>59</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 31,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "NE",
+    "areaName": "Data Interpretation",
+    "question": "<p>How many bottles of wine manufactured in the year 2011 remain unsold at the end of the year 2012?</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em><em></em></p>\n<p> </p>\n<p>[quizky-text]</p>",
+    "passage": "<p> </p><p>A winery manufactures wine which is sold in only one outlet. The wine bottles which are unsold in a year are again put for sale in the outlet for the next year and so on until all of them are sold.<br />The table below gives the partial data of the winery from 2010 to 2018.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736274081503_6971000.PNG\" alt=\"\" width=\"488\" height=\"248\" /></p><p>The table below gives the sale figures of the wine for nine years with respect to its year of manufacture.<br />The ‘–’ symbol indicates that no bottles remain to be sold in that year as the stock has been exhausted earlier year.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736412760938_6919315.PNG\" alt=\"\" width=\"553\" height=\"224\" /></p><p>Note: There were no outstanding bottles from previous years at the start of 2010.</p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>52</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>89</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>37</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>None of these</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 32,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "MCQ",
+    "areaName": "Data Interpretation",
+    "question": "<p><span>The selling price of wine in bottle in the year of its manufacture is Rs. 500 and it increases by 10%, as it gets old, every year. What is the revenue earned from the sale of wine in the year 2013?</span></p>\n<p><em> </em></p>",
+    "passage": "<p> </p><p>A winery manufactures wine which is sold in only one outlet. The wine bottles which are unsold in a year are again put for sale in the outlet for the next year and so on until all of them are sold.<br />The table below gives the partial data of the winery from 2010 to 2018.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736274081503_6971000.PNG\" alt=\"\" width=\"488\" height=\"248\" /></p><p>The table below gives the sale figures of the wine for nine years with respect to its year of manufacture.<br />The ‘–’ symbol indicates that no bottles remain to be sold in that year as the stock has been exhausted earlier year.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736412760938_6919315.PNG\" alt=\"\" width=\"553\" height=\"224\" /></p><p>Note: There were no outstanding bottles from previous years at the start of 2010.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "Rs. 9,38,355</span></p>", "isCorrect": false },
+      { "id": 1, "value": "Rs. 7,18,150</span></p>", "isCorrect": true },
+      { "id": 2, "value": "Rs. 7,05,000</span></p>", "isCorrect": false },
+      { "id": 3, "value": "Rs. 7,24,050</span></p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 33,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "NE",
+    "areaName": "Data Interpretation",
+    "question": "<p>What is the number of the unsold bottles of wine in the outlet after year 2018?</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p> </p>\n<p>[quizky-text]</p>",
+    "passage": "<p> </p><p>A winery manufactures wine which is sold in only one outlet. The wine bottles which are unsold in a year are again put for sale in the outlet for the next year and so on until all of them are sold.<br />The table below gives the partial data of the winery from 2010 to 2018.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736274081503_6971000.PNG\" alt=\"\" width=\"488\" height=\"248\" /></p><p>The table below gives the sale figures of the wine for nine years with respect to its year of manufacture.<br />The ‘–’ symbol indicates that no bottles remain to be sold in that year as the stock has been exhausted earlier year.</p><p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918736412760938_6919315.PNG\" alt=\"\" width=\"553\" height=\"224\" /></p><p>Note: There were no outstanding bottles from previous years at the start of 2010.</p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>782</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>1440</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>783</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>1443</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 34,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "MCQ",
+    "areaName": "Data Interpretation",
+    "question": "<p>How many different grades Asin could have possibly got in the course MA110?</p>",
+    "passage": "<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"><strong>Refer to the data below and answer the quetions that follow.</strong></span></p><p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"> </span></p><p><span>Five students – Ajay, Asin, Akshay, Abhishek and Aarti are in the first year of Electrical engineering department in IIT Delhi. Each student is awarded a grade and grade point in each of the five courses MA110 (4), EE101 (4), PH100 (5), CS100 (5) and CY130 (4) based on the marks obtained in that course. The number written in parentheses alongside each course name is the credits associated to that course. The CGPA (Cumulative Grade Point Average) is weighted average of the grade points awarded in the five courses. The weight in this case is the credits associated to that course.</span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243831793505_9231420.PNG\" alt=\"\" width=\"237\" height=\"204\" /></span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243923521776_7364756.PNG\" alt=\"\" width=\"410\" height=\"140\" /></span></p><p><span>Further it is known that:</span></p><p><span>I.   Asin got less aggregate marks than Ajay.</span><br /><span>II.  Asin got less aggregate marks than Akshay.</span><br /><span>III. Asin got a CGPA of more than 7.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>7</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>6</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>4</p>", "isCorrect": true },
+      { "id": 3, "value": "<p>5</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 35,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "MCQ",
+    "areaName": "Data Interpretation",
+    "question": "<p>How many different grades Akshay could have possibly got in the course PH100?</p>",
+    "passage": "<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"><strong>Refer to the data below and answer the quetions that follow.</strong></span></p><p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"> </span></p><p><span>Five students – Ajay, Asin, Akshay, Abhishek and Aarti are in the first year of Electrical engineering department in IIT Delhi. Each student is awarded a grade and grade point in each of the five courses MA110 (4), EE101 (4), PH100 (5), CS100 (5) and CY130 (4) based on the marks obtained in that course. The number written in parentheses alongside each course name is the credits associated to that course. The CGPA (Cumulative Grade Point Average) is weighted average of the grade points awarded in the five courses. The weight in this case is the credits associated to that course.</span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243831793505_9231420.PNG\" alt=\"\" width=\"237\" height=\"204\" /></span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243923521776_7364756.PNG\" alt=\"\" width=\"410\" height=\"140\" /></span></p><p><span>Further it is known that:</span></p><p><span>I.   Asin got less aggregate marks than Ajay.</span><br /><span>II.  Asin got less aggregate marks than Akshay.</span><br /><span>III. Asin got a CGPA of more than 7.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>7</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>6</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>5</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>4</p>", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 36,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "MCQ",
+    "areaName": "Data Interpretation",
+    "question": "<p>Which student got the maximum CGPA?</p>",
+    "passage": "<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"><strong>Refer to the data below and answer the quetions that follow.</strong></span></p><p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"> </span></p><p><span>Five students – Ajay, Asin, Akshay, Abhishek and Aarti are in the first year of Electrical engineering department in IIT Delhi. Each student is awarded a grade and grade point in each of the five courses MA110 (4), EE101 (4), PH100 (5), CS100 (5) and CY130 (4) based on the marks obtained in that course. The number written in parentheses alongside each course name is the credits associated to that course. The CGPA (Cumulative Grade Point Average) is weighted average of the grade points awarded in the five courses. The weight in this case is the credits associated to that course.</span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243831793505_9231420.PNG\" alt=\"\" width=\"237\" height=\"204\" /></span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243923521776_7364756.PNG\" alt=\"\" width=\"410\" height=\"140\" /></span></p><p><span>Further it is known that:</span></p><p><span>I.   Asin got less aggregate marks than Ajay.</span><br /><span>II.  Asin got less aggregate marks than Akshay.</span><br /><span>III. Asin got a CGPA of more than 7.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>Asin</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>Akshay</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>Aarti</p>", "isCorrect": true },
+      {
+        "id": 3,
+        "value": "<p>Cannot be determined</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "NE",
+    "areaName": "Data Interpretation",
+    "question": "<p><span><span>If Y = 100, what could have been the maximum possible value of X?<br /></span></span></p>\n<p>             <em></em></p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p> </p>\n<p>[quizky-text]</p>",
+    "passage": "<p><span><strong>Refer to the data below and answer the quetions that follow.</strong></span></p>\n<p><span> </span></p>\n<p>Five students – Ajay, Asin, Akshay, Abhishek and Aarti are in the first year of Electrical engineering department in IIT Delhi. Each student is awarded a grade and grade point in each of the five courses MA110 (4), EE101 (4), PH100 (5), CS100 (5) and CY130 (4) based on the marks obtained in that course. The number written in parentheses alongside each course name is the credits associated to that course. The CGPA (Cumulative Grade Point Average) is weighted average of the grade points awarded in the five courses. The weight in this case is the credits associated to that course.</p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243831793505_9231420.PNG\" alt=\"\" width=\"237\" height=\"204\" /></p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243923521776_7364756.PNG\" alt=\"\" width=\"410\" height=\"140\" /></p>\n<p>Further it is known that:</p>\n<p>I.   Asin got less aggregate marks than Ajay.<br />II.  Asin got less aggregate marks than Akshay.<br />III. Asin got a CGPA of more than 7.</p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>68</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>67</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>66</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>65</p>", "isCorrect": false },
+      { "id": 4, "value": "<p>65</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 38,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "NE",
+    "areaName": "Data Interpretation",
+    "question": "<p><span><span>What could have been the minimum possible value of Y?<br /></span></span></p>\n<p>             <em></em></p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p> </p>\n<p>[quizky-text]</p>",
+    "passage": "<p><span><strong>Refer to the data below and answer the quetions that follow.</strong></span></p>\n<p><span> </span></p>\n<p>Five students – Ajay, Asin, Akshay, Abhishek and Aarti are in the first year of Electrical engineering department in IIT Delhi. Each student is awarded a grade and grade point in each of the five courses MA110 (4), EE101 (4), PH100 (5), CS100 (5) and CY130 (4) based on the marks obtained in that course. The number written in parentheses alongside each course name is the credits associated to that course. The CGPA (Cumulative Grade Point Average) is weighted average of the grade points awarded in the five courses. The weight in this case is the credits associated to that course.</p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243831793505_9231420.PNG\" alt=\"\" width=\"237\" height=\"204\" /></p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243923521776_7364756.PNG\" alt=\"\" width=\"410\" height=\"140\" /></p>\n<p>Further it is known that:</p>\n<p>I.   Asin got less aggregate marks than Ajay.<br />II.  Asin got less aggregate marks than Akshay.<br />III. Asin got a CGPA of more than 7.</p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>72</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>74</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>73</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>71</p>", "isCorrect": false },
+      { "id": 4, "value": "<p>70</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 39,
+    "subjectID": 454,
+    "subjectName": "Data Interpretation",
+    "quesType": "MCQ",
+    "areaName": "Data Interpretation",
+    "question": "<p>Abhishek could have possibly got a higher CGPA than at most how many students?</p>",
+    "passage": "<p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"><strong>Refer to the data below and answer the quetions that follow.</strong></span></p><p><span style=\"font-family: arial, helvetica, sans-serif; font-size: small;\"> </span></p><p><span>Five students – Ajay, Asin, Akshay, Abhishek and Aarti are in the first year of Electrical engineering department in IIT Delhi. Each student is awarded a grade and grade point in each of the five courses MA110 (4), EE101 (4), PH100 (5), CS100 (5) and CY130 (4) based on the marks obtained in that course. The number written in parentheses alongside each course name is the credits associated to that course. The CGPA (Cumulative Grade Point Average) is weighted average of the grade points awarded in the five courses. The weight in this case is the credits associated to that course.</span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243831793505_9231420.PNG\" alt=\"\" width=\"237\" height=\"204\" /></span></p><p><span><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636897243923521776_7364756.PNG\" alt=\"\" width=\"410\" height=\"140\" /></span></p><p><span>Further it is known that:</span></p><p><span>I.   Asin got less aggregate marks than Ajay.</span><br /><span>II.  Asin got less aggregate marks than Akshay.</span><br /><span>III. Asin got a CGPA of more than 7.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>1</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>2</p>", "isCorrect": true },
+      { "id": 2, "value": "<p>3</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>4</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 40,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p class=\"q0\"><span style=\"color: windowtext;\">If First Wings Couriers starts first and First Flight Couriers starts before First Hour </span><span style=\"color: windowtext;\">Couriers, then which of the following is necessarily true?</span></p>\n<p class=\"q0\"> </p>\n<p>I.    First Wheels Couriers delivery reached just after First Flight Couriers.<br />II.   First Hour Couriers delivery reached just after First Wings Courier.<br />III.  First Flight Couriers delivery reached Farhaan 3rd.</p>\n<p class=\"q0\"><span style=\"color: windowtext;\"> </span></p>",
+    "passage": "<p class=\"body\"> </p><p class=\"body\">Farhaan receives 6 couriers from 6 different courier services-</p><p class=\"body\">First Reach Couriers, First Flight Couriers, First Hour Couriers, First Day Couriers, First Wings Couriers and First Wheels Couriers. The start time is the time at which it is sent from the sender’s end and the reach time is the time at which Farhaan receives it. It is known that no two courier services have the same start and the reach time.</p><p class=\"body\"> </p><p class=\"body\">The following information is also known:</p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">I.<span style=\"mso-tab-count: 1;\">      </span>The courier service which started first reached first and the courier service which started last reached           </span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">        last and all others services do not reach on the same position as they started.</span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">II.<span style=\"mso-tab-count: 1;\">     </span>First Flight Couriers delivery always reaches Farhaan just after the First Day Couriers delivery but always</span></p><p class=\"q0\"><span style=\"color: windowtext;\">        starts before it.</span></p><p class=\"q0\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">III.<span style=\"mso-tab-count: 1;\">    </span>First Hour Courier always starts third and First Wheels Courier always reaches Farhaan fifth.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>Only I and III</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>Only II and III</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>Only II</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>None of these</p>", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 41,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p>The start time of the first courier is 2:00 am and others start one after the other at an interval of 15 minutes thereafter. Also the first courier reached at 6:00 pm and others reach one after the other at an interval of 15 minutes thereafter. If First Wings Couriers starts first and the First Hour Couriers delivery reaches before First Flight Couriers, then which of the following courier services takes the least time to reach its destination?</p>",
+    "passage": "<p class=\"body\"> </p><p class=\"body\">Farhaan receives 6 couriers from 6 different courier services-</p><p class=\"body\">First Reach Couriers, First Flight Couriers, First Hour Couriers, First Day Couriers, First Wings Couriers and First Wheels Couriers. The start time is the time at which it is sent from the sender’s end and the reach time is the time at which Farhaan receives it. It is known that no two courier services have the same start and the reach time.</p><p class=\"body\"> </p><p class=\"body\">The following information is also known:</p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">I.<span style=\"mso-tab-count: 1;\">      </span>The courier service which started first reached first and the courier service which started last reached           </span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">        last and all others services do not reach on the same position as they started.</span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">II.<span style=\"mso-tab-count: 1;\">     </span>First Flight Couriers delivery always reaches Farhaan just after the First Day Couriers delivery but always</span></p><p class=\"q0\"><span style=\"color: windowtext;\">        starts before it.</span></p><p class=\"q0\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">III.<span style=\"mso-tab-count: 1;\">    </span>First Hour Courier always starts third and First Wheels Courier always reaches Farhaan fifth.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>First Hour Couriers</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>First Day Couriers</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "value": "<p>First Wheels Couriers</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Cannot be determined</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p>Which of the following  statements is definitely false?</p>",
+    "passage": "<p class=\"body\"> </p><p class=\"body\">Farhaan receives 6 couriers from 6 different courier services-</p><p class=\"body\">First Reach Couriers, First Flight Couriers, First Hour Couriers, First Day Couriers, First Wings Couriers and First Wheels Couriers. The start time is the time at which it is sent from the sender’s end and the reach time is the time at which Farhaan receives it. It is known that no two courier services have the same start and the reach time.</p><p class=\"body\"> </p><p class=\"body\">The following information is also known:</p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">I.<span style=\"mso-tab-count: 1;\">      </span>The courier service which started first reached first and the courier service which started last reached           </span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">        last and all others services do not reach on the same position as they started.</span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">II.<span style=\"mso-tab-count: 1;\">     </span>First Flight Couriers delivery always reaches Farhaan just after the First Day Couriers delivery but always</span></p><p class=\"q0\"><span style=\"color: windowtext;\">        starts before it.</span></p><p class=\"q0\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">III.<span style=\"mso-tab-count: 1;\">    </span>First Hour Courier always starts third and First Wheels Courier always reaches Farhaan fifth.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>First Wheels Couriers delivery started before First Hour Couriers delivery. </p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>First Flights Couriers delivery started fifth.</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "value": "<p>First Wings Couriers delivery reached last.</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>First Day Couriers delivery reached before First Hour Couriers delivery.</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "NE",
+    "areaName": "Logical Reasoning",
+    "question": "<p><span><span>The order of starting of how many of 6 couriers can be uniquely determined?<br /></span></span></p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p><em><br /></em></p>\n<p>[quizky-text]</p>",
+    "passage": "<p class=\"body\"> </p>\n<p class=\"body\">Farhaan receives 6 couriers from 6 different courier services-</p>\n<p class=\"body\">First Reach Couriers, First Flight Couriers, First Hour Couriers, First Day Couriers, First Wings Couriers and First Wheels Couriers. The start time is the time at which it is sent from the sender’s end and the reach time is the time at which Farhaan receives it. It is known that no two courier services have the same start and the reach time.</p>\n<p class=\"body\"> </p>\n<p class=\"body\">The following information is also known:</p>\n<p class=\"q0\">I.      The courier service which started first reached first and the courier service which started last reached          </p>\n<p class=\"q0\">        last and all others services do not reach on the same position as they started.</p>\n<p class=\"q0\"> </p>\n<p class=\"q0\">II.     First Flight Couriers delivery always reaches Farhaan just after the First Day Couriers delivery but always</p>\n<p class=\"q0\">        starts before it.</p>\n<p class=\"q0\"> </p>\n<p class=\"q0\">III.    First Hour Courier always starts third and First Wheels Courier always reaches Farhaan fifth.</p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>2</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>3</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>1</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>4</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 44,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p><span><span>If First Wheel Couriers was not the fourth courier to start, what was the fourth courier to be received?<br /></span></span></p>\n<p> </p>\n<p><em><br /></em></p>",
+    "passage": "<p class=\"body\"> </p>\n<p class=\"body\">Farhaan receives 6 couriers from 6 different courier services-</p>\n<p class=\"body\">First Reach Couriers, First Flight Couriers, First Hour Couriers, First Day Couriers, First Wings Couriers and First Wheels Couriers. The start time is the time at which it is sent from the sender’s end and the reach time is the time at which Farhaan receives it. It is known that no two courier services have the same start and the reach time.</p>\n<p class=\"body\"> </p>\n<p class=\"body\">The following information is also known:</p>\n<p class=\"q0\">I.      The courier service which started first reached first and the courier service which started last reached          </p>\n<p class=\"q0\">        last and all others services do not reach on the same position as they started.</p>\n<p class=\"q0\"> </p>\n<p class=\"q0\">II.     First Flight Couriers delivery always reaches Farhaan just after the First Day Couriers delivery but always</p>\n<p class=\"q0\">        starts before it.</p>\n<p class=\"q0\"> </p>\n<p class=\"q0\">III.    First Hour Courier always starts third and First Wheels Courier always reaches Farhaan fifth.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p><span id=\"docs-internal-guid-9a1a77f6-7fff-b2dc-c8a1-57e3744b1118\"><span>First Day Couriers</span></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p><span id=\"docs-internal-guid-3b615c1f-7fff-e086-e614-ff636e0f0e66\"><span>First Wing Couriers</span></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p><span id=\"docs-internal-guid-820c38d1-7fff-f956-ebaa-11c5d38f4363\"><span>First Flight Couriers</span></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p><span id=\"docs-internal-guid-83f3ae6d-7fff-1534-15c4-17a6ed4190ad\"><span>First Hour Couriers</span></span></p>",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p>If First Reach Couriers delivery started first, then in how many ways can different deliveries be made?</p>",
+    "passage": "<p class=\"body\"> </p><p class=\"body\">Farhaan receives 6 couriers from 6 different courier services-</p><p class=\"body\">First Reach Couriers, First Flight Couriers, First Hour Couriers, First Day Couriers, First Wings Couriers and First Wheels Couriers. The start time is the time at which it is sent from the sender’s end and the reach time is the time at which Farhaan receives it. It is known that no two courier services have the same start and the reach time.</p><p class=\"body\"> </p><p class=\"body\">The following information is also known:</p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">I.<span style=\"mso-tab-count: 1;\">      </span>The courier service which started first reached first and the courier service which started last reached           </span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\">        last and all others services do not reach on the same position as they started.</span></p><p class=\"q0\" style=\"margin-top: 2.85pt;\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">II.<span style=\"mso-tab-count: 1;\">     </span>First Flight Couriers delivery always reaches Farhaan just after the First Day Couriers delivery but always</span></p><p class=\"q0\"><span style=\"color: windowtext;\">        starts before it.</span></p><p class=\"q0\"><span style=\"color: windowtext;\"><br /></span></p><p class=\"q0\"><span style=\"color: windowtext;\">III.<span style=\"mso-tab-count: 1;\">    </span>First Hour Courier always starts third and First Wheels Courier always reaches Farhaan fifth.</span></p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>0</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>1</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>2</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>3</p>", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 46,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "NE",
+    "areaName": "Logical Reasoning",
+    "question": "<p>In how many ways can the eight students be selected for five different events if Ajay and Gaurav are selected only for solo events?</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p><em><br /></em></p>\n<p>[quizky-text]</p>",
+    "passage": "<p> </p><p>Eight students named Ajay, Bimal, Chaitanya, Deepak, Eashwar, Farhan, Gaurav and Harish were short-listed by St.Joseph's school for an inter-school competition in 5 events viz. singing, painting, speech, dancing and debate. Singing, painting and speech are solo (single member team) events, while dancing and debate required a team of two and three members respectively. No student can be a member of more than one team.</p><p>i. Deepak and Farhan had a fight among themselves and they decided not to be in the same team.</p><p>ii. Bimal and Harish participated in the same event.</p><p>iii. Ajay and Gaurav cannot participate in the same event or the event starting with same letter.</p><p>iv. Chaitanya participated in a solo event.</p><p>v. Eashwar cannot participate in a solo event.</p>",
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>8</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>4</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>16</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>32</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 47,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p>Which among these cannot be a selection for the debate team? </p>",
+    "passage": "<p> </p><p>Eight students named Ajay, Bimal, Chaitanya, Deepak, Eashwar, Farhan, Gaurav and Harish were short-listed by St.Joseph's school for an inter-school competition in 5 events viz. singing, painting, speech, dancing and debate. Singing, painting and speech are solo (single member team) events, while dancing and debate required a team of two and three members respectively. No student can be a member of more than one team.</p><p>i. Deepak and Farhan had a fight among themselves and they decided not to be in the same team.</p><p>ii. Bimal and Harish participated in the same event.</p><p>iii. Ajay and Gaurav cannot participate in the same event or the event starting with same letter.</p><p>iv. Chaitanya participated in a solo event.</p><p>v. Eashwar cannot participate in a solo event.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "Ajay, Eashwar and Deepak</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "Gaurav, Farhan and Eashwar</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "Bimal, Eashwar and Farhan</span></p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "Bimal, Harish and Eashwar</span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p>Which among these cannot be a selection for singing, painting and speech respectively?</p>\n<p><span> <!--[if !supportLineBreakNewLine]--><br /> <!--[endif]--></span></p>",
+    "passage": "<p> </p><p>Eight students named Ajay, Bimal, Chaitanya, Deepak, Eashwar, Farhan, Gaurav and Harish were short-listed by St.Joseph's school for an inter-school competition in 5 events viz. singing, painting, speech, dancing and debate. Singing, painting and speech are solo (single member team) events, while dancing and debate required a team of two and three members respectively. No student can be a member of more than one team.</p><p>i. Deepak and Farhan had a fight among themselves and they decided not to be in the same team.</p><p>ii. Bimal and Harish participated in the same event.</p><p>iii. Ajay and Gaurav cannot participate in the same event or the event starting with same letter.</p><p>iv. Chaitanya participated in a solo event.</p><p>v. Eashwar cannot participate in a solo event.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "Gaurav, Chaitanya and Deepak</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "Deepak, Ajay and Chaitanya</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "Chaitanya, Deepak and Farhan</span></p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "Ajay, Gaurav and Chaitanya</span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "subjectID": 7,
+    "subjectName": "Logical Reasoning",
+    "quesType": "MCQ",
+    "areaName": "Logical Reasoning",
+    "question": "<p>If Deepak and Farhan sorted out their differences and decided to be in the same team, which of the following statements is definitely false?</p>",
+    "passage": "<p> </p><p>Eight students named Ajay, Bimal, Chaitanya, Deepak, Eashwar, Farhan, Gaurav and Harish were short-listed by St.Joseph's school for an inter-school competition in 5 events viz. singing, painting, speech, dancing and debate. Singing, painting and speech are solo (single member team) events, while dancing and debate required a team of two and three members respectively. No student can be a member of more than one team.</p><p>i. Deepak and Farhan had a fight among themselves and they decided not to be in the same team.</p><p>ii. Bimal and Harish participated in the same event.</p><p>iii. Ajay and Gaurav cannot participate in the same event or the event starting with same letter.</p><p>iv. Chaitanya participated in a solo event.</p><p>v. Eashwar cannot participate in a solo event.</p>",
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "Ajay participated in singing and Gaurav participated in painting.</span></p>\n<br /></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "Chaitanya participated in singing and Ajay participated in speech.</span></p>\n<br /></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "Eashwar and Farhan participated in the same event.</span></p>\n<br /></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "Chaitanya participated in painting and Gaurav participated in speech.</span></p>",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Arithmetic",
+    "question": "<p>There is a lawn with green area equal to 5000 m<sup>2</sup>. The green area of the lawn decreases as the square of the number of cows grazing in the lawn. Two cows together ate 8 m<sup>2</sup> area of the lawn on the first day and everyday two new cows join them. The growth of grass of the lawn on a particular day is directly proportional to the cube of the number of days. If 4 m<sup>2</sup> area of grass grew on the first day, on which of the following days would the green area of lawn be 5000 m<sup>2</sup> again the first time after the 1<sup>st</sup> day?</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>2<sup>nd</sup><span style=\"mso-spacerun: yes;\">  </span>day</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>3<sup>rd</sup><span style=\"mso-spacerun: yes;\">  </span>day</p>",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "value": "<p>4<sup>th</sup><span style=\"mso-spacerun: yes;\">  </span>day</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>5<sup>th</sup><span style=\"mso-spacerun: yes;\">  </span>day</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Arithmetic",
+    "question": "<p><span>Two dogs start running around a 480 m circular track from the same point at the same time in opposite directions and with speeds in the ratio 7 : 9. Which of the following can be the distance of the starting point from the point where they meet for the seventh time?</span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "305 m</span></p>", "isCorrect": false },
+      { "id": 1, "value": "<p>30 m</p>", "isCorrect": true },
+      { "id": 2, "value": "<p>21 m</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>210 m</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 52,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Geometry",
+    "question": "<p>Anil and Vinit are walking towards each other at night. The heights of Anil and Vinit are 1.8 m and 1.5 m respectively. There are lamp posts behind both of them, the lamp post behind Anil being 6 m high and that behind Vinit being 5 m high. Anil and Vinit and both the poles lie on a straight line. At a certain moment when they reach 0.9 m apart from each other, they find that the shadows of their heads fall exactly at each others feet. (i.e., Anil’s head’s shadow falls on Vinit’s feet and Vinit’s head’s shadow falls on Anil’s feet) How far apart are the two lamp posts?</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>3.0 m</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>1.8 m</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>5.1 m</p>", "isCorrect": true },
+      { "id": 3, "value": "6.0 m</span></p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 53,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Geometry",
+    "question": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636903411849263275_4136518.PNG\" alt=\"\" /></p>\n<p><em><br /></em></p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p><em><br /></em></p>\n<p><em>[quizky-text]</em></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>24</p>", "isCorrect": true },
+      {
+        "id": 1,
+        "value": "<p>12 sq. units</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>9 sq. units</span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>18 sq. units</span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Numbers",
+    "question": "<p><span>A number N = 2<sup>3</sup> × 3<sup>3</sup> × 5<sup>2</sup> × 7<sup>2</sup>  What is the number of factors of N that are not divisible by 6?</span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>69</span></p>", "isCorrect": false },
+      { "id": 1, "value": "<p>76</span></p>", "isCorrect": false },
+      { "id": 2, "value": "<p>63</span></p>", "isCorrect": true },
+      { "id": 3, "value": "<p>81</span></p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 55,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Algebra",
+    "question": "<p><span>What is the number of integer values that x can take for both the equations x<sup>2</sup> – 6x – 72 < 0 and x<sup>2</sup> – 20x + 100 > 0?</span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>15</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>0</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>16</p>", "isCorrect": true },
+      { "id": 3, "value": "<p>10</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 56,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Arithmetic",
+    "question": "<p>A shopkeeper purchased rice from two farmers. From one farmer, he purchased 8 kg of rice for a total of Rs. 100, while from the second farmer, he purchased 4 kg of rice for a total of Rs. 120. He had to incur transportation cost to bring the rice to his shop, which was equal to 5% of the amount he paid to the farmers. On reaching his shop, he mixed the rice purchased from the two farmers. While mixing, 2% rice fell on the ground and therefore could not be sold. At what price should he sell the rice so as to make 10% overall profit?</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>Rs. 17.6 per kg</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>Rs. 19.6 per kg</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>Rs. 21.6 per kg</p>", "isCorrect": true },
+      { "id": 3, "value": "<p>Rs. 25 per kg</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 57,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Arithmetic",
+    "question": "<p>The refractive index of a medium is directly proportional to the square root of the thickness of the medium and inversely proportional to the square root of the viscosity of the medium. If the refractive index of honey is 3, when its viscosity is 4 and thickness is 9 inches, then what is the refractive index of milk with a viscosity of 16 and thickness of 64 inches?  </p>\n<p><em><br /> Enter your response (as an integer) using the virtual keyboard in the box provided.</em></p>\n<p><em> </em></p>\n<p><em>[quizky-text]</em></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>4</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>6</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>8</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>12</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 58,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Geometry",
+    "question": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918869139491434_3665920.PNG\" alt=\"\" width=\"154\" height=\"111\" /></p>\n<p>ΔBEF is an equilateral triangle, drawn inside rectangle ABCD, such that A-F-D as shown in the figure. If triangle BEF covers 40% area of rectangle ABCD, then find AF : FD.</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>1 : 3</span></p>", "isCorrect": false },
+      { "id": 1, "value": "<p>2 : 3</span></p>", "isCorrect": true },
+      { "id": 2, "value": "<p>3 : 4</span></p>", "isCorrect": false },
+      { "id": 3, "value": "<p>1 : 4</span></p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 59,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Arithmetic",
+    "question": "<p>An empty vessel is connected with 3 pipes A, B, and C. Pipe A and Pipe B can fill the empty vessel in 4 and 2 minutes respectively while the pipe C can empty the completely filled vessel in 1 minute. Pipe A is opened first and pipe B is opened after 1 minute and the outlet pipe C is opened after 1 more minute.</p>\n<p><br />After how much time from the start is the vessel empty for the first time?</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "2 minutes</span></p>", "isCorrect": false },
+      { "id": 1, "value": "3 minutes</span></p>", "isCorrect": false },
+      { "id": 2, "value": "6 minutes</span></p>", "isCorrect": true },
+      {
+        "id": 3,
+        "value": "<p>The vessel can never be empty</p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Geometry",
+    "question": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918873988437376_3575917.PNG\" alt=\"\" width=\"198\" height=\"135\" /></p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636918875566013887_8512081.PNG\" alt=\"\" width=\"621\" height=\"47\" /></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p><span style=\"font-size: 0pt; font-family: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'; color: black; border: none black 1.0pt; mso-border-alt: none black 0cm; padding: 0cm; background: black; mso-font-width: 0%; layout-grid-mode: line;\" lang=\"EN-US\"> <img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635824086755425884_4781422.png\" alt=\"\" /></span></p>",
+        "isCorrect": false
+      },
+      { "id": 1, "value": "<p> 10 cm</span></p>", "isCorrect": true },
+      {
+        "id": 2,
+        "value": "<p><span style=\"font-size: 0pt; font-family: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'; color: black; border: none black 1.0pt; mso-border-alt: none black 0cm; padding: 0cm; background: black; mso-font-width: 0%; layout-grid-mode: line;\" lang=\"EN-US\"> <img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635824086755894628_1506876.png\" alt=\"\" /></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p><span style=\"font-size: 0pt; font-family: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'; color: black; border: none black 1.0pt; mso-border-alt: none black 0cm; padding: 0cm; background: black; mso-font-width: 0%; layout-grid-mode: line;\" lang=\"EN-US\"> <img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635824086756363361_2337969.png\" alt=\"\" /></span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Numbers",
+    "question": "<p><span>If 'x' pens are distributed equally among a certain number of students, 14 pens remain undistributed. But, if 'x<sup>2</sup>' pens are distributed equally among the same number of students, 11 pens remain undistributed. Which of the following can be the total number of students?</span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>37</span></p>", "isCorrect": true },
+      { "id": 1, "value": "<p>25</span></p>", "isCorrect": false },
+      { "id": 2, "value": "<p>35</span></p>", "isCorrect": false },
+      { "id": 3, "value": "<p>29</span></p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 62,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Arithmetic",
+    "question": "<p><span>In a shoe manufacturing factory, 18 men manufacture 20 shoes in 10 days working for 7.5 hours a day. How long will it take for 36 men to manufacture 40 shoes working 6 hours a day? It is also known that 4 men in the latter case do as much work as 6 men in the former.</span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635695358019535864_9350176.png\" alt=\"\" border=\"0\" /></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635695358020355911_3232717.png\" alt=\"\" border=\"0\" /></p>",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "value": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635695358021215960_4926422.png\" alt=\"\" border=\"0\" /></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "value": "<p>Cannot be determined</span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Geometry",
+    "question": "<p><span>Find the number of points with integer coordinates which are at a distance of less than 5 units from the point (1, 2) on the x-y plane.</span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>61</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>69</p>", "isCorrect": true },
+      { "id": 2, "value": "<p>81</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>105</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 64,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Algebra",
+    "question": "<p>Two candles of equal height but of different thickness are lit simultaneously. If the first burns off completely in 6 hours and the second in 8 hours, when will the first candle be half the height of the second?</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>4 hours</span></p>", "isCorrect": false },
+      {
+        "id": 1,
+        "value": "<p><span style=\"font-size: 0pt; font-family: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'; color: black; border: none black 1.0pt; mso-border-alt: none black 0in; padding: 0in; background: black; mso-font-width: 0%; layout-grid-mode: line;\"> <img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/634992045563750000_1581928.png\" alt=\"\" border=\"0\" /></span></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p><span style=\"font-size: 0pt; font-family: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'; color: black; border: none black 1.0pt; mso-border-alt: none black 0in; padding: 0in; background: black; mso-font-width: 0%; layout-grid-mode: line;\"> <img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/634992045564218750_4621505.png\" alt=\"\" border=\"0\" /></span></p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p><span style=\"font-size: 0pt; font-family: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'; color: black; border: none black 1.0pt; mso-border-alt: none black 0in; padding: 0in; background: black; mso-font-width: 0%; layout-grid-mode: line;\"> <img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/634992045564531250_4775725.png\" alt=\"\" border=\"0\" /></span></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Modern Math",
+    "question": "<p><span><span><span><span>In a class, there are 5 Students, A, B, C, D and E, who have to sit in a row from left to right in ascending order of their scores in a test. D and B got higher score than E and C respectively. They are also ranked according to these scores. If C got a rank better than the median rank of the class, then how many arrangements are possible?</span></span></span><br /> <!--[endif]--></span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>1</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>3</p>", "isCorrect": true },
+      { "id": 2, "value": "<p>12</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>21</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 66,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Modern Math",
+    "question": "<p>'P' persons are sitting at the corners of a 'P' sided table. They are asked to pass around a bag of coins. There are two rules to be followed.</p>\n<p>(i) A person cannot pass the bag to his neighbour.</p>\n<p>(ii) There should be exactly one give and take between all possible pairs of persons.</p>\n<p>Each time the bag is handed over, a bell rings. If after all the possible transactions are over, the bell has rung 90 times, find the number of people.</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided. </em></p>\n<p><em><br /></em></p>\n<p><em>[quizky-text]</em></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>15</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>12</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>90</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>60</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 67,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Geometry",
+    "question": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636924035685131391_7431560.PNG\" alt=\"\" width=\"647\" height=\"220\" /></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635822230443205088_6301028.png\" alt=\"\" border=\"0\" /></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635822230443795122_9421410.png\" alt=\"\" border=\"0\" /></p>",
+        "isCorrect": false
+      },
+      { "id": 2, "value": "<p>3 cm</p>", "isCorrect": true },
+      {
+        "id": 3,
+        "value": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635822230444385155_9680616.png\" alt=\"\" border=\"0\" /></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Arithmetic",
+    "question": "<p>A total of ‘x’ workers start working on a project on the first day. On the second, fourth, sixth and eighth days, half of the workers working on the project the previous day left the project, while on the third, fifth and the seventh day, one third of the workers working on the project the previous day left the project. The project was completed in 8 days. If only one employee worked on the project on the 8<sup>th</sup> day, what is the value of ‘x’?</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>45</span></p>", "isCorrect": false },
+      { "id": 1, "value": "<p>36</span></p>", "isCorrect": false },
+      { "id": 2, "value": "<p>60</span></p>", "isCorrect": false },
+      { "id": 3, "value": "<p>54</p>", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 69,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Algebra",
+    "question": "<p>If in the following equation x and y are integers, then how many sets of solutions do the equation have?</p>\n<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636953342972069384_4427000.JPG\" alt=\"\" width=\"321\" height=\"30\" /></p>\n<p class=\"MsoNormal\" style=\"margin-bottom: .0001pt; line-height: normal;\"> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided </em></p>\n<p><em><br /></em></p>\n<p><em>[quizky-text]</em></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>1</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>0</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>2</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>infinite</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 70,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Geometry",
+    "question": "<p>Two flat circular disks cut out of the same sheet of metal of uniform thickness have their radii in the ratio 3 : 5. Their combined weight is 136 gm. Find the approximate weight (in gm) of the heavier disk.</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided </em></p>\n<p><em><br /></em></p>\n<p><em>[quizky-text]</em></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>100 </p>", "isCorrect": true },
+      { "id": 1, "value": "<p>96 </p>", "isCorrect": false },
+      { "id": 2, "value": "<p>108 </p>", "isCorrect": false },
+      { "id": 3, "value": "<p>106</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 71,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Arithmetic",
+    "question": "<p><span>A tank has two inlet pipes A and B, which can fill the empty tank individually in 4 and 6 hours respectively. The tank also has one outlet pipe C, which can empty the tank completely in 4 hours. The tank is initially empty, when a man opened both inlet pipes. He wanted to open the outlet pipe, when the tank was half full. However, by mistake he started the outlet pipe when the tank was one-fourth empty. How many minutes earlier will the tank get completely filled than it would have, had he started the outlet pipe as per his original plan?</span></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      { "id": 0, "value": "<p>24 minutes</p>", "isCorrect": false },
+      { "id": 1, "value": "<p>36 minutes</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>48 minutes</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>54 minutes</p>", "isCorrect": true }
+    ]
+  },
+  {
+    "id": 72,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Algebra",
+    "question": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/636953348412321639_3205482.JPG\" alt=\"\" width=\"633\" height=\"165\" /></p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p> </p>\n<p><em>[quizky-text]</em></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>30</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>35%</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>40%</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>20%</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 73,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "MCQ",
+    "areaName": "Algebra",
+    "question": "<p><img src=\"https://imsclick2cert.blob.core.windows.net/imsitemimages/635477348012981018_6408396.gif\" alt=\"\" width=\"569\" height=\"63\" border=\"0\" /></p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 1,
+    "options": [
+      {
+        "id": 0,
+        "value": "<p>2, 2<sup>2</sup>, 2<sup>3</sup></p>",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "value": "<p>2<sup>3</sup>, 2<sup>2</sup>, 2</p>",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "value": "<p>2<sup>2</sup>, 2<sup>2</sup>, 2<sup>2</sup></p>",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "value": "<p>2, 2<sup>3</sup>, 2<sup>5</sup></p>",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Algebra",
+    "question": "<p><span>If both ‘a’ and ‘b’ belong to the set {1, 2, 3, 4, 5} then the number of equations of the form x<sup>2</sup> + ax + b = 0 having complex roots is(where ‘a’ and ‘b’ need not necessarily be distinct)</span></p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p><em><br /></em></p>\n<p>[quizky-text]</p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>13</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>9</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>10</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>12</p>", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 75,
+    "subjectID": 427,
+    "subjectName": "Mathematics",
+    "quesType": "NE",
+    "areaName": "Arithmetic",
+    "question": "<p>Aman, Raman and Kirtan invest Rs. 12,000, Rs. 15,000 and Rs. 14,500 in a business, respectively. After 3 months, Aman withdraws Rs. 2,000 while Raman invests Rs. 5,000 more. At the end of a year, they earn a total profit of Rs. 15,750. What is the difference in the shares of profit of Kirtan and Aman(in Rs.)?</p>\n<p> </p>\n<p><em>Enter your response (as an integer) using the virtual keyboard in the box provided below.</em></p>\n<p><em><br /></em></p>\n<p>[quizky-text]</p>\n<p> </p>",
+    "passage": null,
+    "marks": 3,
+    "negativeMarks": 0,
+    "options": [
+      { "id": 0, "value": "<p>1440</p>", "isCorrect": true },
+      { "id": 1, "value": "<p>3780</p>", "isCorrect": false },
+      { "id": 2, "value": "<p>5220</p>", "isCorrect": false },
+      { "id": 3, "value": "<p>2060</p>", "isCorrect": false }
+    ]
+  }
+]

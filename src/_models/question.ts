@@ -6,14 +6,20 @@ export class Question {
   public subjectId: number
   public options: Array<{ id: number, value: any, isCorrect: boolean }>
   public marks: number = 1
+  public areaName: string
+  public question: string
+  public passage: string | null
   public status: Status = Status.NOT_VISITED
   private readonly negativeMarks: number
   private selectedAnswer: number
-  constructor (id: number, subjectId: number, options: any[], marks: number, negativeMarks: number = 0, quesType: 'MCQ' | 'NE' = 'MCQ') {
+  constructor (id: number, subjectId: number, options: any[], marks: number, question: string, passage: string | null, areaName: string, negativeMarks: number = 0, quesType: 'MCQ' | 'NE' = 'MCQ') {
     this.id = id
     this.quesType = quesType
     this.subjectId = subjectId
     this.options = options
+    this.question = question
+    this.areaName = areaName
+    this.passage = passage
     this.negativeMarks = negativeMarks
     this.marks = marks
   }

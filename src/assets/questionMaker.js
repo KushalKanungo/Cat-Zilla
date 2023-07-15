@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const questions = [
   {
     IsPassageQuestionSplit: true,
@@ -18281,12 +18283,21 @@ const parsed = questions2.map((question) => {
     itemType: question.ItemType,
     areaName: question.AreaName,
     subjectName: question.SubjectName,
-    // explanation: question.explanation,
-    // question: question.Items,
-    // passage: question.Passage,
+    explanation: question.explanation,
+    question: question.Items,
+    passage: question.Passage,
     marks: question.Points,
     negativeMarks: question.NegativePoints
   }
 })
 
-console.table(parsed)
+const jsonData = JSON.stringify(parsed);
+
+fs.writeFile('data.json', jsonData, (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Data written to file');
+});
+

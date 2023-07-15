@@ -1,0 +1,20 @@
+.ques-number {
+  width: 12px !important;
+  height: 12px !important;
+  border: 2px solid #a076f9;
+  color: #a076f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-family: "Montserrat" !important;
+  font-weight: 600;
+  transition: all 0.4s ease-in;
+}
+
+.ques-number:hover {
+  background-color: #a076f9;
+  color: white;
+  cursor: pointer;
+  border-radius: 100%;
+}

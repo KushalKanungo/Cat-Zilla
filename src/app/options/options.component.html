@@ -1,0 +1,11 @@
+<div class="">
+  <label *ngFor="let option of options" class="m-4"
+    ><input
+      type="radio"
+      class="radio-inline"
+      name="radios"
+      [value]="option.id" /><span class="outside"
+      ><span class="inside"></span></span
+    ><span class="" [innerHtml]="option.value"></span
+  ></label>
+</div>

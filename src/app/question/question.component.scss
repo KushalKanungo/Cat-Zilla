@@ -1,0 +1,54 @@
+.question-number {
+  background-color: white;
+  font-family: "Montserrat" !important;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #a076f9;
+}
+.question {
+  font-size: 1.04rem;
+}
+
+.option {
+  margin-top: 1rem !important;
+}
+::ng-deep .p-scrollpanel-component div {
+  font-size: 0.8rem !important;
+}
+
+::ng-deep label p {
+  display: inline !important;
+}
+
+/* inspiration */
+.inspiration {
+  font-size: 12px;
+  margin-top: 50px;
+  position: absolute;
+  bottom: 10px;
+  font-weight: 300;
+}
+
+.inspiration a {
+  color: #666;
+}
+@media screen and (max-width: 767px) {
+  /* inspiration */
+  .inspiration {
+    display: none;
+  }
+}
+
+.options-wrapper {
+  background-color: #ede4ff;
+  border-radius: 10px;
+}
+
+::ng-deep .passage {
+  text-align: justify !important;
+}
+
+::ng-deep .p-scrollpanel .p-scrollpanel-bar {
+  background-color: #a076f9;
+  width: 4px;
+}

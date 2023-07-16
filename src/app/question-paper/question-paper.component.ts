@@ -26,22 +26,21 @@ export class QuestionPaperComponent {
     questions: this.verbalQuestions,
     sectionId: 0,
     sectionLabel: 'Verbal & Reading',
-    maxTime: 3000,
-    status: Status.DONE
+    maxTime: 1800
   }
 
   reasoningPaperSection: Section = {
     questions: this.reasoningQuestions,
     sectionId: 1,
     sectionLabel: 'Data Inter. & Logical Res.',
-    maxTime: 3000
+    maxTime: 1800
   }
 
   mathsPaperSection: Section = {
     questions: this.mathsQuestions,
     sectionId: 2,
     sectionLabel: 'Quantative Analysis',
-    maxTime: 3000
+    maxTime: 2100
   }
 
   questionPaper: Section[] = [
@@ -67,16 +66,22 @@ export class QuestionPaperComponent {
     this.currentQuestionIndex -= 1
   }
 
+  timeTaken = setInterval(() => {
+    this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].timeSpent += 1
+  }, 1000)
+
   changeToQuestion (idx: number): void {
     if (idx < 0 || idx >= this.questionPaper[this.currentSectionIndex].questions.length) return
+    if (this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].userResponse === undefined && this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status !== Status.REVIEW) { this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status = Status.NOT_ANSWERED }
+
     this.currentQuestionIndex = idx
   }
 
-  nextSection (): void {
-    this.currentSectionIndex += 1
-  }
+  changeToSection (idx: number): void {
+    this.currentQuestionIndex = 0
+    this.questionPaper[this.currentSectionIndex].status = Status.DONE
+    console.log('section changed')
 
-  prevSection (): void {
-    this.currentSectionIndex -= 1
+    this.currentSectionIndex = idx
   }
 }

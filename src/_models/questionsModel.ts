@@ -16,8 +16,9 @@ export interface Question {
   passage: string | null
   marks: number
   negativeMarks: number
-  options: Array<{ id: number, value: string, isCorrect?: boolean | undefined }>
-  timeSpent?: number
+  options: Array<{ id: number, value: string, userResponse?: boolean, isCorrect?: boolean | undefined }>
+  userResponse?: number
+  timeSpent: number
   status?: Status
 
 }

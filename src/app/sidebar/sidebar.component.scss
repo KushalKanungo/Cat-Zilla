@@ -1,8 +1,23 @@
+::ng-deep .p-sidebar{
+  // background-color: #ede4ff !important;
+  border-radius: 20px;
+  height: calc(100vh - 100px) !important;
+  right: 0.8rem !important;
+  top: 70px !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+  // border-top-left-radius: 50px;
+  // border-bottom-left-radius: 50px;
+}
+
+h3{
+  font-family: "Montserrat" !important;
+}
 .ques-number {
-  width: 12px !important;
-  height: 12px !important;
+  width: 16px !important;
+  height: 16px !important;
   border: 2px solid #a076f9;
   color: #a076f9;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +25,13 @@
   font-family: "Montserrat" !important;
   font-weight: 600;
   transition: all 0.4s ease-in;
+  position: relative;
+  i {
+    // position: absolute;
+    top: 22.8px;
+    font-size: 16px;
+    right: 0;
+  }
 }
 
 .ques-number:hover, .active-question {
@@ -17,4 +39,18 @@
   color: white;
   cursor: pointer;
   border-radius: 100%;
+}
+
+.text-green{
+  color: #7ECFC0;
+}
+
+.text-red{
+  color: #ef4b4b;
+}
+
+.timer{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }

@@ -1,9 +1,9 @@
-<section id="bottom-bar" class="p-1" >
+<section id="bottom-bar" class="p-1 ms-4 mt-1"  >
   <div class="tabs">
     <ng-container *ngFor="let section of allSections; let i = index">
       <ng-template [ngIf]="true">
-        <input type="radio" [id]="section.index" name="tabs" checked />
-        <label class="tab text-truncate" [for]="section.index">{{section.label}}<span class="notification"><i class="bi bi-check2-circle"></i></span></label>
+        <input type="radio" [id]="section.index" name="tabs" disabled [checked]="currentSectionIndex === i" (click)="changeToSectionHandeler(section.index)"/>
+        <label class="tab text-truncate" [for]="section.index">{{section.label}}<span *ngIf="questionPaper[section.index].status === statusEnum.DONE" class="notification"><i class="bi bi-check2-circle"></i></span></label>
       </ng-template>
     </ng-container>
 		<span class="glider"></span>

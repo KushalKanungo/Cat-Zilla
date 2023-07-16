@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Status } from 'src/_enums/status'
+import { type Section } from 'src/_models/section'
 
 @Component({
   selector: 'app-bottom-bar',
@@ -6,15 +8,24 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   styleUrls: ['./bottom-bar.component.scss']
 })
 export class BottomBarComponent {
-  @Output() nextQuestion = new EventEmitter<string>()
-  @Output() prevQuestion = new EventEmitter<string>()
+  @Output() changeToQuestion = new EventEmitter()
+  @Output() changeToSection = new EventEmitter()
+  @Input() currentQuestionIndex: number
+  @Input() currentSectionIndex: number
+  @Input() questionPaper: Section[]
   @Input() allSections: Array<{ label: string, index: any }>
 
+  statusEnum = Status
+
   nextQuestionHandeler (): void {
-    this.nextQuestion.emit()
+    this.changeToQuestion.emit(this.currentQuestionIndex + 1)
   }
 
   prevQuestionHandeler (): void {
-    this.prevQuestion.emit()
+    this.changeToQuestion.emit(this.currentQuestionIndex - 1)
+  }
+
+  changeToSectionHandeler (idx: number): void {
+    this.changeToSection.emit(idx)
   }
 }

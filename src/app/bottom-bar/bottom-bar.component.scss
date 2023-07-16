@@ -1,13 +1,25 @@
 #bottom-bar {
-  width: calc(100vw - 320px);
+  width: calc(100vw - 40px);
   position: fixed;
-  bottom: 0px;
+  top: 0px;
+	z-index: 0;
+	border-radius: 20px;
+	// position: relative;
   background-color: white;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .prev-next-buttons {
-  font-size: 3rem;
+  font-size: 2.6rem;
   color: #a076f9;
+	transition: all 0.1s ease-out;
 }
+.prev-next-buttons:hover {
+	color: #a076f9;
+}
+.prev-next-buttons:active {
+  transform: scale(0.9);
+}
+
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
@@ -21,8 +33,8 @@
   display: flex;
 	position: relative;
 	background-color: #fff;
-	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
-	padding: 0.45rem;
+	height: 48px;
+	padding: 0.45rem;	
 	border-radius: 99px; // just a high number to create pill effect
 	* {
     z-index: 2;
@@ -39,7 +51,7 @@ input[type="radio"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 54px;
+	height: 36px;
 	width: 240px;
 	font-size: 0.9rem;
 	font-weight: 500;
@@ -67,9 +79,7 @@ input[type="radio"] {
 		& + label {
 			color: #a076f9;
 			& > .notification {
-				// background-color: #a076f9;
         color: #a076f9;
-				color: #fff;
 			}
 		}
 	}
@@ -102,7 +112,7 @@ input[id="2"] {
 .glider {
 	position: absolute;
 	display: flex;
-	height: 54px;
+	height: 36px;
 	width: 240px;
 	background-color: #ede4ff;
 	z-index: 1;

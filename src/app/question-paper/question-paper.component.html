@@ -1,3 +1,23 @@
-<app-sidebar [questions]="verbalQuestions" [currentQuestionIndex]="currentQuestionIndex" (changeToQuestion)="changeToQuestion($event)"></app-sidebar>
-<app-question [questionNumber]="currentQuestionIndex + 1" [question]="questionPaper[currentSectionIndex].questions[currentQuestionIndex]"></app-question>
-<app-bottom-bar [allSections]="allSections" (nextQuestion)="nextQuestion()" (prevQuestion)="prevQuestion()"></app-bottom-bar>
+<app-bottom-bar
+  [allSections]="allSections"
+  [currentQuestionIndex]="currentQuestionIndex"
+  (changeToQuestion)="changeToQuestion($event)"
+  (changeToSection)="changeToSection($event)"
+  [currentSectionIndex]="currentSectionIndex"
+  [questionPaper]="questionPaper"
+></app-bottom-bar>
+<app-sidebar
+  [questions]="questionPaper[this.currentSectionIndex].questions"
+  [currentSectionIndex]="currentSectionIndex"
+  [currentQuestionIndex]="currentQuestionIndex"
+  [currentSectionTime]="questionPaper[this.currentSectionIndex].maxTime"
+  (changeToQuestion)="changeToQuestion($event)"
+  (changeToSection)="changeToSection($event)"
+
+></app-sidebar>
+<app-question
+  [questionNumber]="currentQuestionIndex + 1"
+  [question]="
+    questionPaper[currentSectionIndex].questions[currentQuestionIndex]
+  "
+></app-question>

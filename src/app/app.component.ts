@@ -22,6 +22,6 @@ export class AppComponent implements OnInit {
   questionPaper: Section[] = [this.verbalPaperSection, this.reasoningPaperSection, this.mathsPaperSection]
   first = this.mathsPaperSection.questions[23]
   ngOnInit (): void {
-    console.table(this.verbalQuestions)
+    console.log('loaded')
   }
 }

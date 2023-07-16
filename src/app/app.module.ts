@@ -9,12 +9,12 @@ import { ScrollPanelModule } from 'primeng/scrollpanel'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { SidebarComponent } from './sidebar/sidebar.component'
-import { QuestionComponent } from './question/question.component';
-import { OptionsComponent } from './options/options.component';
-import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
-import { PaperSectionComponent } from './paper-section/paper-section.component';
+import { QuestionComponent } from './question/question.component'
+import { OptionsComponent } from './options/options.component'
+import { BottomBarComponent } from './bottom-bar/bottom-bar.component'
+import { PaperSectionComponent } from './paper-section/paper-section.component'
 import { QuestionPaperComponent } from './question-paper/question-paper.component'
-
+import { CountdownModule } from 'ngx-countdown'
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,8 @@ import { QuestionPaperComponent } from './question-paper/question-paper.componen
     RadioButtonModule,
     ReactiveFormsModule,
     ScrollPanelModule,
-    FormsModule
+    FormsModule,
+    CountdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

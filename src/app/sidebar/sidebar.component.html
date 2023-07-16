@@ -5,21 +5,31 @@
   [showCloseIcon]="false"
   [position]="'right'"
 >
+<div class="timer">
+  <countdown #cd [config]="config" (event)="timerFinishHandeler($event)"></countdown>
+</div>
   <h3>QUESTIONS</h3>
-  <h1>
-    <i
-      class="bi bi-eye"
-      style="color: red !important"
-      pTooltip="Enter your username"
-    ></i>
-    <i class="bi bi-patch-check" style="color: green !important"></i>
-    <i class="bi bi-bookmark-fill" style="color: gray !important"></i>
-    <i class="bi bi-award" style="color: purple !important"></i>
-  </h1>
+  <h4>{{questions[currentQuestionIndex].timeSpent}}</h4>
   <div class="row row-cols-5 px-3">
     <div class="col my-2" *ngFor="let question of questions; let i = index">
-      <div class="ques-number p-3" [ngClass]="{'active-question': currentQuestionIndex == i}" (click)="changeToQuestionHandeler(i)">
+      <div
+        class="ques-number"
+        style="padding: 20px"
+        [ngClass]="{ 'active-question': currentQuestionIndex == i }"
+        (click)="changeToQuestionHandeler(i)"
+      >
         {{ i + 1 }}
+        <i
+          class="bi"
+          [ngClass]="{
+            'text-white': i === currentQuestionIndex,
+            'bi-bookmark-star-fill': questions[i].status === 'review',
+            'bi-bookmark-check-fill': questions[i].status === 'answered',
+            'bi-bookmark-x-fill': questions[i].status === 'notAnswered',
+            'text-red': questions[i].status === 'notAnswered',
+            'text-green': questions[i].status === 'answered'
+          }"
+        ></i>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core'
   styleUrls: ['./options.component.scss']
 })
 export class OptionsComponent {
-  @Input() options: Array<{ value: string, id: number, isCorrect: boolean }>
+  @Input() options: Array<{ value: string, id: number, isCorrect?: boolean }>
   @Input() questionType: string
   @Input() optionsType: string
 };

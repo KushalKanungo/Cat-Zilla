@@ -1,10 +1,11 @@
-import { type Question } from './question'
+import { type Status } from 'src/_enums/status'
+import { type Question } from './questionsModel'
 
-export class Section {
-  public questions: Question[]
-  public maxTime: number = 30
-  constructor (questions: Question[], maxTime: number = 30) {
-    this.questions = questions
-    this.maxTime = maxTime
-  }
+export interface Section {
+  sectionId: number
+  sectionLabel: string
+  questions: Question[]
+  maxTime: number
+  timeSpent?: number
+  status?: Status
 }

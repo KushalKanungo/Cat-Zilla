@@ -1,15 +1,27 @@
-import { Component } from '@angular/core'
+
+import { Component, type OnInit } from '@angular/core'
 import questions from '../assets/question.json'
-import { Question } from 'src/_models/question'
+import { type Question } from 'src/_models/questionsModel'
+import { type Section } from 'src/_models/section'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'CATzilla'
-  questions = questions.map(ques => new Question(ques.id, ques.subjectID, ques.options, ques.marks, ques.question, ques.passage, ques.areaName, ques.negativeMarks, ques.quesType as any))
-  ques = questions[15]
-  first: Question = new Question(this.ques.id, this.ques.subjectID, this.ques.options, this.ques.marks, this.ques.question, this.ques.passage, this.ques.areaName, this.ques.negativeMarks, this.ques.quesType as any)
+  verbalQuestions: Question[] = questions.filter(question => question.sectionId === 0)
+  reasoningQuestions: Question[] = questions.filter(question => question.sectionId === 1)
+  mathsQuestions: Question[] = questions.filter(question => question.sectionId === 2)
+
+  verbalPaperSection: Section = { questions: this.verbalQuestions, sectionId: 0, sectionLabel: 'Verbal & Reading', maxTime: 3000 }
+  reasoningPaperSection: Section = { questions: this.reasoningQuestions, sectionId: 1, sectionLabel: 'Verbal & Reading', maxTime: 3000 }
+  mathsPaperSection: Section = { questions: this.mathsQuestions, sectionId: 2, sectionLabel: 'Verbal & Reading', maxTime: 3000 }
+
+  questionPaper: Section[] = [this.verbalPaperSection, this.reasoningPaperSection, this.mathsPaperSection]
+  first = this.mathsPaperSection.questions[23]
+  ngOnInit (): void {
+    console.table(this.verbalQuestions)
+  }
 }

@@ -12,7 +12,7 @@
   transition: all 0.4s ease-in;
 }
 
-.ques-number:hover {
+.ques-number:hover, .active-question {
   background-color: #a076f9;
   color: white;
   cursor: pointer;

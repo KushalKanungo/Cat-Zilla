@@ -1,0 +1,3 @@
+<app-sidebar [questions]="verbalQuestions" [currentQuestionIndex]="currentQuestionIndex" (changeToQuestion)="changeToQuestion($event)"></app-sidebar>
+<app-question [questionNumber]="currentQuestionIndex + 1" [question]="questionPaper[currentSectionIndex].questions[currentQuestionIndex]"></app-question>
+<app-bottom-bar [allSections]="allSections" (nextQuestion)="nextQuestion()" (prevQuestion)="prevQuestion()"></app-bottom-bar>

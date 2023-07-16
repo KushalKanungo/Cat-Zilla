@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-lg-7">
       <h2 class="question-number ps-3 pb-2">
-        Ques {{ question.id }} <span><i class="bi bi-flag"></i></span>
+        Ques {{ questionNumber }} <span><i class="bi bi-flag"></i></span>
       </h2>
 
       <p-scrollPanel
@@ -24,7 +24,7 @@
           *ngIf="question.passage != null"
           [innerHtml]="question.question"
         ></div>
-        <div class="options-wrapper p-2">
+        <div class="options-wrapper p-2 mt-2">
           <app-options
             [questionType]="'MCQ'"
             [options]="question.options"

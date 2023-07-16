@@ -1,4 +1,14 @@
-<section id="bottom-bar" class="p-1" dir="rtl">
-  <i class="bi bi-caret-right-fill"></i>
-  <i class="bi bi-caret-left-fill"></i>
+<section id="bottom-bar" class="p-1" >
+  <div class="tabs">
+    <ng-container *ngFor="let section of allSections; let i = index">
+      <ng-template [ngIf]="true">
+        <input type="radio" [id]="section.index" name="tabs" checked />
+        <label class="tab text-truncate" [for]="section.index">{{section.label}}<span class="notification"><i class="bi bi-check2-circle"></i></span></label>
+      </ng-template>
+    </ng-container>
+		<span class="glider"></span>
+    <i class="bi bi-caret-left-fill prev-next-buttons" (click)="prevQuestionHandeler()"></i>
+    <i class="bi bi-caret-right-fill prev-next-buttons" (click)="nextQuestionHandeler()" ></i>
+	</div>
+
 </section>

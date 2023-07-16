@@ -11,7 +11,9 @@ import { AppComponent } from './app.component'
 import { SidebarComponent } from './sidebar/sidebar.component'
 import { QuestionComponent } from './question/question.component';
 import { OptionsComponent } from './options/options.component';
-import { BottomBarComponent } from './bottom-bar/bottom-bar.component'
+import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
+import { PaperSectionComponent } from './paper-section/paper-section.component';
+import { QuestionPaperComponent } from './question-paper/question-paper.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { BottomBarComponent } from './bottom-bar/bottom-bar.component'
     SidebarComponent,
     QuestionComponent,
     OptionsComponent,
-    BottomBarComponent
+    BottomBarComponent,
+    PaperSectionComponent,
+    QuestionPaperComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,8 @@ import { BottomBarComponent } from './bottom-bar/bottom-bar.component'
 import { PaperSectionComponent } from './paper-section/paper-section.component'
 import { QuestionPaperComponent } from './question-paper/question-paper.component'
 import { CountdownModule } from 'ngx-countdown'
+import { SplitterModule } from 'primeng/splitter'
+import { InputTextModule } from 'primeng/inputtext'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,8 @@ import { CountdownModule } from 'ngx-countdown'
     ReactiveFormsModule,
     ScrollPanelModule,
     FormsModule,
+    SplitterModule,
+    InputTextModule,
     CountdownModule
   ],
   providers: [],

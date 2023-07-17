@@ -26,21 +26,21 @@ export class QuestionPaperComponent {
     questions: this.verbalQuestions,
     sectionId: 0,
     sectionLabel: 'Verbal & Reading',
-    maxTime: 10
+    maxTime: 100
   }
 
   reasoningPaperSection: Section = {
     questions: this.reasoningQuestions,
     sectionId: 1,
     sectionLabel: 'Data Inter. & Logical Res.',
-    maxTime: 10
+    maxTime: 100
   }
 
   mathsPaperSection: Section = {
     questions: this.mathsQuestions,
     sectionId: 2,
     sectionLabel: 'Quantative Analysis',
-    maxTime: 10
+    maxTime: 100
   }
 
   questionPaper: Section[] = [

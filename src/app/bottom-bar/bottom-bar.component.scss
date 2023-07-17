@@ -1,25 +1,13 @@
 #bottom-bar {
-  width: calc(100vw - 40px);
+  width: calc(100vw - 50px);
   position: fixed;
-  top: 0px;
+  top: 6px;
 	z-index: 0;
-	border-radius: 20px;
+	border-radius: 50px;
 	// position: relative;
   background-color: white;
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
-.prev-next-buttons {
-  font-size: 2.6rem;
-  color: #a076f9;
-	transition: all 0.1s ease-out;
-}
-.prev-next-buttons:hover {
-	color: #a076f9;
-}
-.prev-next-buttons:active {
-  transform: scale(0.9);
-}
-
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
@@ -65,7 +53,7 @@ input[type="radio"] {
 	align-items: center;
 	justify-content: center;
   font-size: 2rem !important;
-  color: #a076f9;
+  color: var(--normal-accent);
 	// width: 2rem;
 	// height: 2rem;
 
@@ -77,9 +65,9 @@ input[type="radio"] {
 input[type="radio"] {
 	&:checked {
 		& + label {
-			color: #a076f9;
+			color: var(--normal-accent);
 			& > .notification {
-        color: #a076f9;
+        color: var(--normal-accent);
 			}
 		}
 	}
@@ -114,7 +102,7 @@ input[id="2"] {
 	display: flex;
 	height: 36px;
 	width: 240px;
-	background-color: #ede4ff;
+	background-color: var(--light-accent);
 	z-index: 1;
 	border-radius: 99px; // just a high number to create pill effect
 	transition: 0.25s ease-out;

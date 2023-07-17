@@ -1,37 +1,34 @@
 ::ng-deep .p-sidebar{
-  // background-color: #ede4ff !important;
+  // background-color: var(--light-accent) !important;
   border-radius: 10px;
   height: calc(100vh - 100px) !important;
-  right: 0.8rem !important;
-  top: 70px !important;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+  right: 1.4rem !important;
+  top: 4.8rem !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
   // border-top-left-radius: 50px;
   // border-bottom-left-radius: 50px;
 }
 
 h3{
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: 300;
+  font-size: 2rem;
   font-family: "Montserrat" !important;
 }
 .ques-number {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
   width: 16px !important;
   height: 16px !important;
-  // border: 4px solid #a076f9 !important;
-  color: #a076f9;
-  // background-color: #ede4ff;
+  color: var(--normal-accent);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   font-family: "Montserrat" !important;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   transition: all 0.4s ease-in;
   position: relative;
   i {
-    // position: absolute;
     top: 22.8px;
     font-size: 16px;
     right: 0;
@@ -39,7 +36,7 @@ h3{
 }
 
 .ques-number:hover, .active-question {
-  background-color: #a076f9;
+  background-color: var(--normal-accent);
   color: white;
   cursor: pointer;
   border-radius: 100%;
@@ -54,8 +51,60 @@ h3{
 }
 
 .timer{
-  font-size: 2rem;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  font-family: 'Montserrat', sans-serif !important ;
   text-align: center;
-  color: #a076f9;
+  color: var(--normal-accent);
+  i{
+    animation: wiggle 2s linear infinite 10s;
+    font-size: 3rem;
+  }
+}
+
+::ng-deep .timer{
+  .count-down{
+    span{
+      font-family: 'Montserrat', sans-serif !important;
+    }
+  }
+}
+
+.prev-next-buttons {
+  font-size: 2.6rem;
+  color: var(--normal-accent);
+	transition: all 0.1s ease-out;
+}
+.prev-next-buttons:hover {
+  transform: scale(1.2);
+	fill: var(--normal-accent) !important;
+  
+}
+.prev-next-buttons:active {
+  transform: scale(0.9);
+}
+
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }

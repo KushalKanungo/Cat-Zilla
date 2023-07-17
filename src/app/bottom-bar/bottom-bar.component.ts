@@ -17,14 +17,6 @@ export class BottomBarComponent {
 
   statusEnum = Status
 
-  nextQuestionHandeler (): void {
-    this.changeToQuestion.emit(this.currentQuestionIndex + 1)
-  }
-
-  prevQuestionHandeler (): void {
-    this.changeToQuestion.emit(this.currentQuestionIndex - 1)
-  }
-
   changeToSectionHandeler (idx: number): void {
     this.changeToSection.emit(idx)
   }

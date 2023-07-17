@@ -1,9 +1,21 @@
 ::ng-deep .p-scrollpanel{
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
   border-radius: 10px;
+  background-color: white;
 }
+
 ::ng-deep .custombar1{
-  background-color: #ede4ff !important;
+  background-color: var(--normal-accent) !important;
+  color: white;
+  width: 100%;
+}
+
+::ng-deep .p-splitter .p-splitter-gutter {
+  background: transparent;
+}
+
+p-scrollpanel{
+  width: 100%;
 }
 
 
@@ -11,14 +23,16 @@
   font-family: "Montserrat" !important;
   font-size: 2rem;
   font-weight: 500;
-  color: #a076f9;
+  color: var(--normal-accent);
 }
 .question {
-  font-size: 1.04rem;
-  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif; 
 }
 
 .option {
+  // background-color: var(--normal-accent) !important;
   margin-top: 1rem !important;
 }
 ::ng-deep .p-scrollpanel-component div {
@@ -49,15 +63,26 @@
 }
 
 .options-wrapper {
-  background-color: #ede4ff;
+  // background-color: var(--light-accent);
   border-radius: 10px;
 }
 
 ::ng-deep .passage {
+  b{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  font-family: 'Space Grotesk', sans-serif; 
   text-align: justify !important;
+  line-height: 24px;
+}
+
+::ng-deep .passage strong{
+  font-size: 20px;
+  font-weight: 500;
 }
 
 ::ng-deep .p-scrollpanel .p-scrollpanel-bar {
-  background-color: #a076f9;
+  background-color: var(--normal-accent);
   width: 4px;
 }

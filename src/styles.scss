@@ -2,6 +2,7 @@
 @import "primeng/resources/primeng.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 // @import "~bootstrap/scss/functions";
 // @import "~bootstrap/scss/variables";
 // @import "~bootstrap/scss/mixins";
@@ -12,24 +13,38 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 @import "~bootstrap/dist/css/bootstrap-utilities.css";
 
+:root {
+  --dark-accent: #6528f7;
+  --normal-accent: #a076f9;
+  --medium-accent: #d7bbf5;
+  --light-accent: #ede4ff;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif; 
 }
 
-p {
-  margin-bottom: 0.4rem;
+p, br {
+  // margin-bottom: 0.4rem;
 }
 
 body {
   // font-family: "IBM Plex Serif", serif;
-  // background-color: #ede4ff !important;
+  background-color: var(--light-accent) !important;
 }
 
 .wrapper {
+  margin-top: 30px;
   width: calc(100vw - 330px);
+  height: 90vh;
 }
 
 .p-sidebar {
   width: 320px !important;
+}
+
+image:hover{
+  transform: scale(2);
 }

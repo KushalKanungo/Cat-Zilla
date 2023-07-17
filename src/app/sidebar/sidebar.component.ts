@@ -39,6 +39,14 @@ export class SidebarComponent implements AfterViewInit {
     console.log($event)
   }
 
+  nextQuestionHandeler (): void {
+    this.changeToQuestion.emit(this.currentQuestionIndex + 1)
+  }
+
+  prevQuestionHandeler (): void {
+    this.changeToQuestion.emit(this.currentQuestionIndex - 1)
+  }
+
   changeToQuestionHandeler (idx: number): void {
     this.changeToQuestion.emit(idx)
   }

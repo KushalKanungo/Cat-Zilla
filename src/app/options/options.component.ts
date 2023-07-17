@@ -16,6 +16,10 @@ export class OptionsComponent {
   @Input() optionsType: string
   @Input() userResponse: number | undefined
 
+  ngOnInit (): void {
+    console.log(this.questionType)
+  }
+
   onOptionSelect (event: any): void {
     console.log(this.userResponse)
     this.setQuestionStatus.emit(Status.ANSWERED)

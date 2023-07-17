@@ -1,13 +1,29 @@
 <div class="">
-  <label *ngFor="let option of options" class="m-4"
-    ><input
+  <ng-template [ngIf]="question.quesType  === 'NE'">
+    <input type="number" pInputText [(ngModel)]="question.userResponse" />
+  </ng-template>
+  <ng-template [ngIf]="question.quesType === 'MCQ'">
+    <!-- <label *ngFor="let option of options" class="m-4"
+      ><input
+        type="radio"
+        class="radio-inline"
+        name="radios"
+        (click)="onOptionSelect($event)"
+        [checked]="option.userResponse"
+        [value]="option.id" /><span class="outside"
+        ><span class="inside"></span></span
+      ><span class="" [innerHtml]="option.value"></span
+    ></label> -->
+    <label *ngFor="let option of options" class="my-4">
+			<input         
       type="radio"
       class="radio-inline"
       name="radios"
       (click)="onOptionSelect($event)"
       [checked]="option.userResponse"
-      [value]="option.id" /><span class="outside"
-      ><span class="inside"></span></span
-    ><span class="" [innerHtml]="option.value"></span
-  ></label>
+      [value]="option.id" />
+			<span [innerHtml]="option.value" >HTML</span>
+		</label>
+  </ng-template>
+  
 </div>

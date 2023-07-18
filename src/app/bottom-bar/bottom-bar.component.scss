@@ -2,7 +2,7 @@
   width: calc(100vw - 50px);
   position: fixed;
   top: 6px;
-	z-index: 0;
+	z-index: 2;
 	border-radius: 50px;
 	// position: relative;
   background-color: white;
@@ -11,10 +11,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
-:root {
-	--primary-color: #185ee0;
-	--secondary-color: #e6eef9;
-}
 
 
 .tabs {
@@ -65,9 +61,9 @@ input[type="radio"] {
 input[type="radio"] {
 	&:checked {
 		& + label {
-			color: var(--normal-accent);
+			color: var(--light-accent);
 			& > .notification {
-        color: var(--normal-accent);
+        color: var(--light-accent);
 			}
 		}
 	}
@@ -102,7 +98,9 @@ input[id="2"] {
 	display: flex;
 	height: 36px;
 	width: 240px;
-	background-color: var(--light-accent);
+	// background-color: var(--dark-accent);
+	background: rgb(9,9,121);
+	background: linear-gradient(90deg, var(--dark-accent) 0%, var(--normal-accent) 100%);
 	z-index: 1;
 	border-radius: 99px; // just a high number to create pill effect
 	transition: 0.25s ease-out;

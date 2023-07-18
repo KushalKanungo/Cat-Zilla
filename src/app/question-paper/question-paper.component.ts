@@ -1,15 +1,32 @@
-import { Component } from '@angular/core'
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { Component, OnInit } from '@angular/core'
 import questions from '../../assets/question.json'
 import { type Question } from 'src/_models/questionsModel'
 import { type Section } from 'src/_models/section'
 import { Status } from 'src/_enums/status'
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 
 @Component({
   selector: 'app-question-paper',
   templateUrl: './question-paper.component.html',
   styleUrls: ['./question-paper.component.scss']
 })
-export class QuestionPaperComponent {
+export class QuestionPaperComponent implements OnInit {
+  constructor (private readonly breakpointObserver: BreakpointObserver) {
+
+  }
+
+  isMobile = false
+
+  ngOnInit (): void {
+    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((state) => {
+        console.log(state.matches)
+        this.isMobile = state.matches
+      })
+  }
+
   verbalQuestions: Question[] = questions.filter(
     (question) => question.sectionId === 0
   )

@@ -1,12 +1,30 @@
-<div class="wrapper px-4">
-  <p-splitter [style]="{ background: 'transparent' }"  styleClass="mb-5" [panelSizes]="[60, 40]" [gutterSize]="8" >
+<div class="wrapper px-1 px-lg-4" [ngClass]="{ 'small-wrapper': isMobile }">
+  <p-splitter
+    [style]="{ background: 'transparent' }"
+    styleClass="mb-5"
+    [panelSizes]="[60, 40]"
+    [gutterSize]="8"
+    *ngIf="!isMobile"
+  >
     <ng-template pTemplate>
       <p-scrollPanel
-      [style]="{ width: '100%', height: 'calc(100vh - 100px)', paddingBottom: '8px', marginTop: '46px' }"
+        [style]="{
+          width: '100%',
+          height: 'calc(100vh - 100px)',
+          paddingBottom: '8px'
+        }"
       >
-      <h2 class="question-number ps-3 pb-2 pt-2">
-        Ques {{ questionNumber }} <span (click)="setQuestionStatus(statusEnum.REVIEW)"><i [ngClass]="{'bi bi-bookmark-star-fill': question.status==='review', 'bi bi-bookmark-star': question.status!=='review'}"></i></span>
-      </h2>
+        <h2 class="question-number ps-3 pb-2 pt-2">
+          Ques {{ questionNumber }}
+          <span (click)="setQuestionStatus(statusEnum.REVIEW)"
+            ><i
+              [ngClass]="{
+                'bi bi-bookmark-star-fill': question.status === 'review',
+                'bi bi-bookmark-star': question.status !== 'review'
+              }"
+            ></i
+          ></span>
+        </h2>
         <div class="mt-3 passage px-3" [innerHtml]="question.passage"></div>
         <div
           class="px-3 passage"
@@ -16,7 +34,10 @@
       </p-scrollPanel>
     </ng-template>
     <ng-template pTemplate>
-      <p-scrollPanel [style]="{  height: 'calc(100vh - 100px)', marginTop: '46px' }" styleClass="custombar1">
+      <p-scrollPanel
+        [style]="{ height: 'calc(100vh - 100px)' }"
+        styleClass="custombar1"
+      >
         <div
           class="question px-4 mt-3"
           *ngIf="question.passage != null"
@@ -57,5 +78,78 @@
         </div> -->
       </p-scrollPanel>
     </ng-template>
-</p-splitter>
+  </p-splitter>
+  <div *ngIf="isMobile" class="row row-cols-1 mobile-question ">
+    <p-scrollPanel
+      class="col"
+      [style]="{
+        width: '100%',
+        height: 'calc(100vh - 100px)',
+        paddingBottom: '8px',
+        marginBottom: '20px'
+      }"
+    >
+      <h2 class="question-number ps-3 pb-2 pt-2">
+        Ques {{ questionNumber }}
+        <span (click)="setQuestionStatus(statusEnum.REVIEW)"
+          ><i
+            [ngClass]="{
+              'bi bi-bookmark-star-fill': question.status === 'review',
+              'bi bi-bookmark-star': question.status !== 'review'
+            }"
+          ></i
+        ></span>
+      </h2>
+      <div class="mt-3 passage px-3" [innerHtml]="question.passage"></div>
+      <div
+        class="px-3 passage"
+        *ngIf="question.passage == null"
+        [innerHtml]="question.question"
+      ></div>
+    </p-scrollPanel>
+    <p-scrollPanel
+      [style]="{ height: 'calc(100vh - 100px)' }"
+      styleClass="custombar1"
+      class="col"
+    >
+      <div
+        class="question px-4 mt-3"
+        *ngIf="question.passage != null"
+        [innerHtml]="question.question"
+      ></div>
+      <div class="options-wrapper p-2 mt-2">
+        <app-options
+          [question]="question"
+          (setQuestionStatus)="setQuestionStatus($event)"
+          (setUserResponse)="setUserResponse($event)"
+          [userResponse]="question.userResponse"
+          [questionType]="'MCQ'"
+          [options]="question.options"
+        ></app-options>
+      </div>
+      <!-- <form class="flex flex-column gap-3" [formGroup]="formGroup">
+  <div *ngFor="let option of question.options" class="option">
+    <p-radioButton
+      [value]="option.id"
+      formControlName="selectedOption"
+    ></p-radioButton>
+    <label class="ml-2" [innerHtml]="option.value"></label>
+  </div>
+</form> -->
+      <!-- <div class="plans">
+    <label
+      class="plan basic-plan"
+      *ngFor="let option of question.options"
+      [for]="option.id"
+    >
+      <input type="radio" name="plan" [id]="option.id" />
+      <div class="plan-content">
+        <div class="plan-details">
+          <p [innerHtml]="option.value"></p>
+        </div>
+      </div>
+    </label>
+  </div> -->
+    </p-scrollPanel>
+  </div>
 </div>

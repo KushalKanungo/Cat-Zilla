@@ -13,6 +13,7 @@ export class SidebarComponent implements AfterViewInit {
   @Input() currentQuestionIndex: number
   @Input() currentSectionIndex: number
   @Input() questions: Question[]
+  @Input() isMobile: boolean
   @Input() currentSectionTime: number
   @ViewChild('cd', { static: false }) private readonly countdown: CountdownComponent
 

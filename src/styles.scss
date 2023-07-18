@@ -14,10 +14,44 @@
 @import "~bootstrap/dist/css/bootstrap-utilities.css";
 
 :root {
-  --dark-accent: #6528f7;
-  --normal-accent: #a076f9;
-  --medium-accent: #d7bbf5;
-  --light-accent: #ede4ff;
+  // --dark-accent: #6528f7;
+  // --normal-accent: #a076f9;
+  // --medium-accent: #d7bbf5;
+  // --light-accent: #ede4ff;
+
+  // --dark-accent: #4C3D3D;
+  // --normal-accent: #C07F00;
+  // --medium-accent: #FFD95A;
+  // --light-accent: #FFF7D4;
+
+  // --dark-accent: #251B37;
+  // --normal-accent: #372948;
+  // --medium-accent: #FFCACA;
+  // --light-accent: #FFECEF;
+  
+  --dark-accent: #0078AA;
+  --normal-accent: #3AB4F2;
+  --medium-accent: #F2DF3A;
+  --light-accent: #F6F6F6;
+  
+  // --dark-accent: #415D43;
+  // --normal-accent: #709775;
+  // --medium-accent: #8FB996;
+  // --light-accent: #A1CCA5;
+  
+  // --dark-accent: #1E2749;
+  // --normal-accent: #273469;
+  // --medium-accent: #E4D9FF;
+  // --light-accent: #FAFAFF;
+
+  // --dark-accent: #358600;
+  // --normal-accent: #63C132;
+  // --medium-accent: #9EE37D;
+  // --light-accent: #CFFCFF;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -36,9 +70,13 @@ body {
 }
 
 .wrapper {
-  margin-top: 30px;
+  margin-top: 78px;
   width: calc(100vw - 330px);
-  height: 90vh;
+  height: 85vh;
+}
+
+.small-wrapper{
+  width: calc(100vw - 85px) !important;
 }
 
 .p-sidebar {

@@ -7,6 +7,7 @@
   [questionPaper]="questionPaper"
 ></app-bottom-bar>
 <app-sidebar
+  [isMobile]="isMobile"
   [questions]="questionPaper[this.currentSectionIndex].questions"
   [currentSectionIndex]="currentSectionIndex"
   [currentQuestionIndex]="currentQuestionIndex"

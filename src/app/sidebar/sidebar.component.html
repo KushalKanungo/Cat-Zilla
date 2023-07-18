@@ -5,7 +5,7 @@
   [showCloseIcon]="false"
   [position]="'right'"
 >
-  <div class="timer d-flex flex-column">
+  <div class="timer d-none d-lg-flex flex-column">
     <i class="bi bi-alarm"></i>
     <countdown
       #cd
@@ -13,7 +13,7 @@
       (event)="timerFinishHandeler($event)"
     ></countdown>
   </div>
-  <div class="d-flex align-items-center justify-content-between px-4 my-4">
+  <div class="d-none d-lg-flex align-items-center justify-content-between px-4 my-4">
     <i
       class="bi bi-caret-left prev-next-buttons"
       (click)="prevQuestionHandeler()"
@@ -24,8 +24,8 @@
       (click)="nextQuestionHandeler()"
     ></i>
   </div>
-  <div class="row row-cols-5 px-3">
-    <div class="col my-2" *ngFor="let question of questions; let i = index">
+  <div class="row  row-cols-1 row-cols-lg-5" id="style-4">
+    <div class="col my-2 d-flex justify-content-center" *ngFor="let question of questions; let i = index">
       <div
         class="ques-number"
         style="padding: 22px"

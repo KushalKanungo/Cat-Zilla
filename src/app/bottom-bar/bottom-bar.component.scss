@@ -16,7 +16,7 @@
 .tabs {
   display: flex;
 	position: relative;
-	background-color: #fff;
+	// background-color: var(--medium-accent);
 	height: 48px;
 	padding: 0.45rem;	
 	border-radius: 99px; // just a high number to create pill effect
@@ -49,10 +49,7 @@ input[type="radio"] {
 	align-items: center;
 	justify-content: center;
   font-size: 2rem !important;
-  color: var(--normal-accent);
-	// width: 2rem;
-	// height: 2rem;
-
+  color: var(--dark-accent) !important;
 	margin-left: 0.2rem;
 	border-radius: 50%;
 	transition: 0.15s ease-in;
@@ -63,34 +60,20 @@ input[type="radio"] {
 		& + label {
 			color: var(--light-accent);
 			& > .notification {
-        color: var(--light-accent);
+        color: var(--light-accent) !important;
 			}
 		}
 	}
 }
 
-input[id="0"] {
-	&:checked {
-		& ~ .glider {
-			transform: translateX(0);
-		}
-	}
-}
-
-input[id="1"] {
-	&:checked {
-		& ~ .glider {
-			transform: translateX(100%);
-		}
-	}
-}
-
-input[id="2"] {
-	&:checked {
-		& ~ .glider {
-			transform: translateX(200%);
-		}
-	}
+@for $i from 1 through 10 {
+  input[id="#{$i}"] {
+    &:checked {
+      & ~ .glider {
+        transform: translateX($i * 100%);
+      }
+    }
+  }
 }
 
 .glider {
@@ -98,9 +81,7 @@ input[id="2"] {
 	display: flex;
 	height: 36px;
 	width: 240px;
-	// background-color: var(--dark-accent);
-	background: rgb(9,9,121);
-	background: linear-gradient(90deg, var(--dark-accent) 0%, var(--normal-accent) 100%);
+	background: var(--dark-accent);
 	z-index: 1;
 	border-radius: 99px; // just a high number to create pill effect
 	transition: 0.25s ease-out;
@@ -110,4 +91,8 @@ input[id="2"] {
 	.tabs {
 		transform: scale(0.6);
 	}
+}
+
+i{
+	font-size: 1.4rem;
 }

@@ -1,7 +1,7 @@
 <div class="wrapper px-1 px-lg-4" [ngClass]="{ 'small-wrapper': isMobile }">
   <p-splitter
     [style]="{ background: 'transparent' }"
-    styleClass="mb-5"
+    styleClass="mb-5 mb-lg-0"
     [panelSizes]="[60, 40]"
     [gutterSize]="8"
     *ngIf="!isMobile"
@@ -16,14 +16,6 @@
       >
         <h2 class="question-number ps-3 pb-2 pt-2">
           Ques {{ questionNumber }}
-          <span (click)="setQuestionStatus(statusEnum.REVIEW)"
-            ><i
-              [ngClass]="{
-                'bi bi-bookmark-star-fill': question.status === 'review',
-                'bi bi-bookmark-star': question.status !== 'review'
-              }"
-            ></i
-          ></span>
         </h2>
         <div class="mt-3 passage px-3" [innerHtml]="question.passage"></div>
         <div

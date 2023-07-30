@@ -4,6 +4,8 @@ import { Status } from 'src/_enums/status'
 import { type Question } from 'src/_models/questionsModel'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { QuestionPaperService } from '../_services/question-paper.service'
 
 @Component({
   selector: 'app-question',
@@ -17,7 +19,7 @@ export class QuestionComponent implements OnInit {
   formGroup: FormGroup
   statusEnum = Status
   isMobile = false
-  constructor (private readonly breakpointObserver: BreakpointObserver) {
+  constructor (private readonly breakpointObserver: BreakpointObserver, private readonly questionPaperService: QuestionPaperService) {
 
   }
 
@@ -35,6 +37,7 @@ export class QuestionComponent implements OnInit {
 
   setUserResponse (response: number): void {
     this.question.userResponse = response
+    this.questionPaperService.postUserResponse(this.question).subscribe({ next: () => {} })
     console.log(this.question.userResponse)
   }
 

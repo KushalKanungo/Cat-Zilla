@@ -3,9 +3,9 @@ import { type Question } from './questionsModel'
 
 export interface Section {
   sectionId: number
-  sectionLabel: string
+  label: string
   questions: Question[]
   maxTime: number
-  timeSpent?: number
+  timeSpent: number
   status?: Status
 }

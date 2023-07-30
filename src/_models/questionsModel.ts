@@ -1,7 +1,7 @@
 import { type Status } from 'src/_enums/status'
 
 export interface Question {
-  id: number
+  id: string
   sectionId: number
   sectionName: string
   sectionLabel: string

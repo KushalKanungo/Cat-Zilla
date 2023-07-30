@@ -6,7 +6,7 @@
 
 ::ng-deep .custombar1{
   // background-color: var(--normal-accent) !important;
-  background: linear-gradient(180deg, var(--normal-accent) 0%, var(--dark-accent) 100%);
+  background: linear-gradient(180deg, var(--normal-accent) 0%, var(--normal-accent) 100%);
   color: white;
   width: 100%;
 }
@@ -93,7 +93,7 @@ p-scrollpanel{
 }
 
 ::ng-deep .p-scrollpanel .p-scrollpanel-bar {
-  background-color: var(--normal-accent);
+  background-color: var(--dark-accent);
   width: 4px;
 }
 

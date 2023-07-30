@@ -1,11 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { Component, OnInit } from '@angular/core'
-import questions from '../../assets/question.json'
-import { type Question } from 'src/_models/questionsModel'
 import { type Section } from 'src/_models/section'
 import { Status } from 'src/_enums/status'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { ActivatedRoute } from '@angular/router'
+import { QuestionPaperService } from '../_services/question-paper.service'
 
 @Component({
   selector: 'app-question-paper',
@@ -13,11 +14,17 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
   styleUrls: ['./question-paper.component.scss']
 })
 export class QuestionPaperComponent implements OnInit {
-  constructor (private readonly breakpointObserver: BreakpointObserver) {
+  constructor (private readonly breakpointObserver: BreakpointObserver, private readonly activateRoute: ActivatedRoute, private readonly questionPaperService: QuestionPaperService) {
 
   }
 
   isMobile = false
+  timeTaken: any
+  questionPaper: Section[]
+  allSections: Array<{ label: string, index: any }>
+  currentSectionIndex: number = 0
+  currentQuestionIndex: number = 0
+  attemptId: string
 
   ngOnInit (): void {
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
@@ -25,53 +32,18 @@ export class QuestionPaperComponent implements OnInit {
         console.log(state.matches)
         this.isMobile = state.matches
       })
+
+    this.questionPaper = this.activateRoute.snapshot.data['questionPaper'].sections
+    this.allSections = this.questionPaper.map((sec: Section, idx) => ({ label: sec.label, index: idx }))
+    this.questionPaper[this.currentSectionIndex].status = Status.IN_PROGRESS
+    this.timeTaken = setInterval(() => {
+      this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].timeSpent += 1
+      this.questionPaper[this.currentSection()].timeSpent += 1
+      if (this.questionPaper[this.currentSectionIndex].timeSpent === this.questionPaper[this.currentSectionIndex].maxTime) {
+        this.changeToSection(this.currentSectionIndex + 1)
+      }
+    }, 1000)
   }
-
-  verbalQuestions: Question[] = questions.filter(
-    (question) => question.sectionId === 0
-  )
-
-  reasoningQuestions: Question[] = questions.filter(
-    (question) => question.sectionId === 1
-  )
-
-  mathsQuestions: Question[] = questions.filter(
-    (question) => question.sectionId === 2
-  )
-
-  verbalPaperSection: Section = {
-    questions: this.verbalQuestions,
-    sectionId: 0,
-    sectionLabel: 'Verbal & Reading',
-    maxTime: 100
-  }
-
-  reasoningPaperSection: Section = {
-    questions: this.reasoningQuestions,
-    sectionId: 1,
-    sectionLabel: 'Data Inter. & Logical Res.',
-    maxTime: 100
-  }
-
-  mathsPaperSection: Section = {
-    questions: this.mathsQuestions,
-    sectionId: 2,
-    sectionLabel: 'Quantative Analysis',
-    maxTime: 100
-  }
-
-  questionPaper: Section[] = [
-    this.verbalPaperSection,
-    this.reasoningPaperSection,
-    this.mathsPaperSection
-  ]
-
-  currentSectionIndex: number = 0
-  currentQuestionIndex: number = 0
-
-  first = this.mathsPaperSection.questions[23]
-
-  allSections = this.questionPaper.map((sec: Section, idx) => ({ label: sec.sectionLabel, index: idx }))
 
   nextQuestion (): void {
     if (this.currentQuestionIndex >= this.questionPaper[this.currentSectionIndex].questions.length - 1) return
@@ -83,22 +55,22 @@ export class QuestionPaperComponent implements OnInit {
     this.currentQuestionIndex -= 1
   }
 
-  timeTaken = setInterval(() => {
-    this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].timeSpent += 1
-  }, 1000)
-
   changeToQuestion (idx: number): void {
     if (idx < 0 || idx >= this.questionPaper[this.currentSectionIndex].questions.length) return
     if (this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].userResponse === undefined && this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status !== Status.REVIEW) { this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status = Status.NOT_ANSWERED }
-
+    this.questionPaperService.postUserResponse(this.questionPaper[this.currentSection()].questions[this.currentQuestionIndex]).subscribe({ next: () => {} })
     this.currentQuestionIndex = idx
   }
 
+  currentSection (): number {
+    return this.questionPaper.findIndex(section => section.status === Status.IN_PROGRESS)
+  }
+
   changeToSection (idx: number): void {
+    if (this.questionPaper[idx].status === Status.DONE) { return }
     this.currentQuestionIndex = 0
     this.questionPaper[this.currentSectionIndex].status = Status.DONE
-    console.log('section changed')
-
     this.currentSectionIndex = idx
+    this.questionPaper[this.currentSectionIndex].status = Status.IN_PROGRESS
   }
 }

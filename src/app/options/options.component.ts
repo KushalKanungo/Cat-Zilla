@@ -18,6 +18,7 @@ export class OptionsComponent {
 
   ngOnInit (): void {
     console.log(this.questionType)
+    // this.userResponse = this.question.userResponse
   }
 
   onOptionSelect (event: any): void {
@@ -26,4 +27,8 @@ export class OptionsComponent {
     this.setUserResponse.emit(event.target.value)
     this.options[event.target.value].userResponse = true
   }
-};
+
+  onAnswering (event: Event): void {
+    this.question.userResponse !== null ? this.setQuestionStatus.emit(Status.ANSWERED) : this.setQuestionStatus.emit(Status.NOT_ANSWERED)
+  }
+}

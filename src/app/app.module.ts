@@ -5,6 +5,7 @@ import { SidebarModule } from 'primeng/sidebar'
 import { RadioButtonModule } from 'primeng/radiobutton'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ScrollPanelModule } from 'primeng/scrollpanel'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -17,6 +18,7 @@ import { QuestionPaperComponent } from './question-paper/question-paper.componen
 import { CountdownModule } from 'ngx-countdown'
 import { SplitterModule } from 'primeng/splitter'
 import { InputTextModule } from 'primeng/inputtext'
+import { ConfirmPopupModule } from 'primeng/confirmpopup'
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { InputTextModule } from 'primeng/inputtext'
     FormsModule,
     SplitterModule,
     InputTextModule,
-    CountdownModule
+    CountdownModule,
+    ConfirmPopupModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

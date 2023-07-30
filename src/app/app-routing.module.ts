@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, type Routes } from '@angular/router'
 import { QuestionPaperComponent } from './question-paper/question-paper.component'
+import { questionPaperResolver } from './_resolver/question-paper-resolver'
 
 const routes: Routes = [{
-  path: 'ques',
+  path: 'paper',
   component: QuestionPaperComponent,
-  pathMatch: 'full'
+  resolve: { questionPaper: questionPaperResolver }
 }]
 
 @NgModule({

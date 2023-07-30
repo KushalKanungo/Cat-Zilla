@@ -9,6 +9,7 @@
 <app-sidebar
   [isMobile]="isMobile"
   [questions]="questionPaper[this.currentSectionIndex].questions"
+  [section]="questionPaper[this.currentSectionIndex]"
   [currentSectionIndex]="currentSectionIndex"
   [currentQuestionIndex]="currentQuestionIndex"
   [currentSectionTime]="questionPaper[this.currentSectionIndex].maxTime"

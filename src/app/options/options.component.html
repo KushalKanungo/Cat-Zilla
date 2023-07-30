@@ -1,6 +1,8 @@
 <div class="">
   <ng-template [ngIf]="question.quesType  === 'NE'">
-    <input type="number" pInputText [(ngModel)]="question.userResponse" />
+    <div class="d-flex align-items-center">
+      <label class="me-2 fs-5 mb-0" for=""> Your Response </label> <input type="number" pInputText [(ngModel)]="question.userResponse" (keyup)="onAnswering($event)" />
+    </div>
   </ng-template>
   <ng-template [ngIf]="question.quesType === 'MCQ'">
     <!-- <label *ngFor="let option of options" class="m-4"

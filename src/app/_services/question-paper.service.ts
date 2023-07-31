@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders, HttpParamsOptions } from '@angular/common/http'
 import { env } from '../../../env'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { Observable } from 'rxjs'
 import { Status } from 'src/_enums/status'
-import { Question } from 'src/_models/questionsModel'
+import { type Question } from 'src/_models/questionsModel'
+import { type Filter } from 'src/_models/filter'
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,18 @@ export class QuestionPaperService {
       attemptId, questionId: id, status, timeSpent, userResponse
     }
     return this.http.post<any>(this.BASE_URL + '/question-paper/paper-answer', params)
+  }
+
+  getAllQuestionPapers (params: Filter): Observable<any> {
+    const httpOptions: any = {
+      headers: new HttpHeaders({
+        Accept: 'text/html',
+        'Content-Type': 'text/plain; charset=utf-8'
+      }),
+      params,
+      responseType: 'text'
+    }
+
+    return this.http.get<any>(this.BASE_URL + '/question_papers', httpOptions)
   }
 }

@@ -70,6 +70,7 @@
   --sucess: #03CEA4;
   --warning: #F4D35E;
   --info: #9A48D0;
+  --white: white;
 
 }
 
@@ -138,4 +139,7 @@ image:hover{
   &:hover{
     background-color: var(--normal-accent);
   }
+}
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }

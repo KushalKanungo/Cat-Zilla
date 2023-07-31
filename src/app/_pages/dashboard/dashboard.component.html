@@ -1,0 +1,41 @@
+<app-navigation-bar></app-navigation-bar>
+<section class="main px-4">
+  <div class="row">
+    <div class="col-12 col-lg-9 g-0">
+      <div class="search-bar shadow"> Search Here</div>
+      <section class="test-papers shadow row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row row-cols-xl-3 pt-4">
+        <div
+        class="paper-card-wrapper p-1 p-md-2"
+          *ngFor="let item of [1, 2, 34, 5, 5, 6,5,6,7,8,9]"
+          >
+          <div class="paper-card p-4 mx-4 mx-sm-0">
+            <div class="start"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="label-wrapper">
+              <div class="label">Paper Name</div>
+              <p class="desc text-muted text-truncate">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum,
+                quasi.
+              </p>
+              <div class="row row-cols-2">
+                <div class="col">
+                  <div class="my-3 text-green easy">40 Easy </div>
+                  <div class="my-3 text-yellow  medium">20 Medium</div>
+                  <div class="my-3 text-red  hard">40 Hard</div>
+                </div>
+                <div class="col">
+                  <div class="my-3 text-blue hard text-center total-ques">74</div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="attempts">Attempts: 12</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="col-lg-3">
+      <app-mini-dashboard></app-mini-dashboard>
+
+    </div>
+  </div>
+</section>

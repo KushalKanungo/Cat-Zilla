@@ -1,0 +1,35 @@
+nav{
+  background-color: var(--normal-accent);
+  width: 300px;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+::ng-deep .p-panelmenu .p-panelmenu-header > a{
+  background-color: var(--normal-accent);
+  color: var(--white) !important;
+  border: none;
+  &:hover, &:active{
+    border: none;
+    background-color: var(--normal-accent) !important;
+  }
+} 
+::ng-deep .p-panelmenu .p-panelmenu-header.p-highlight > a{
+  background-color: var(--normal-accent);
+  color: var(--white) !important;
+  border: none;
+  &:hover, &:active{
+    border: none;
+    background-color: var(--normal-accent) !important;
+  }
+} 
+
+::ng-deep .p-menuitem{
+  color: var(--white) !important;
+  &:hover{
+    background-color: var(--normal-accent) !important;
+  }
+  background-color: var(--normal-accent);
+}

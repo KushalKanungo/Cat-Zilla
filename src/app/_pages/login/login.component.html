@@ -1,0 +1,27 @@
+
+
+<form action="" #loginForm="ngForm" (ngSubmit)="onSubmit()">
+  <section class="login-wrapper fade-in">
+      <div class="heading ">CatZilla</div>
+      <input type="text" name="email" [(ngModel)]="formdata.email" placeholder="Registered Email" class="mb-3" required>
+      <input type="password" name="password" [(ngModel)]="formdata.password" placeholder="Password" class="mb-3" required>
+      <button [disabled]="!loginForm.valid">Login <i class="bi bi-door-open"></i></button>
+    </section>
+  </form>
+  
+
+
+<div class="area" >
+      <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+      </ul>
+</div >

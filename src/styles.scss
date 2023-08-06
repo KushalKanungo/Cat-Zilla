@@ -151,7 +151,6 @@ image:hover{
   background-color: var(--dark-accent);
   color: white;
   border-radius: 0.4rem;
-  margin-top: 4rem;
   cursor: pointer;
   &:hover{
     background-color: var(--normal-accent);
@@ -229,3 +228,13 @@ image:hover{
     padding-bottom: 8px;
   }
  }
+
+
+.p-tooltip-text {
+  font: 0.8em sans-serif;
+  color: var(--dark-accent) !important; 
+}
+
+.p-tooltip .p-tooltip-text {
+  background-color: var(--light-accent) !important;
+}

@@ -1,4 +1,27 @@
 <app-navigation-bar></app-navigation-bar>
+<p-dialog [header]=" 'Ques '+previewedQuestion?.questionNo" [maximizable]="true" [dismissableMask]="true" [(visible)]="isPreviewVisible" [modal]="true" [style]="{ width: '50vw', borderRadius: '20px' }" [draggable]="false" [resizable]="false">
+  <app-question-preview [question]="previewedQuestion"></app-question-preview>
+</p-dialog>
+
+
+<p-overlayPanel #colomnSelecter>
+  <p-multiSelect
+                (onChange)="onColumnChange($event)"
+                (onClear)="onColumnChange(true)"
+                placeholder="Columns"
+                [showClear]="true"
+                dropdownIcon="bi bi-caret-down fs-5"
+                [options]="columns"
+                [style]="{ width: '160px', margin: '10px' }"
+                [panelStyle]="{ width: '240px' }"
+                [(ngModel)]="selectedColumns"
+                appendTo="body"
+              >              <ng-template pTemplate="clearicon">
+                <i class="bi bi-trash"></i>
+              </ng-template></p-multiSelect>
+</p-overlayPanel>
+
+
 <section class="main px-4">
   <div class="row">
     <div class="col-12 col-lg-9 g-0">
@@ -46,75 +69,127 @@
 
         <p-table
           [value]="selectedQuestions"
-          [tableStyle]="{ 'min-width': '60rem' }"
+          [scrollable]="true"
+          [tableStyle]="{ 'min-width': '60rem'}"
+          [showLoader] = "false"
           scrollHeight="calc(100vh - 240px)"
           [reorderableColumns]="true"
+          [columns]="selectedColumns"
           [loading]="loading"
         >
+
+        <ng-template pTemplate="loadingbody">
+          <tr *ngFor="let item2 of [1,2,3,4,5,6,7,8,9,9]">
+            <td *ngFor="let item of [1,2,3,4,4,5,5]"><p-skeleton></p-skeleton></td>
+          </tr>
+        </ng-template>
+      
+
           <ng-template pTemplate="caption">
-            <div class="align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-start">
               <p-multiSelect
                 (onChange)="onFilterChange($event)"
+                dropdownIcon="bi bi-caret-down fs-5"
+                (onClear)="onFilterChange('sections', true)"
                 placeholder="Section"
-                [showClear]="true"
+                pTooltip="Sections"
+                tooltipPosition="top"
+                [showClear]='true'
                 [options]="sections"
-                [showClear]="false"
                 [style]="{ width: '160px', margin: '10px' }"
                 [panelStyle]="{ width: '240px' }"
                 [(ngModel)]="filter.sections"
                 appendTo="body"
-              ></p-multiSelect>
+              >              <ng-template pTemplate="clearicon">
+                <i class="bi bi-trash"></i>
+              </ng-template></p-multiSelect>
               <p-multiSelect
                 (onChange)="onFilterChange($event)"
+                (onClear)="onFilterChange('subjects', true)"
+                dropdownIcon="bi bi-caret-down fs-5"
+                pTooltip="Subjects"
+                tooltipPosition="top"
                 placeholder="Subject"
                 [showClear]="true"
                 [options]="subjects"
-                [showClear]="false"
                 [style]="{ width: '160px', margin: '10px' }"
                 [panelStyle]="{ width: '240px' }"
                 [(ngModel)]="filter.subjects"
                 appendTo="body"
-              ></p-multiSelect>
+              >              <ng-template pTemplate="clearicon">
+                <i class="bi bi-trash"></i>
+              </ng-template></p-multiSelect>
               <p-multiSelect
                 (onChange)="onFilterChange($event)"
+                (onClear)="onFilterChange('topics', true)"
+                dropdownIcon="bi bi-caret-down fs-5"
                 placeholder="Topic"
+                pTooltip="Topics"
+                tooltipPosition="top"
                 [showClear]="true"
                 [options]="topics"
-                [showClear]="false"
                 [style]="{ width: '160px', margin: '10px' }"
                 [panelStyle]="{ width: '240px' }"
                 [(ngModel)]="filter.topics"
                 appendTo="body"
-              ></p-multiSelect>
+              >              <ng-template pTemplate="clearicon">
+                <i class="bi bi-trash"></i>
+              </ng-template></p-multiSelect>
               <p-multiSelect
                 (onChange)="onFilterChange($event)"
+                (onClear)="onFilterChange('areas', true)"
+                dropdownIcon="bi bi-caret-down fs-5"
+                pTooltip="Area"
+                tooltipPosition="top"
                 placeholder="Area"
                 [showClear]="true"
                 [options]="areas"
-                [showClear]="false"
                 [style]="{ width: '160px', margin: '10px' }"
                 [panelStyle]="{ width: '240px' }"
                 [(ngModel)]="filter.areas"
                 appendTo="body"
-              ></p-multiSelect>
-              <!-- <p-button icon="pi pi-refresh"></p-button> -->
+              >
+              <ng-template pTemplate="clearicon">
+                <i class="bi bi-trash"></i>
+              </ng-template>
+            </p-multiSelect>
+              <p-multiSelect
+                pTooltip="Responses"
+                tooltipPosition="top"
+                (onChange)="onFilterChange($event)"
+                (onClear)="onFilterChange('responses', true)"
+                dropdownIcon="bi bi-caret-down fs-5"
+                placeholder="Response"
+                [showClear]="true"
+                [options]="responses"
+                [style]="{ width: '160px', margin: '10px' }"
+                [panelStyle]="{ width: '240px' }"
+                [(ngModel)]="filter.responses"
+                appendTo="body"
+              >
+              <ng-template pTemplate="clearicon">
+                <i class="bi bi-trash"></i>
+              </ng-template></p-multiSelect>
+              <button pTooltip="Columns" class="columns-icon" (click)="colomnSelecter.toggle($event)"><i class="bi bi-list-ul"></i></button>
             </div>
           </ng-template>
+          
           <ng-template pTemplate="header">
             <tr>
               <th
-              class="text-nowrap"
+                class="text-nowrap"
                 [pSortableColumn]="header.key"
-                *ngFor="let header of QUESTION_TABLE_HEADERS"
+                *ngFor="let header of selectedQuestionTableHeaders"
               >
                 {{ header.header }}
                 <p-sortIcon class="text-white" [field]="header.key"></p-sortIcon>
               </th>
             </tr>
           </ng-template>
+
           <ng-template pTemplate="body" let-question>
             <tr>
-              <td *ngFor="let header of QUESTION_TABLE_HEADERS">
+              <td *ngFor="let header of selectedQuestionTableHeaders" (click)="onPreview($event, question.id, question.userResponse)" >
                 <span *ngIf="header.key !== 'isCorrect'">
                   {{
                     header.command

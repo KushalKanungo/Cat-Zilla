@@ -8,6 +8,28 @@
 
 }
 
+.columns-icon{
+  all: unset;
+  height: 38px;
+  width: 38px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--dark-accent);
+  i{ 
+    margin: 8px;
+    font-size: 1.2rem;
+    color: var(--light-accent);
+  }
+
+  &:hover{
+    background-color: var(--medium-accent);
+    i{
+      color: var(--dark-accent);
+    }
+  }
+
+}
+
 .search-bar{
   margin-top: 20px;
   background-color: var(--white);
@@ -124,11 +146,11 @@
     position: sticky;
     top: 0px;
     &:first-child{
-      border-top-left-radius: 20px ;
+      border-top-left-radius: 10px ;
     }
     
     &:last-child{
-      border-top-right-radius: 20px ;
+      border-top-right-radius: 10px ;
     }
   }
   }

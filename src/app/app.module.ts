@@ -5,10 +5,13 @@ import { SidebarModule } from 'primeng/sidebar'
 import { RadioButtonModule } from 'primeng/radiobutton'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ScrollPanelModule } from 'primeng/scrollpanel'
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
 import { TagModule } from 'primeng/tag';
+import { DialogModule } from 'primeng/dialog';
 import { AppRoutingModule } from './app-routing.module'
+import { SkeletonModule } from 'primeng/skeleton';
 import { PanelMenuModule } from 'primeng/panelmenu'
 import { CheckboxModule } from 'primeng/checkbox'
 import { AppComponent } from './app.component'
@@ -29,7 +32,8 @@ import { AuthInterceptor } from 'src/_interceptors/auth-interceptor';
 import { DashboardComponent } from './_pages/dashboard/dashboard.component';
 import { NavigationBarComponent } from './_components/navigation-bar/navigation-bar.component';
 import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashboard.component';
-import { InsightsComponent } from './_components/insights/insights.component'
+import { InsightsComponent } from './_components/insights/insights.component';
+import { QuestionPreviewComponent } from './_components/question-preview/question-preview.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +47,8 @@ import { InsightsComponent } from './_components/insights/insights.component'
     DashboardComponent,
     NavigationBarComponent,
     MiniDashboardComponent,
-    InsightsComponent
+    InsightsComponent,
+    QuestionPreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +68,10 @@ import { InsightsComponent } from './_components/insights/insights.component'
     PanelMenuModule,
     TableModule,
     MultiSelectModule,
-    TagModule
+    TagModule,
+    OverlayPanelModule,
+    DialogModule,
+    SkeletonModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]

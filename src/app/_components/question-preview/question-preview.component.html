@@ -1,0 +1,23 @@
+
+<div>
+
+  <p class="question p-2 ">
+    <span [innerHTML]="question?.question"></span>
+  </p>
+    
+  <p class="mt-3 p-2  text-green">
+    <strong>Correct</strong> <br>
+   <span class="text-green correct" [innerHTML]="question?.options[question?.correctOption].option"> </span>
+  </p>
+
+  <p class="mt-3 p-2 " *ngIf="question?.userResponse !== null && question?.userResponse !== question?.correctOption">
+    <strong>Your Response </strong><br>
+   <span [ngClass]="{'text-red': question?.userResponse !== question?.correctOption, 'text-green' : question?.userResponse === question?.correctOption }"  class="correct" [innerHTML]="question?.options[question?.userResponse].option"> </span>
+  </p>
+
+  <div class="mt-3 p-2 explanation">
+    <div class="mb-3"> <strong> Explanation: </strong> </div>
+    <span [innerHTML]="question?.explanation"></span>
+  </div>
+
+</div>

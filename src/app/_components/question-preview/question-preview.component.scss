@@ -1,0 +1,26 @@
+*{
+  font-size: 0.95rem;
+}
+
+.question{
+  color: var(--dark-accent);
+  span{
+    font-size: 1.04rem;
+    font-weight: 500;
+  }
+}
+
+.correct{
+  font-style: italic;
+}
+
+.explanation{
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  border-radius: 10px;
+  background-color: var(--light-accent);
+  color: var(--dark-accent);
+}
+
+strong{
+  font-size: 1.1rem;
+}

@@ -1,5 +1,5 @@
 .main{
-  margin-left: 300px;
+  margin-left: 80px;
 }
 
 .paper-card-wrapper{
@@ -34,7 +34,7 @@
 .paper-card {
   font-family: 'Montserrat';
   position: relative;
-  // max-width: 260px;
+  max-width: 260px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   height: 18rem;
   background-color: var(--white);
@@ -84,7 +84,7 @@
   .attempts {
     position: absolute;
     bottom: 20px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -103,5 +103,59 @@
   border-radius: 10px;
   label{
     font-size: 1.2rem;
+  }
+}
+
+:host ::ng-deep .p-datatable .p-datatable-header{
+  background-color: var(--white-accent);
+  padding: 4px 2px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-thead > tr {
+  border-radius: 20px;
+  th{
+    background-color: var(--normal-accent);
+    color: var(--white);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    &:first-child{
+      border-top-left-radius: 20px ;
+    }
+    
+    &:last-child{
+      border-top-right-radius: 20px ;
+    }
+  }
+  }
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+//  width: 2rem !important; 
+}
+:host ::ng-deep .p-datatable {
+  font-size: 0.8rem;
+}
+
+:host ::ng-deep .p-datatable .p-sortable-column:not(.p-highlight):hover, :host ::ng-deep .p-datatable .p-sortable-column.p-highlight:hover {
+  background-color: var(--dark-accent) !important;
+  color: var(--light-accent);
+}
+
+p-sorticon{
+//  font-size: 0.5rem;
+}
+
+:host ::ng-deep .p-datatable .p-sortable-column:focus{
+  box-shadow: none;
+}
+
+
+@media screen and (max-width: 64em) {
+  :host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+      top: 0px;
   }
 }

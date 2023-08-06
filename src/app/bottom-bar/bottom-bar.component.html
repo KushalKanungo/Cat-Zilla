@@ -2,7 +2,7 @@
   <div class="tabs">
     <ng-container *ngFor="let section of allSections; let i = index">
       <ng-template [ngIf]="true">
-        <input type="radio" [id]="section.index" name="tabs"  [checked]="currentSectionIndex === i" (click)="changeToSectionHandeler(section.index)"/>
+        <input type="radio" [id]="section.index" name="tabs" [disabled]="currentSectionIndex !== i"   [checked]="currentSectionIndex === i" (click)="changeToSectionHandeler(section.index)"/>
         <label class="tab text-truncate" [for]="section.index">{{section.label}}
           <span *ngIf="questionPaper[section.index].status === statusEnum.DONE" class="notification"><i class="bi bi-check2-circle "></i></span>
           <span *ngIf="questionPaper[section.index].status === statusEnum.IN_PROGRESS" class="notification"><i class="bi bi-c-circle-fill "></i></span>

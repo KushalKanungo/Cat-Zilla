@@ -28,13 +28,14 @@
 
   // --dark-accent: #251B37;
   // --normal-accent: #372948;
+  // --primary-color: #372948;
   // --medium-accent: #FFCACA;
   // --light-accent: #FFECEF;
   
-  --dark-accent: #0078AA;
-  --normal-accent: #3AB4F2;
-  --medium-accent: #F2DF3A;
-  --light-accent: #F6F6F6;
+  // --dark-accent: #0078AA;
+  // --normal-accent: #3AB4F2;
+  // --medium-accent: #F2DF3A;
+  // --light-accent: #F6F6F6;
   
   // <========Dark Green=======>
   // --dark-accent: #415D43;
@@ -43,10 +44,10 @@
   // --light-accent: #A1CCA5;
   
   // <=======DARK BLUE=====>
-  // --dark-accent: #1E2749;
-  // --normal-accent: #273469;
-  // --medium-accent: #E4D9FF;
-  // --light-accent: #FAFAFF;
+  --dark-accent: #1E2749;
+  --normal-accent: #273469;
+  --medium-accent: #E4D9FF;
+  --light-accent: #FAFAFF;
 
   // <=======GREEN========>
   // --dark-accent: #358600;
@@ -119,12 +120,28 @@ image:hover{
   color: var(--danger);
 }
 
+.bg-red{
+  background-color: var(--danger) !important;
+}
+
+.bg-yellow{
+  background-color: var(--warning) !important;
+}
+
+.bg-green{
+  background-color: var(--sucess) !important;
+}
+
 .text-blue{
   color: var(--info);
 }
 
 .text-yellow{
   color: var(--warning);
+}
+
+.text-white, .p-sortable-column-icon{
+  color: var(--white) !important;
 }
 
 .theme-btn, input[type="button"]{
@@ -157,7 +174,7 @@ image:hover{
   *::-webkit-scrollbar
   {
     width: 4px;
-  background-color: transparent;
+    background-color: transparent;
    border-radius: 6px;
  }
  
@@ -165,4 +182,50 @@ image:hover{
  {
    background-color: var(--normal-accent);
    border-radius: 6px;
+ }
+
+ p-multiSelect{
+ *{ font-size: 0.8rem !important;}
+ }
+
+ p-multiselectitem{
+  *{font-size: 0.8rem !important;}
+ }
+
+ .p-multiselect-close, .p-multiselect-header .p-checkbox{
+  // display: none !important;
+ }
+
+ .p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight{
+  background-color: var(--light-accent);
+  color: var(--dark-accent);
+ }
+
+ .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover{
+    background: var(--normal-accent);
+  border-color: var(--normal-accent);
+
+ }
+
+ .p-checkbox .p-checkbox-box.p-highlight {
+  border-color: var(--normal-accent);
+  background: var(--normal-accent);
+  &:hover, &:active {
+    border-color: var(--normal-accent);
+    background: var(--normal-accent);
+    
+  }
+}
+
+
+ .p-inputtext{
+  padding: 6px;
+ }
+
+ p-tag{
+  padding: 4px;
+  border-radius: 4px;
+  span{
+    padding-bottom: 8px;
+  }
  }

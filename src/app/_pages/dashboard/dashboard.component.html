@@ -3,10 +3,17 @@
   <div class="row">
     <div class="col-12 col-lg-9 g-0">
       <div class="search-bar shadow">
-        <input class="search-field" [(ngModel)]="query" (keydown.enter)="onSearch()" placeholder="Search" type="text">
+        <input
+          class="search-field"
+          [(ngModel)]="query"
+          (keydown.enter)="onSearch()"
+          placeholder="Search"
+          type="text"
+        />
       </div>
-      <section class="test-papers shadow row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row row-cols-xl-3 pt-4">
-        <div
+      <!-- <section class="test-papers shadow row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 pt-4"> -->
+      <section class="test-papers shadow row row-cols-1 pt-4">
+        <!-- <div
         class="paper-card-wrapper p-1 p-md-2"
           *ngFor="let item of [1, 2, 34, 5, 5, 6,5,6,7,8,9]"
           >
@@ -35,12 +42,112 @@
               <div >2023-01-01</div>
             </div>
           </div>
-        </div>
+        </div> -->
+
+        <p-table
+          [value]="selectedQuestions"
+          [tableStyle]="{ 'min-width': '60rem' }"
+          scrollHeight="calc(100vh - 240px)"
+          [reorderableColumns]="true"
+          [loading]="loading"
+        >
+          <ng-template pTemplate="caption">
+            <div class="align-items-center justify-content-between">
+              <p-multiSelect
+                (onChange)="onFilterChange($event)"
+                placeholder="Section"
+                [showClear]="true"
+                [options]="sections"
+                [showClear]="false"
+                [style]="{ width: '160px', margin: '10px' }"
+                [panelStyle]="{ width: '240px' }"
+                [(ngModel)]="filter.sections"
+                appendTo="body"
+              ></p-multiSelect>
+              <p-multiSelect
+                (onChange)="onFilterChange($event)"
+                placeholder="Subject"
+                [showClear]="true"
+                [options]="subjects"
+                [showClear]="false"
+                [style]="{ width: '160px', margin: '10px' }"
+                [panelStyle]="{ width: '240px' }"
+                [(ngModel)]="filter.subjects"
+                appendTo="body"
+              ></p-multiSelect>
+              <p-multiSelect
+                (onChange)="onFilterChange($event)"
+                placeholder="Topic"
+                [showClear]="true"
+                [options]="topics"
+                [showClear]="false"
+                [style]="{ width: '160px', margin: '10px' }"
+                [panelStyle]="{ width: '240px' }"
+                [(ngModel)]="filter.topics"
+                appendTo="body"
+              ></p-multiSelect>
+              <p-multiSelect
+                (onChange)="onFilterChange($event)"
+                placeholder="Area"
+                [showClear]="true"
+                [options]="areas"
+                [showClear]="false"
+                [style]="{ width: '160px', margin: '10px' }"
+                [panelStyle]="{ width: '240px' }"
+                [(ngModel)]="filter.areas"
+                appendTo="body"
+              ></p-multiSelect>
+              <!-- <p-button icon="pi pi-refresh"></p-button> -->
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th
+              class="text-nowrap"
+                [pSortableColumn]="header.key"
+                *ngFor="let header of QUESTION_TABLE_HEADERS"
+              >
+                {{ header.header }}
+                <p-sortIcon class="text-white" [field]="header.key"></p-sortIcon>
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-question>
+            <tr>
+              <td *ngFor="let header of QUESTION_TABLE_HEADERS">
+                <span *ngIf="header.key !== 'isCorrect'">
+                  {{
+                    header.command
+                      ? header.command(question[header.key])
+                      : question[header.key]
+                  }}
+                </span>
+                <!-- <p-tag *ngIf="header.key === 'isCorrect'" [severity]="header?.command(question[header.key]) === 'Wrong' ? 'danger' : (header?.command(question[header.key]) === 'Correct' ? 'success' : 'warning' ) "> -->
+                <p-tag
+                  *ngIf="header.key === 'isCorrect'"
+                  [style]="{ background: 'transparent' }"
+                  [ngClass]="{
+                    'bg-red': header?.command(question[header.key]) === 'Wrong',
+                    'bg-green':
+                      header?.command(question[header.key]) === 'Correct',
+                    'bg-yellow':
+                      header?.command(question[header.key]) === 'Skipped'
+                  }"
+                >
+                  {{
+                    header.command
+                      ? header.command(question[header.key])
+                      : question[header.key]
+                  }}
+                </p-tag>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
       </section>
     </div>
     <div class="col-lg-3">
       <app-mini-dashboard></app-mini-dashboard>
-
     </div>
   </div>
 </section>

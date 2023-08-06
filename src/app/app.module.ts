@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ScrollPanelModule } from 'primeng/scrollpanel'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
+import { TagModule } from 'primeng/tag';
 import { AppRoutingModule } from './app-routing.module'
 import { PanelMenuModule } from 'primeng/panelmenu'
 import { CheckboxModule } from 'primeng/checkbox'
@@ -20,12 +21,15 @@ import { QuestionPaperComponent } from './question-paper/question-paper.componen
 import { CountdownModule } from 'ngx-countdown'
 import { SplitterModule } from 'primeng/splitter'
 import { InputTextModule } from 'primeng/inputtext'
+import { TableModule } from 'primeng/table'
+import { MultiSelectModule } from 'primeng/multiselect'
 import { ConfirmPopupModule } from 'primeng/confirmpopup'
 import { LoginComponent } from './_pages/login/login.component'
 import { AuthInterceptor } from 'src/_interceptors/auth-interceptor';
 import { DashboardComponent } from './_pages/dashboard/dashboard.component';
 import { NavigationBarComponent } from './_components/navigation-bar/navigation-bar.component';
-import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashboard.component'
+import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashboard.component';
+import { InsightsComponent } from './_components/insights/insights.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +42,8 @@ import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashbo
     LoginComponent,
     DashboardComponent,
     NavigationBarComponent,
-    MiniDashboardComponent
+    MiniDashboardComponent,
+    InsightsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,10 @@ import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashbo
     ConfirmPopupModule,
     HttpClientModule,
     CheckboxModule,
-    PanelMenuModule
+    PanelMenuModule,
+    TableModule,
+    MultiSelectModule,
+    TagModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]

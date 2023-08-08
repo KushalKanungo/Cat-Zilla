@@ -15,6 +15,21 @@
 
 :root {
   
+  // --dark-accent: #001C30;
+  // --normal-accent: #176B87;
+  // --medium-accent: #64CCC5;
+  // --light-accent: #DAFFFB;
+ 
+  // --dark-accent: #072227;
+  // --normal-accent: #35858B;
+  // --medium-accent: #4FBDBA;
+  // --light-accent: #AEFEFF;
+
+  // --dark-accent: #214151;
+  // --normal-accent: #F8DC81;
+  // --medium-accent: #A2D0C1;
+  // --light-accent: #EFF7E1;
+
   // --dark-accent: #6528f7;
   // --normal-accent: #a076f9;
   // --medium-accent: #d7bbf5;
@@ -26,11 +41,11 @@
   // --medium-accent: #FFD95A;
   // --light-accent: #FFF7D4;
 
-  // --dark-accent: #251B37;
-  // --normal-accent: #372948;
-  // --primary-color: #372948;
-  // --medium-accent: #FFCACA;
-  // --light-accent: #FFECEF;
+  --dark-accent: #251B37;
+  --normal-accent: #372948;
+  --primary-color: #372948;
+  --medium-accent: #FFCACA;
+  --light-accent: #FFECEF;
   
   // --dark-accent: #0078AA;
   // --normal-accent: #3AB4F2;
@@ -44,10 +59,10 @@
   // --light-accent: #A1CCA5;
   
   // <=======DARK BLUE=====>
-  --dark-accent: #1E2749;
-  --normal-accent: #273469;
-  --medium-accent: #E4D9FF;
-  --light-accent: #FAFAFF;
+  // --dark-accent: #1E2749;
+  // --normal-accent: #273469;
+  // --medium-accent: #E4D9FF;
+  // --light-accent: #FAFAFF;
 
   // <=======GREEN========>
   // --dark-accent: #358600;
@@ -68,8 +83,11 @@
   // --light-accent: #E7E5DF;
 
   --danger: #DA4167;
-  --sucess: #03CEA4;
+  --danger-lite: #d96582;
+  --success: #03CEA4;
+  --success-lite: #46ceb3;
   --warning: #F4D35E;
+  --warning-lite: #efda8f;
   --info: #9A48D0;
   --white: white;
 
@@ -83,6 +101,7 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Space Grotesk', sans-serif; 
+  scroll-behavior: smooth;
 }
 
 p, br {
@@ -113,7 +132,7 @@ image:hover{
 }
 
 .text-green{
-  color: var(--sucess);
+  color: var(--success);
 }
 
 .text-red{
@@ -129,7 +148,7 @@ image:hover{
 }
 
 .bg-green{
-  background-color: var(--sucess) !important;
+  background-color: var(--success) !important;
 }
 
 .text-blue{

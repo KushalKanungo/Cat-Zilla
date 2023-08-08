@@ -10,6 +10,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
 import { TagModule } from 'primeng/tag';
 import { DialogModule } from 'primeng/dialog';
+import { ChartModule } from 'primeng/chart';
 import { AppRoutingModule } from './app-routing.module'
 import { SkeletonModule } from 'primeng/skeleton';
 import { PanelMenuModule } from 'primeng/panelmenu'
@@ -33,7 +34,8 @@ import { DashboardComponent } from './_pages/dashboard/dashboard.component';
 import { NavigationBarComponent } from './_components/navigation-bar/navigation-bar.component';
 import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashboard.component';
 import { InsightsComponent } from './_components/insights/insights.component';
-import { QuestionPreviewComponent } from './_components/question-preview/question-preview.component'
+import { QuestionPreviewComponent } from './_components/question-preview/question-preview.component';
+import { PaperListingComponent } from './_pages/paper-listing/paper-listing.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,8 @@ import { QuestionPreviewComponent } from './_components/question-preview/questio
     NavigationBarComponent,
     MiniDashboardComponent,
     InsightsComponent,
-    QuestionPreviewComponent
+    QuestionPreviewComponent,
+    PaperListingComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ import { QuestionPreviewComponent } from './_components/question-preview/questio
     TagModule,
     OverlayPanelModule,
     DialogModule,
-    SkeletonModule
+    SkeletonModule,
+    ChartModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]

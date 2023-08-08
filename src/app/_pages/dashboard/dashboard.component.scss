@@ -2,6 +2,14 @@
   margin-left: 80px;
 }
 
+.result-sections{
+  height: calc(100vh - 110px);
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 0.9rem;
+
+}
+
 .paper-card-wrapper{
   // display: flex;
   // justify-content: center;
@@ -50,70 +58,15 @@
   margin: 10px 0 20px 0;
   background-color: var(--white);
   overflow: scroll;
+  scroll-snap-align: start;
   border-radius: 10px;
+  // .row{
+  //   height: 100%;
+  //   .col, .col-3, .col-4{
+  //     height: 50%;
+  //   }
+  // }
 }
-
-.paper-card {
-  font-family: 'Montserrat';
-  position: relative;
-  max-width: 260px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  height: 18rem;
-  background-color: var(--white);
-  border-radius: 10px;
-  .label-wrapper {
-    // background-color: var(--normal-accent);
-    // color: var(--white);
-    .label {
-      font-size: 1.2rem;
-    }
-    p {
-      font-size: 14px;
-    }
-  }
-  .total-ques{
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  .start {
-    position: absolute;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    right: 20px;
-    bottom: 20px;
-    color: var(--light-accent);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background-color: var(--normal-accent);
-    &:hover,
-    &:active {
-      // transform: scale(1.1);
-      background-color: var(--dark-accent);
-      i {
-        font-size: 28px !important;
-        text-align: center;
-      }
-    }
-    border-radius: 10px;
-    i {
-      font-size: 24px !important;
-      transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    }
-  }
-  .attempts {
-    position: absolute;
-    bottom: 20px;
-    font-size: 14px;
-  }
-}
-
-.test-papers {
-  // background-color: white;
-}
-
 
 
 .overview-card{
@@ -181,3 +134,28 @@ p-sorticon{
       top: 0px;
   }
 }
+
+.result-small-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  height: 120px;
+  gap: 1rem;
+  // background-color: var(--light-accent);
+  color: var(--dark-accent);
+  .label{
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .data{
+    font-family: 'Montserrat';
+    font-size: 1.9rem;
+    font-weight: 500;
+  }
+}
+
+

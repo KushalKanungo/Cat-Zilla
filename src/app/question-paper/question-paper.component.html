@@ -10,6 +10,7 @@
   [isMobile]="isMobile"
   [questions]="questionPaper[this.currentSectionIndex].questions"
   [section]="questionPaper[this.currentSectionIndex]"
+  [isLastSection]="allSections.length - 1 === currentSectionIndex"
   [currentSectionIndex]="currentSectionIndex"
   [currentQuestionIndex]="currentQuestionIndex"
   [currentSectionTime]="questionPaper[this.currentSectionIndex].maxTime"

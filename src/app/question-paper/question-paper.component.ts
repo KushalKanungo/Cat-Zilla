@@ -56,8 +56,12 @@ export class QuestionPaperComponent implements OnInit {
   }
 
   changeToQuestion (idx: number): void {
-    if (idx < 0 || idx >= this.questionPaper[this.currentSectionIndex].questions.length) return
-    if (this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].userResponse === undefined && this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status !== Status.REVIEW) { this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status = Status.NOT_ANSWERED }
+    debugger
+
+    if (idx < 0 || idx >= this.questionPaper[this.currentSection()].questions.length) return
+    const currentQuestion = this.questionPaper[this.currentSection()].questions[this.currentQuestionIndex]
+    if (currentQuestion.userResponse === undefined && currentQuestion.status !== Status.REVIEW)  
+      currentQuestion.status = Status.NOT_ANSWERED 
     this.questionPaperService.postUserResponse(this.questionPaper[this.currentSection()].questions[this.currentQuestionIndex]).subscribe({ next: () => {} })
     this.currentQuestionIndex = idx
   }
@@ -68,8 +72,9 @@ export class QuestionPaperComponent implements OnInit {
 
   changeToSection (idx: number): void {
     if (this.questionPaper[idx].status === Status.DONE) { return }
-    this.currentQuestionIndex = 0
+    this.changeToQuestion(0)
     this.questionPaper[this.currentSectionIndex].status = Status.DONE
+    // this.currentQuestionIndex = 0
     this.currentSectionIndex = idx
     this.questionPaper[this.currentSectionIndex].status = Status.IN_PROGRESS
   }

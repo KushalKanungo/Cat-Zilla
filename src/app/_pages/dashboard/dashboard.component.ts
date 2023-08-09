@@ -46,6 +46,13 @@ export class DashboardComponent {
     },
   }
 
+  chartBy = ['Number', 'Time Spent', 'Average Time']
+
+  chartByChange(event: any){
+    this.barChartData = this.createDataForBarChart(this.sectionsData, this.questions, event.value)
+    
+  }
+
   barChartOptions: any 
 
   data: any
@@ -103,7 +110,7 @@ export class DashboardComponent {
           console.log(result);
           
           // this.data = this.createDataForBarChart([result])
-          this.barChartData = this.createDataForBarChart(sections)
+          this.barChartData = this.createDataForBarChart(sections, questions)
           this.resultCardData = this.createResultCardData(result, sections, questions)
           this.sectionsData = sections
           this.result = result
@@ -151,112 +158,11 @@ export class DashboardComponent {
         }
     };
   }
-  products = [
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-  ]
 
   fillDropDowns() {
     this.questions.forEach((question: any) => {
       if (this.sections.every(({ value }) => value !== question.sectionId))
-        this.sections.push({
-          label: question.sectionName,
-          value: question.sectionId,
-        })
+        this.sections.push({ label: question.sectionName, value: question.sectionId })
       if (this.areas.every(({ value }) => value !== question.areaId))
         this.areas.push({ label: question.areaName, value: question.areaId })
       if (this.topics.every(({ value }) => value !== question.topicId))
@@ -312,7 +218,7 @@ export class DashboardComponent {
     // this.selectedQuestionTableHeaders = [...this.selectedQuestionTableHeaders]
   }
 
-  onPreview(event: any, questionId: string, userResponse: any) {
+  onPreview(event: any, questionId: string, userResponse: any, isCorrect: boolean) {
     // console.log(userResponse);
     let correctOption = 0
     this.questionService.getQuestionById(questionId).subscribe({
@@ -320,10 +226,11 @@ export class DashboardComponent {
         correctOption = data.options.find((opt: any) => opt.isCorrect).index
         this.previewedQuestion = {
           ...data,
-          userResponse: userResponse,
+          userResponse,
           correctOption,
+          isCorrect
         }
-        console.log(this.previewedQuestion.userResponse)
+        console.log(this.previewedQuestion.questionType.label)
 
         this.isPreviewVisible = true
       },
@@ -374,12 +281,10 @@ export class DashboardComponent {
     return tempData
   }
 
-  createDataForBarChart(sectionsArray: any[]){
+  createDataForBarChart(sectionsArray: any[], questions: any[] = [], groupBy:string = 'Number'){
     const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text-color');
-    const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-
+    
+    const [correctData, wrongData, unansweredData] = this.calculateChartData(sectionsArray, questions, groupBy)
     return {
         labels: sectionsArray.map((sec)=> sec.sectionName),
         datasets: [
@@ -387,19 +292,22 @@ export class DashboardComponent {
                 type: 'bar',
                 label: 'Correct',
                 backgroundColor: documentStyle.getPropertyValue('--success'),
-                data: sectionsArray.map(sec => sec.correct)
+                data: correctData
+                // data: sectionsArray.map(sec => sec.correct)
             },
             {
                 type: 'bar',
                 label: 'Wrong',
                 backgroundColor: documentStyle.getPropertyValue('--danger'),
-                data: sectionsArray.map(sec => sec.wrong)
+                data: wrongData
+                // data: sectionsArray.map(sec => sec.wrong)
             },
             {
                 type: 'bar',
                 label: 'Unanswered',
-                backgroundColor: documentStyle.getPropertyValue('--warning'),
-                data: sectionsArray.map(sec => sec.unanswered)
+                backgroundColor: documentStyle.getPropertyValue('--normal-accent'),
+                data: unansweredData
+                // data: sectionsArray.map(sec => sec.unanswered)
             }
         ]
     };
@@ -440,4 +348,35 @@ export class DashboardComponent {
     ]
     return tempdata
   }
+
+  calculateChartData(sections: any[], questions: any[], groupBy:string = 'Number'): Array<number[]>{
+    
+    // If group by is Time Spent
+    let correctData: number[] = sections.map(({correct}) => correct)
+    let wrongData : number[] = sections.map(({wrong}) => wrong)
+    let unansweredData : number[] = sections.map(({unanswered}) => unanswered)
+    if (groupBy === 'Time Spent' || groupBy === 'Average Time'){
+      correctData = sections.map(({ sectionId }) => questions.reduce((sum, ques) => {
+        return (ques.isCorrect && ques.sectionId === sectionId) ?  sum + ques.timeSpent : sum 
+      }, 0) )
+      
+      wrongData = sections.map(({sectionId}) => questions.reduce((sum, ques) => {
+        return (!ques.isCorrect && ques.userResponse && ques.sectionId === sectionId) ?  sum + ques.timeSpent : sum 
+      }, 0) )
+      
+      unansweredData = sections.map(({sectionId}) => questions.reduce((sum, ques) => {
+        return ((ques.isCorrect === undefined || ques.isCorrect === null)  && ques.sectionId === sectionId) ?  sum + ques.timeSpent : sum 
+      }, 0) )
+    }
+    if (groupBy === 'Average Time'){
+      sections.forEach(({correct, wrong, unanswered}, idx )  => {
+        correctData[idx] = Math.round(correctData[idx] / correct).toFixed(0) as unknown as number
+        wrongData[idx] = Math.round(wrongData[idx] / wrong).toFixed(0) as unknown as number
+        unansweredData[idx] = Math.round(unansweredData[idx] / unanswered).toFixed(0) as unknown as number
+      } )
+    }
+
+    return [correctData, wrongData, unansweredData]
+  }
 }
+  

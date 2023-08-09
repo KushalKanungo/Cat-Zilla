@@ -60,9 +60,9 @@
       </div>
     </div>
   </div>
-  <h4 class="text-center">
-    Time Spent: {{ questions[currentQuestionIndex].timeSpent }} sec
-  </h4>
   <p-confirmPopup></p-confirmPopup>
-  <button class="theme-btn" (click)="confirm($event)">Next Section <i class="bi bi-arrow-bar-right ms-1"></i></button>
+  <div class="d-flex justify-content-center">
+    <button class="theme-btn" *ngIf="!isLastSection" (click)="confirm($event)">Next Section <i class="bi bi-arrow-bar-right ms-1"></i></button>
+    <button class="theme-btn px-4" *ngIf="isLastSection"> Submit <i class="bi bi-check2-square"></i> </button>
+  </div>
 </p-sidebar>

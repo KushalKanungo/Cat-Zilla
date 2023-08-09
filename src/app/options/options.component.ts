@@ -31,4 +31,15 @@ export class OptionsComponent {
   onAnswering (event: Event): void {
     this.question.userResponse !== null ? this.setQuestionStatus.emit(Status.ANSWERED) : this.setQuestionStatus.emit(Status.NOT_ANSWERED)
   }
+
+  onChange(event: any){
+    if(event.target.value !== ''){
+      this.setQuestionStatus.emit(Status.ANSWERED)
+      this.setUserResponse.emit(event.target.value)
+    }
+    else if((event.target.value === '')){
+      this.setQuestionStatus.emit(Status.NOT_ANSWERED)
+      this.setUserResponse.emit(null)
+    } 
+  }
 }

@@ -143,6 +143,7 @@ p-sorticon{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
   height: 120px;
+  cursor: pointer;
   gap: 1rem;
   // background-color: var(--light-accent);
   color: var(--dark-accent);
@@ -150,11 +151,24 @@ p-sorticon{
     font-family: 'Montserrat';
     font-size: 1rem;
     font-weight: 300;
+    
   }
   .data{
     font-family: 'Montserrat';
     font-size: 1.9rem;
     font-weight: 500;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:hover{
+    border-radius: 20px;
+     background-color: var(--normal-accent);
+     color: var(--light-accent);
+     .data{
+      font-size: 2.2rem;
+      // -webkit-text-stroke: 2px var(--light-accent);
+      }
+
   }
 }
 

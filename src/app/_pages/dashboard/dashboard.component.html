@@ -44,7 +44,7 @@
       </div>
       <div class="result-sections">
         <section class="test-papers shadow row row-cols-1 pt-4">
-          <div class="row">
+          <div class="row" *ngIf="!loading">
             <div class="col-12 p-2">
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
                 <div class="col p-3" *ngFor="let resultData of resultCardData">
@@ -55,12 +55,10 @@
                 </div>
               </div>
             </div>
+            <div class="col-6"></div>
             <div class="col-6">
-              <!-- <p-chart
-                type="polarArea"
-                [data]="data"
-                [options]="options"
-              ></p-chart> -->
+              <p-dropdown [options]="chartBy" (onChange)="chartByChange($event)"></p-dropdown></div>
+            <div class="col-6">
               <p-chart type="bar" [data]="data" [options]="barChartOptions"></p-chart>
 
             </div>
@@ -69,6 +67,27 @@
               <p-chart type="bar" [data]="barChartData" [options]="barChartOptions"></p-chart>
             </div>
             
+          </div>
+
+          <div class="row pt-4" *ngIf="loading">
+            <div class="col-12">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-4">
+              <p-skeleton height="120px"></p-skeleton>
+              <p-skeleton height="120px"></p-skeleton>
+              <p-skeleton height="120px"></p-skeleton>
+              <p-skeleton height="120px"></p-skeleton>
+              <p-skeleton height="120px"></p-skeleton>
+              <p-skeleton height="120px"></p-skeleton>
+              </div>
+            </div>
+            <div class="col-6 mt-4 px-4" style="overflow: hidden;" *ngFor="let item of [1,2]">
+              <div class="row row-cols-3 align-items-end px-4">
+                <p-skeleton height="50vh" width="6vw"></p-skeleton>
+                <p-skeleton height="30vh" width="6vw"></p-skeleton>
+                <p-skeleton height="40vh" width="6vw"></p-skeleton>
+              </div>
+              </div>
+
           </div>
         </section>
         <section class="test-papers shadow row row-cols-1 pt-4">
@@ -210,7 +229,7 @@
                 <td
                   *ngFor="let header of selectedQuestionTableHeaders"
                   (click)="
-                    onPreview($event, question.id, question.userResponse)
+                    onPreview($event, question.id, question.userResponse, question.isCorrect)
                   "
                 >
                   <span *ngIf="header.key !== 'isCorrect'">

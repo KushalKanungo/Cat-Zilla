@@ -5,13 +5,15 @@
 .question{
   color: var(--dark-accent);
   span{
+    font-family: 'Montserrat' !important;
     font-size: 1.04rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
 .correct{
   font-style: italic;
+  font-weight: 600;
 }
 
 .explanation{
@@ -19,6 +21,8 @@
   border-radius: 10px;
   background-color: var(--light-accent);
   color: var(--dark-accent);
+  text-align: justify;
+  padding: 2px 10px;
 }
 
 strong{

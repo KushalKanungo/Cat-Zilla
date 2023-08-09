@@ -5,6 +5,7 @@ import { SidebarModule } from 'primeng/sidebar'
 import { RadioButtonModule } from 'primeng/radiobutton'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ScrollPanelModule } from 'primeng/scrollpanel'
+import { DropdownModule } from 'primeng/dropdown';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
@@ -72,6 +73,7 @@ import { PaperListingComponent } from './_pages/paper-listing/paper-listing.comp
     TableModule,
     MultiSelectModule,
     TagModule,
+    DropdownModule,
     OverlayPanelModule,
     DialogModule,
     SkeletonModule,

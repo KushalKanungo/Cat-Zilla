@@ -19,6 +19,7 @@ export class SidebarComponent {
   @Input() section: Section
   @Input() isMobile: boolean
   @Input() currentSectionTime: number
+  @Input() isLastSection: boolean
   statusEnum = Status
 
   constructor (private readonly confirmationService: ConfirmationService) {}

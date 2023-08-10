@@ -25,7 +25,7 @@ export class QuestionPaperService {
       id: questionPaperId,
       sections: sectionIds.map(id => ({ id }))
     }
-    return this.http.post<any>(this.BASE_URL + '/question-paper/paper', params)
+    return this.http.post<any>(this.BASE_URL + '/question-papers/paper', params)
   }
 
   postUserResponse (question: Question, attemptId: string = '64c60dd55d0e5b0253e5dcf7'): Observable<any> {
@@ -33,7 +33,7 @@ export class QuestionPaperService {
     const params = {
       attemptId, questionId: id, status, timeSpent, userResponse
     }
-    return this.http.post<any>(this.BASE_URL + '/question-paper/paper-answer', params)
+    return this.http.post<any>(this.BASE_URL + '/question-papers/paper-answer', params)
   }
 
   getAllQuestionPapers (params: Filter): Observable<any> {
@@ -43,9 +43,9 @@ export class QuestionPaperService {
         'Content-Type': 'text/plain; charset=utf-8'
       }),
       params,
-      responseType: 'text'
+      responseType: 'json'
     }
 
-    return this.http.get<any>(this.BASE_URL + '/question_papers', httpOptions)
+    return this.http.get<any>(this.BASE_URL + '/question-papers', httpOptions)
   }
 }

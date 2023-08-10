@@ -7,29 +7,36 @@ nav{
   top: 0;
 }
 
-::ng-deep .p-panelmenu .p-panelmenu-header > a{
-  background-color: var(--normal-accent);
-  color: var(--white) !important;
-  border: none;
-  &:hover, &:active{
-    border: none;
-    background-color: var(--normal-accent) !important;
-  }
-} 
-::ng-deep .p-panelmenu .p-panelmenu-header.p-highlight > a{
-  background-color: var(--normal-accent);
-  color: var(--white) !important;
-  border: none;
-  &:hover, &:active{
-    border: none;
-    background-color: var(--normal-accent) !important;
-  }
-} 
+.nav-link{
+  all: unset;
+  background-color: var(--white);
 
-::ng-deep .p-menuitem{
-  color: var(--white) !important;
-  &:hover{
-    background-color: var(--normal-accent) !important;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  flex-direction: column;
+  width: 48px;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  i{
+    font-size: 1.6rem;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
   }
-  background-color: var(--normal-accent);
+  &:hover{
+    border-radius: 20px;
+    background-color: var(--dark-accent);
+    i{ color: var(--white) }
+  }
+
+  &:active{
+    transform: scale(0.9);
+  }
+}
+
+.active{
+  border-radius: 20px;
+  background-color: var(--dark-accent);
+  i{ color: var(--white) }
 }

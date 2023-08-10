@@ -1,29 +1,35 @@
 <app-navigation-bar></app-navigation-bar>
+<p-dialog header="Start paper" [(visible)]="isDialogVisible" [modal]="true" [style]="{ width: '20rem' }" [draggable]="false" [resizable]="false">
+ 
+</p-dialog>
 <section class="main px-4">
   <div class="row">
     <div class="col-12 col-lg-9 g-0">
       <div class="search-bar shadow">
         <input
           class="search-field"
-          [(ngModel)]="query"
+          [(ngModel)]="filter.query"
           (keydown.enter)="onSearch()"
           placeholder="Search"
           type="text"
         />
       </div>
       <div class="result-sections">
-        <section class="test-papers shadow row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 pt-4">
+        <section *ngIf="!isLoading" class="test-papers shadow row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 pt-4 px-3">
           <div
         class="paper-card-wrapper p-1 p-md-2"
-          *ngFor="let item of [1, 2, 34, 5, 5, 6,5,6,7,8,9]"
+          *ngFor="let paper of questionPapers"
           >
           <div class="paper-card p-4 mx-4 mx-sm-0">
-            <div class="start"><i class="bi bi-caret-right-fill"></i></div>
             <div class="label-wrapper">
-              <div class="label">Paper Name</div>
+              <!-- <div class="like">
+                <div class="placement">
+                  <div id="like" class="heart" (click)="onLike($event)"></div>
+                </div>
+              </div> -->
+              <div class="label text-truncate" [pTooltip]="paper.label" >{{paper.label}}</div>
               <p class="desc text-muted text-truncate">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum,
-                quasi.
+                {{paper.description}}
               </p>
               <div class="row row-cols-2">
                 <div class="col">
@@ -31,19 +37,28 @@
                   <div class="my-3 text-yellow  medium">20 Medium</div>
                   <div class="my-3 text-red  hard">40 Hard</div>
                 </div>
-                <div class="col">
-                  <div class="my-3 text-blue hard text-center total-ques">74</div>
+                <div class="col d-flex align-items-end justify-content-center">
+                  <div class="pb-2 text-blue hard text-center total-ques">{{ paper.questionsCount }}</div>
                 </div>
               </div>
             </div>
+            <button class="theme-btn text-center d-block m-auto py-2 mt-2" style="width: 60%; text-transform: uppercase;" (click)="showDialog($event, paper.id)"> Start </button>
           
             <div class="attempts">
-              <div >Last Attempt: </div>
-              <div >2023-01-01</div>
+              <div class="text-center" >Date Added: {{paper.createdAt | date}} </div>
             </div>
           </div>
         </div>
+        
+
         </section>
+        <section *ngIf="isLoading" class="test-papers shadow row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 pt-4 px-3">
+          <div class="p-2" *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]">
+            <p-skeleton width="100%" height="285px"></p-skeleton>
+          </div>
+        </section>
+
+
       </div>
     </div>
     <div class="col-lg-3">

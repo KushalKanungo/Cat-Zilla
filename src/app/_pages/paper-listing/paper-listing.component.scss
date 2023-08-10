@@ -55,37 +55,48 @@
     font-size: 3rem;
     font-weight: 700;
   }
-  .start {
+
+  .like{
     position: absolute;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    right: 20px;
-    bottom: 20px;
-    color: var(--light-accent);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background-color: var(--normal-accent);
-    &:hover,
-    &:active {
-      // transform: scale(1.1);
-      background-color: var(--dark-accent);
-      i {
-        font-size: 28px !important;
-        text-align: center;
-      }
-    }
-    border-radius: 10px;
-    i {
-      font-size: 24px !important;
-      transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    right: 10%;
+    color: var(--normal-accent);
+    i{
+      font-size: 2em;
     }
   }
+
   .attempts {
     position: absolute;
     bottom: 20px;
+    left: 0;
+    width: 100%;
     font-size: 14px;
   }
+}
+
+
+.heart {
+  width: 100px;
+  height: 100px;
+  transform: scale(1.2);
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  position: absolute;
+  right: -6px;
+  top: -10px;
+  &.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
+}
+
+
+
+@-webkit-keyframes like {
+  0%   { transform: scale(1); }
+  90%   { transform: scale(1.2); }
+  100% { transform: scale(1.1); }
 }

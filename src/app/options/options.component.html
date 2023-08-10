@@ -1,10 +1,10 @@
 <div class="">
-  <ng-template [ngIf]="question.quesType  === 'NE'">
+  <ng-template [ngIf]="question.quesType.toUpperCase()  === 'NE'">
     <div class="d-flex align-items-center">
       <label class="me-2 fs-5 mb-0" for=""> Your Response </label> <input type="number" pInputText [(ngModel)]="question.userResponse" (keyup)="onChange($event)"/>
     </div>
   </ng-template>
-  <ng-template [ngIf]="question.quesType === 'MCQ'">
+  <ng-template [ngIf]="question.quesType.toUpperCase() === 'MCQ'">
     <!-- <label *ngFor="let option of options" class="m-4"
       ><input
         type="radio"

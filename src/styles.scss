@@ -1,24 +1,34 @@
 @import 'primeng/resources/themes/lara-light-blue/theme.css';
 @import 'primeng/resources/primeng.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-// @import "~bootstrap/scss/functions";
-// @import "~bootstrap/scss/variables";
-// @import "~bootstrap/scss/mixins";
-// @import "~bootstrap/scss/grid";
-// @import "~bootstrap/scss/utilities";
-// @import "~bootstrap/dist/css/bootstrap-reboot.css";
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import '~bootstrap/dist/css/bootstrap-grid.css';
 @import '~bootstrap-icons/font/bootstrap-icons.css';
 @import '~bootstrap/dist/css/bootstrap-utilities.css';
 
-:root {
-  // --dark-accent: #001C30;
-  // --normal-accent: #176B87;
-  // --medium-accent: #64CCC5;
-  // --light-accent: #DAFFFB;
+// @font-face {
+//   font-family: Montserrat;
+//   src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf);
+// }
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
 
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url(./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+
+:root {
+  // FAV Cyan
+  --dark-accent: #001C30;
+  --normal-accent: #176B87;
+  --medium-accent: #64CCC5;
+  --light-accent: #DAFFFB;
+
+  // FAV Green
   // --dark-accent: #072227;
   // --normal-accent: #35858B;
   // --medium-accent: #4FBDBA;
@@ -29,7 +39,7 @@
   // --medium-accent: #A2D0C1;
   // --light-accent: #EFF7E1;
 
-  // --dark-accent: #6528f7;
+  // --dark-accent: #422a77;
   // --normal-accent: #a076f9;
   // --medium-accent: #d7bbf5;
   // --light-accent: #ede4ff;
@@ -40,12 +50,14 @@
   // --medium-accent: #FFD95A;
   // --light-accent: #FFF7D4;
 
-  --dark-accent: #251b37;
-  --normal-accent: #372948;
-  --primary-color: #372948;
-  --medium-accent: #ffcaca;
-  --light-accent: #ffecef;
+  // Dark Pink Fav
+  // --dark-accent: #251b37;
+  // --normal-accent: #372948;
+  // --primary-color: #372948;
+  // --medium-accent: #ffcaca;
+  // --light-accent: #ffecef;
 
+  // FAV Blue
   // --dark-accent: #0078AA;
   // --normal-accent: #3AB4F2;
   // --medium-accent: #F2DF3A;
@@ -168,12 +180,17 @@ input[type='button'] {
   all: unset;
   font-size: large;
   padding: 0.6rem;
-  background-color: var(--dark-accent);
   color: white;
   border-radius: 0.4rem;
   cursor: pointer;
+  background-color: var(--normal-accent);
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  //  background: -webkit-linear-gradient(to top,var(--normal-accent), var(--dark-accent)); 
+  //   background-color: var(--dark-accent);
+  //  background: linear-gradient(to top, var(--normal-accent), var(--dark-accent)); 
   &:hover {
-    background-color: var(--normal-accent);
+    background: var(--dark-accent) !important;
+    letter-spacing: 1px;
   }
 }
 .shadow {
@@ -214,6 +231,9 @@ p-multiselectitem {
 
 .p-multiselect-header {
   background-color: var(--normal-accent) !important;
+  .p-checkbox{
+    display: none;
+  }
 }
 
 .p-multiselect-clear-icon{
@@ -222,9 +242,16 @@ p-multiselectitem {
   }
 }
 
+.p-multiselect-panel .p-multiselect-header .p-multiselect-close{
+  color: var(--white);
+  &:hover{
+    color: (var(--dark-accent));
+  }
+}
+
 .p-multiselect-panel {
-  background-color: rgba(255, 255, 255, 0.738);
-  backdrop-filter: blur(8px);
+  // background-color: rgba(255, 255, 255, 0.738);
+  // backdrop-filter: blur(8px);
 }
 
 .p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {

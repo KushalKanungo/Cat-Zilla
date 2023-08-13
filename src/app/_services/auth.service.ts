@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core'
 import { Observable, tap } from 'rxjs'
 import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router'
-import { env } from '../../../env'
+import ENV from '../../../env'
 
 export interface SignInResponse {
   accessToken: string
@@ -14,9 +14,9 @@ export interface SignInResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  private readonly ACCESS_TOKEN_KEY_NAME = 'accessToken'
-  private readonly AUTH_FAILED_REDIRECT_URL = '/'
-  private readonly BASE_URL = env.BASE_URL + '/users/'
+  private readonly ACCESS_TOKEN_KEY_NAME = ENV.ACCESS_TOKEN_KEY_NAME
+  private readonly AUTH_FAILED_REDIRECT_URL = '/login'
+  private readonly BASE_URL = ENV.BASE_URL + '/users/'
 
   constructor (private readonly http: HttpClient, private readonly router: Router) {}
 
@@ -29,7 +29,7 @@ export class AuthService {
       .pipe(
         tap((response) => {
           this.saveAccessToken(response.accessToken)
-          void this.router.navigate(['paper'])
+          void this.router.navigate(['papers'])
         })
       )
   }
@@ -65,5 +65,6 @@ export class AuthService {
 
   logOut (): void {
     this.clearAccessToken()
+    void this.router.navigate([this.AUTH_FAILED_REDIRECT_URL])
   }
 }

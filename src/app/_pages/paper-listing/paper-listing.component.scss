@@ -36,8 +36,10 @@
 .paper-card {
   font-family: 'Montserrat';
   position: relative;
-  max-width: 260px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  // max-width: 260px;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   height: 18rem;
   background-color: var(--white);
   border-radius: 10px;

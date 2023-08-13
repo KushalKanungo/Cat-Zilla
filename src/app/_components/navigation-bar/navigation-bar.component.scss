@@ -10,7 +10,6 @@ nav{
 .nav-link{
   all: unset;
   background-color: var(--white);
-
   height: 48px;
   display: flex;
   justify-content: center;
@@ -21,6 +20,7 @@ nav{
   transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   i{
     font-size: 1.6rem;
+    color: var(--dark-accent);
     transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
   }

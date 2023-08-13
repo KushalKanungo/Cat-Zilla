@@ -1,5 +1,4 @@
-<app-navigation-bar></app-navigation-bar>
-<p-dialog
+  <p-dialog
   [header]="'Ques ' + previewedQuestion?.questionNo"
   [maximizable]="true"
   [dismissableMask]="true"
@@ -9,6 +8,15 @@
   [draggable]="false"
   [resizable]="false"
 >
+<ng-template pTemplate="closeicon">
+  <i class="bi bi-x-diamond"></i>
+</ng-template>
+<ng-template pTemplate="maximizeicon">
+  <i class="bi bi-fullscreen"></i>
+</ng-template>
+<ng-template pTemplate="minimizeicon">
+  <i class="bi bi-fullscreen-exit"></i>
+</ng-template>
   <app-question-preview [question]="previewedQuestion"></app-question-preview>
 </p-dialog>
 
@@ -31,8 +39,8 @@
 </p-overlayPanel>
 
 <section class="main px-4">
-  <div class="row">
-    <div class="col-12 col-lg-9 g-0">
+  <div class="row" >
+    <div class="col-12 col-lg-9 g-0" >
       <div class="search-bar shadow">
         <input
           class="search-field"
@@ -42,7 +50,7 @@
           type="text"
         />
       </div>
-      <div class="result-sections">
+      <div class="result-sections" *ngIf="!showResultChooseMessage">
         <section class="test-papers shadow row row-cols-1 pt-4">
           <div class="row" *ngIf="!loading">
             <div class="col-12 p-2">
@@ -264,7 +272,12 @@
           </p-table>
         </section>
       </div>
+      <div class="result-sections bg-white shadow mt-2 rounded" *ngIf="showResultChooseMessage">
+          <div class="message  fs-1 d-flex justify-content-center align-items-center"> <span>Select a result to show details <i class="bi bi-caret-right"> </i> </span></div>
+      </div>
     </div>
+    
+
     <div class="col-lg-3">
       <app-mini-dashboard></app-mini-dashboard>
     </div>

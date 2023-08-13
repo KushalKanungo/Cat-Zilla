@@ -1,5 +1,7 @@
 
 import { Component, type OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
+import { Location } from '@angular/common'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +9,12 @@ import { Component, type OnInit } from '@angular/core'
 })
 export class AppComponent implements OnInit {
   title = 'CATzilla'
+  currentPath = ''
+  constructor (private readonly route: ActivatedRoute, private readonly location: Location) {}
+  isQuestionPaperUi = false
   ngOnInit (): void {
-    console.log('loaded')
+    this.location.onUrlChange(url => {
+      this.currentPath = url.split('/')?.[1]
+    })
   }
 }

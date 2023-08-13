@@ -5,15 +5,16 @@ import { SidebarModule } from 'primeng/sidebar'
 import { RadioButtonModule } from 'primeng/radiobutton'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ScrollPanelModule } from 'primeng/scrollpanel'
-import { DropdownModule } from 'primeng/dropdown';
-import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { DropdownModule } from 'primeng/dropdown'
+import { OverlayPanelModule } from 'primeng/overlaypanel'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
-import { TagModule } from 'primeng/tag';
-import { DialogModule } from 'primeng/dialog';
-import { ChartModule } from 'primeng/chart';
+import { TagModule } from 'primeng/tag'
+import { DialogModule } from 'primeng/dialog'
+import { ChartModule } from 'primeng/chart'
+import { ConfirmDialogModule } from 'primeng/confirmdialog'
 import { AppRoutingModule } from './app-routing.module'
-import { SkeletonModule } from 'primeng/skeleton';
+import { SkeletonModule } from 'primeng/skeleton'
 import { PanelMenuModule } from 'primeng/panelmenu'
 import { CheckboxModule } from 'primeng/checkbox'
 import { AppComponent } from './app.component'
@@ -30,12 +31,12 @@ import { TableModule } from 'primeng/table'
 import { MultiSelectModule } from 'primeng/multiselect'
 import { ConfirmPopupModule } from 'primeng/confirmpopup'
 import { LoginComponent } from './_pages/login/login.component'
-import { AuthInterceptor } from 'src/_interceptors/auth-interceptor';
-import { DashboardComponent } from './_pages/dashboard/dashboard.component';
-import { NavigationBarComponent } from './_components/navigation-bar/navigation-bar.component';
-import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashboard.component';
-import { InsightsComponent } from './_components/insights/insights.component';
-import { QuestionPreviewComponent } from './_components/question-preview/question-preview.component';
+import { AuthInterceptor } from 'src/_interceptors/auth-interceptor'
+import { DashboardComponent } from './_pages/dashboard/dashboard.component'
+import { NavigationBarComponent } from './_components/navigation-bar/navigation-bar.component'
+import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashboard.component'
+import { InsightsComponent } from './_components/insights/insights.component'
+import { QuestionPreviewComponent } from './_components/question-preview/question-preview.component'
 import { PaperListingComponent } from './_pages/paper-listing/paper-listing.component'
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { PaperListingComponent } from './_pages/paper-listing/paper-listing.comp
     OverlayPanelModule,
     DialogModule,
     SkeletonModule,
-    ChartModule
+    ChartModule,
+    ConfirmDialogModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]

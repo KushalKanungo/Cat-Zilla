@@ -1,25 +1,31 @@
 import { Component } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 import { Header } from 'primeng/api'
 import { QuestionService } from 'src/app/_services/question.service'
 import { ResultService } from 'src/app/_services/result.service'
+import { switchMap } from 'rxjs/operators'
+import { of } from 'rxjs'
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  constructor(
+  constructor (
+    private readonly questionService: QuestionService,
     private readonly resultService: ResultService,
-    private readonly questionService: QuestionService
+    private readonly route: ActivatedRoute
   ) {}
 
   query = ''
+  attemptId: string
   questions = []
   sectionsData = []
-  barChartData:any = []
+  showResultChooseMessage: boolean = true
+  barChartData: any = []
   selectedQuestions: any[] = []
-  resultCardData: Array<{label: string, data: any}> 
+  resultCardData: Array<{ label: string, data: any }>
   result: any
   isPreviewVisible = false
   filter: {
@@ -29,43 +35,43 @@ export class DashboardComponent {
     subjects: string[]
     responses: string[]
   } = {
-    sections: [],
-    topics: [],
-    areas: [],
-    subjects: [],
-    responses: [],
-  }
+      sections: [],
+      topics: [],
+      areas: [],
+      subjects: [],
+      responses: []
+    }
 
   options = {
     plugins: {
       legend: {
         labels: {
-          usePointStyle: true,
-        },
-      },
-    },
+          usePointStyle: true
+        }
+      }
+    }
   }
 
   chartBy = ['Number', 'Time Spent', 'Average Time']
 
-  chartByChange(event: any){
+  chartByChange (event: any) {
     this.barChartData = this.createDataForBarChart(this.sectionsData, this.questions, event.value)
-    
   }
 
-  barChartOptions: any 
+  barChartOptions: any
 
   data: any
 
-  subjects: Array<{ label: string; value: string }> = []
-  sections: Array<{ label: string; value: string }> = []
-  topics: Array<{ label: string; value: string }> = []
-  areas: Array<{ label: string; value: string }> = []
-  responses: Array<{ label: string; value: string }> = [
+  subjects: Array<{ label: string, value: string }> = []
+  sections: Array<{ label: string, value: string }> = []
+  topics: Array<{ label: string, value: string }> = []
+  areas: Array<{ label: string, value: string }> = []
+  responses: Array<{ label: string, value: string }> = [
     { label: 'Correct', value: 'Correct' },
     { label: 'Wrong', value: 'Wrong' },
-    { label: 'Skipped', value: 'Skipped' },
+    { label: 'Skipped', value: 'Skipped' }
   ]
+
   loading = true
   previewedQuestion: any
   QUESTION_TABLE_HEADERS = [
@@ -74,7 +80,7 @@ export class DashboardComponent {
     {
       header: 'TimeSpent',
       key: 'timeSpent',
-      command: (value: unknown) => `${value} sec`,
+      command: (value: unknown) => `${value} sec`
     },
     {
       header: 'Response',
@@ -82,135 +88,160 @@ export class DashboardComponent {
       command: (value: boolean | null | undefined) =>
         value === null || value === undefined
           ? 'Skipped'
-          : value === true
-          ? 'Correct'
-          : 'Wrong',
+          : value
+            ? 'Correct'
+            : 'Wrong'
     },
     { header: 'Topic', key: 'topicName' },
     { header: 'Area', key: 'areaName' },
-    { header: 'Subject', key: 'subjectName' },
+    { header: 'Subject', key: 'subjectName' }
   ]
+
   columns: string[] = []
   selectedColumns: string[] = []
   selectedQuestionTableHeaders: any = []
 
-  ngOnInit() {
+  ngOnInit () {
     this.columns = this.QUESTION_TABLE_HEADERS.map(({ header }) => header)
     this.selectedColumns = [...this.columns]
     this.selectedQuestionTableHeaders = [...this.QUESTION_TABLE_HEADERS]
-    this.resultService
-      .getResultByAttemptId('64c60dd55d0e5b0253e5dcf7')
-      .subscribe({
-        next: ({ questions, sections, ...result }) => {
-          this.questions = questions
-          this.selectedQuestions = questions
-          this.fillDropDowns()
-          this.loading = false
-          this.data = this.createDataForPieChart(sections)
-          console.log(result);
-          
-          // this.data = this.createDataForBarChart([result])
-          this.barChartData = this.createDataForBarChart(sections, questions)
-          this.resultCardData = this.createResultCardData(result, sections, questions)
-          this.sectionsData = sections
-          this.result = result
-        },
-      })
-      const documentStyle = getComputedStyle(document.documentElement);
-      const textColor = documentStyle.getPropertyValue('--text-color');
-      const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
-      const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-      this.barChartOptions = {
-        maintainAspectRatio: false,
-        aspectRatio: 0.8,
-        plugins: {
-            tooltips: {
-                mode: 'index',
-                intersect: false
-            },
-            legend: {
-                labels: {
-                    color: textColor
-                }
-            }
-        },
-        scales: {
-            x: {
-                stacked: true,
-                ticks: {
-                    color: textColorSecondary
-                },
-                grid: {
-                    color: surfaceBorder,
-                    drawBorder: false
-                }
-            },
-            y: {
-                stacked: true,
-                ticks: {
-                    color: textColorSecondary
-                },
-                grid: {
-                    color: surfaceBorder,
-                    drawBorder: false
-                }
-            }
+
+    this.route.paramMap.pipe(
+      switchMap(params => {
+        const id = params.get('id')
+        if (id === null) {
+          this.showResultChooseMessage = true
+          return of(null)
         }
-    };
+        this.loading = true
+        this.selectedQuestions = []
+        this.showResultChooseMessage = false
+        return this.resultService.getResultByAttemptId(id)
+      })
+    ).subscribe({
+      next: (data: any) => {
+        console.log('data', data)
+        if (data === null) {
+          return
+        }
+        this.initialDataFill(data)
+        this.loading = false
+      }
+    })
+
+    const documentStyle = getComputedStyle(document.documentElement)
+    const textColor = documentStyle.getPropertyValue('--text-color')
+    const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary')
+    const surfaceBorder = documentStyle.getPropertyValue('--surface-border')
+    this.barChartOptions = {
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
+      plugins: {
+        tooltips: {
+          mode: 'index',
+          intersect: false
+        },
+        legend: {
+          labels: {
+            color: textColor
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: {
+            color: textColorSecondary
+          },
+          grid: {
+            color: surfaceBorder,
+            drawBorder: false
+          }
+        },
+        y: {
+          stacked: true,
+          ticks: {
+            color: textColorSecondary
+          },
+          grid: {
+            color: surfaceBorder,
+            drawBorder: false
+          }
+        }
+      }
+    }
   }
 
-  fillDropDowns() {
+  initialDataFill ({ questions, sections, ...result }: { questions: any, sections: any }): void {
+    this.questions = questions
+    this.selectedQuestions = questions
+    this.fillDropDowns()
+    this.loading = false
+    this.data = this.createDataForPieChart(sections)
+    console.log(result)
+
+    // this.data = this.createDataForBarChart([result])
+    this.barChartData = this.createDataForBarChart(sections, questions)
+    this.resultCardData = this.createResultCardData(result, sections, questions)
+    this.sectionsData = sections
+    this.result = result
+  }
+
+  fillDropDowns () {
     this.questions.forEach((question: any) => {
-      if (this.sections.every(({ value }) => value !== question.sectionId))
-        this.sections.push({ label: question.sectionName, value: question.sectionId })
-      if (this.areas.every(({ value }) => value !== question.areaId))
-        this.areas.push({ label: question.areaName, value: question.areaId })
-      if (this.topics.every(({ value }) => value !== question.topicId))
-        this.topics.push({ label: question.topicName, value: question.topicId })
-      if (this.subjects.every(({ value }) => value !== question.subjectId))
+      if (this.sections.every(({ value }) => value !== question.sectionId)) { this.sections.push({ label: question.sectionName, value: question.sectionId }) }
+      if (this.areas.every(({ value }) => value !== question.areaId)) { this.areas.push({ label: question.areaName, value: question.areaId }) }
+      if (this.topics.every(({ value }) => value !== question.topicId)) { this.topics.push({ label: question.topicName, value: question.topicId }) }
+      if (this.subjects.every(({ value }) => value !== question.subjectId)) {
         this.subjects.push({
           label: question.subjectName,
-          value: question.subjectId,
+          value: question.subjectId
         })
+      }
     })
   }
 
-  onFilterChange(event: any, throughClear = false) {
+  onFilterChange (event: any, throughClear = false) {
     this.selectedQuestions = this.questions
     if (throughClear) {
       this.filter[event as keyof typeof this.filter] = []
     }
     // console.log(event);
 
-    if (this.filter.areas?.length > 0)
+    if (this.filter.areas?.length > 0) {
       this.selectedQuestions = this.selectedQuestions.filter((question: any) =>
         this.filter.areas.includes(question.areaId)
       )
-    if (this.filter.sections?.length > 0)
+    }
+    if (this.filter.sections?.length > 0) {
       this.selectedQuestions = this.selectedQuestions.filter((question: any) =>
         this.filter.sections.includes(question.sectionId)
       )
-    if (this.filter.topics?.length > 0)
+    }
+    if (this.filter.topics?.length > 0) {
       this.selectedQuestions = this.selectedQuestions.filter((question: any) =>
         this.filter.topics.includes(question.topicId)
       )
-    if (this.filter.subjects?.length > 0)
+    }
+    if (this.filter.subjects?.length > 0) {
       this.selectedQuestions = this.selectedQuestions.filter((question: any) =>
         this.filter.subjects.includes(question.subjectId)
       )
-    if (this.filter.responses?.length > 0)
+    }
+    if (this.filter.responses?.length > 0) {
       this.selectedQuestions = this.selectedQuestions.filter(
         (question: any) =>
-          this.QUESTION_TABLE_HEADERS[3].command &&
+          (this.QUESTION_TABLE_HEADERS[3].command != null) &&
           this.filter.responses.includes(
             this.QUESTION_TABLE_HEADERS[3].command(question.isCorrect)
           )
       )
+    }
     this.selectedQuestions = [...this.selectedQuestions]
     console.log(this.selectedQuestions)
   }
 
-  onColumnChange(event: any) {
+  onColumnChange (event: any) {
     if (event === true) this.selectedColumns = []
     this.selectedQuestionTableHeaders = this.QUESTION_TABLE_HEADERS.filter(
       ({ header }) => this.selectedColumns.includes(header)
@@ -218,7 +249,7 @@ export class DashboardComponent {
     // this.selectedQuestionTableHeaders = [...this.selectedQuestionTableHeaders]
   }
 
-  onPreview(event: any, questionId: string, userResponse: any, isCorrect: boolean) {
+  onPreview (event: any, questionId: string, userResponse: any, isCorrect: boolean) {
     // console.log(userResponse);
     let correctOption = 0
     this.questionService.getQuestionById(questionId).subscribe({
@@ -233,15 +264,15 @@ export class DashboardComponent {
         console.log(this.previewedQuestion.questionType.label)
 
         this.isPreviewVisible = true
-      },
+      }
     })
   }
 
-  onSearch(): void {
+  onSearch (): void {
     console.log(this.query)
   }
 
-  createDataForPieChart(sectionsArray: any[]) {
+  createDataForPieChart (sectionsArray: any[]) {
     const documentStyle = getComputedStyle(document.documentElement)
     const textColor = documentStyle.getPropertyValue('--text-color')
     const totalQuestions = sectionsArray.reduce(
@@ -268,115 +299,111 @@ export class DashboardComponent {
           backgroundColor: [
             documentStyle.getPropertyValue('--warning'),
             documentStyle.getPropertyValue('--success'),
-            documentStyle.getPropertyValue('--danger'),
+            documentStyle.getPropertyValue('--danger')
           ],
           hoverBackgroundColor: [
             documentStyle.getPropertyValue('--warning-lite'),
             documentStyle.getPropertyValue('--success-lite'),
-            documentStyle.getPropertyValue('--danger-lite'),
-          ],
-        },
-      ],
+            documentStyle.getPropertyValue('--danger-lite')
+          ]
+        }
+      ]
     }
     return tempData
   }
 
-  createDataForBarChart(sectionsArray: any[], questions: any[] = [], groupBy:string = 'Number'){
-    const documentStyle = getComputedStyle(document.documentElement);
-    
+  createDataForBarChart (sectionsArray: any[], questions: any[] = [], groupBy: string = 'Number') {
+    const documentStyle = getComputedStyle(document.documentElement)
+
     const [correctData, wrongData, unansweredData] = this.calculateChartData(sectionsArray, questions, groupBy)
     return {
-        labels: sectionsArray.map((sec)=> sec.sectionName),
-        datasets: [
-            {
-                type: 'bar',
-                label: 'Correct',
-                backgroundColor: documentStyle.getPropertyValue('--success'),
-                data: correctData
-                // data: sectionsArray.map(sec => sec.correct)
-            },
-            {
-                type: 'bar',
-                label: 'Wrong',
-                backgroundColor: documentStyle.getPropertyValue('--danger'),
-                data: wrongData
-                // data: sectionsArray.map(sec => sec.wrong)
-            },
-            {
-                type: 'bar',
-                label: 'Unanswered',
-                backgroundColor: documentStyle.getPropertyValue('--normal-accent'),
-                data: unansweredData
-                // data: sectionsArray.map(sec => sec.unanswered)
-            }
-        ]
-    };
+      labels: sectionsArray.map((sec) => sec.sectionName),
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Correct',
+          backgroundColor: documentStyle.getPropertyValue('--success'),
+          data: correctData
+          // data: sectionsArray.map(sec => sec.correct)
+        },
+        {
+          type: 'bar',
+          label: 'Wrong',
+          backgroundColor: documentStyle.getPropertyValue('--danger'),
+          data: wrongData
+          // data: sectionsArray.map(sec => sec.wrong)
+        },
+        {
+          type: 'bar',
+          label: 'Unanswered',
+          backgroundColor: documentStyle.getPropertyValue('--warning'),
+          data: unansweredData
+          // data: sectionsArray.map(sec => sec.unanswered)
+        }
+      ]
+    }
   }
 
-  createResultCardData(result: any, sectionsData: any, questions: any): Array<{label: string, data: any}>{
-    const avgCorrect = Math.round(questions.reduce((sum: any,ques: any) => {
-      if (ques.isCorrect){
-        console.log(ques.timeSpent);
+  createResultCardData (result: any, sectionsData: any, questions: any): Array<{ label: string, data: any }> {
+    const avgCorrect = Math.round(questions.reduce((sum: any, ques: any) => {
+      if (ques.isCorrect) {
         return sum + ques.timeSpent
       }
       return sum
-    }, 0)/result.correct).toFixed(0)
+    }, 0) / result.correct).toFixed(0)
 
-    const avgWrong = Math.round(questions.reduce((sum: any,ques: any) => {
-      if (ques.isCorrect === false){
-        console.log(ques.timeSpent);
+    const avgWrong = Math.round(questions.reduce((sum: any, ques: any) => {
+      if (ques.isCorrect === false && ques.userResponse !== null) {
         return sum + ques.timeSpent
       }
       return sum
-    }, 0)/result.wrong).toFixed(0)
+    }, 0) / result.wrong).toFixed(0)
 
-    const avgUnanswered = Math.round(questions.reduce((sum: any,ques: any) => {
-      if (ques.userResponse === null){
-        console.log(ques.timeSpent);
+    const avgUnanswered = Math.round(questions.reduce((sum: any, ques: any) => {
+      if (ques.userResponse === null) {
         return sum + ques.timeSpent
       }
       return sum
-    }, 0)/result.unanswered).toFixed(0)
+    }, 0) / result.unanswered).toFixed(0)
 
     const tempdata = [
-      {label: 'Marks', data: result.marks},
-      {label: 'Avg. Correct', data: `${avgCorrect}s` },
-      {label: 'Wrong', data: `${avgWrong}s`},
-      {label: 'Unanswered', data: `${avgUnanswered}s`},
-      {label: 'Percentage', data: (Math.round(result.marks) * 100 / result.maximumMarks).toFixed(2) },
-      {label: 'Attempted %', data: (Math.round(result.correct + result.wrong) * 100 / result.total).toFixed(2)}
+      { label: 'Marks', data: result.marks },
+      { label: 'Avg. Correct', data: `${avgCorrect}s` },
+      { label: 'Wrong', data: `${avgWrong}s` },
+      { label: 'Unanswered', data: `${avgUnanswered}s` },
+      { label: 'Percentage', data: (Math.round(result.marks) * 100 / result.maximumMarks).toFixed(2) },
+      { label: 'Attempted %', data: (Math.round(result.correct + result.wrong) * 100 / result.total).toFixed(2) }
     ]
     return tempdata
   }
 
-  calculateChartData(sections: any[], questions: any[], groupBy:string = 'Number'): Array<number[]>{
-    
+  calculateChartData (sections: any[], questions: any[], groupBy: string = 'Number'): number[][] {
     // If group by is Time Spent
-    let correctData: number[] = sections.map(({correct}) => correct)
-    let wrongData : number[] = sections.map(({wrong}) => wrong)
-    let unansweredData : number[] = sections.map(({unanswered}) => unanswered)
-    if (groupBy === 'Time Spent' || groupBy === 'Average Time'){
+    let correctData: number[] = sections.map(({ correct }) => correct)
+    let wrongData: number[] = sections.map(({ wrong }) => wrong)
+    let unansweredData: number[] = sections.map(({ unanswered }) => unanswered)
+    if (groupBy === 'Time Spent' || groupBy === 'Average Time') {
       correctData = sections.map(({ sectionId }) => questions.reduce((sum, ques) => {
-        return (ques.isCorrect && ques.sectionId === sectionId) ?  sum + ques.timeSpent : sum 
-      }, 0) )
-      
-      wrongData = sections.map(({sectionId}) => questions.reduce((sum, ques) => {
-        return (!ques.isCorrect && ques.userResponse && ques.sectionId === sectionId) ?  sum + ques.timeSpent : sum 
-      }, 0) )
-      
-      unansweredData = sections.map(({sectionId}) => questions.reduce((sum, ques) => {
-        return ((ques.isCorrect === undefined || ques.isCorrect === null)  && ques.sectionId === sectionId) ?  sum + ques.timeSpent : sum 
-      }, 0) )
+        return (ques.isCorrect && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
+      }, 0))
+
+      wrongData = sections.map(({ sectionId }) => questions.reduce((sum, ques) => {
+
+        return (!ques.isCorrect && ques.userResponse !== null && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
+      }, 0))
+
+      unansweredData = sections.map(({ sectionId }) => questions.reduce((sum, ques) => {
+        return ((ques.isCorrect === undefined || ques.isCorrect === null) && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
+      }, 0))
     }
-    if (groupBy === 'Average Time'){
-      sections.forEach(({correct, wrong, unanswered}, idx )  => {
+    if (groupBy === 'Average Time') {
+      sections.forEach(({ correct, wrong, unanswered }, idx) => {
         correctData[idx] = Math.round(correctData[idx] / correct).toFixed(0) as unknown as number
         wrongData[idx] = Math.round(wrongData[idx] / wrong).toFixed(0) as unknown as number
         unansweredData[idx] = Math.round(unansweredData[idx] / unanswered).toFixed(0) as unknown as number
-      } )
+      })
     }
 
     return [correctData, wrongData, unansweredData]
   }
 }
-  

@@ -41,6 +41,15 @@ export class QuestionComponent implements OnInit {
     console.log(this.question.userResponse)
   }
 
+  fixImages (): void {
+    document.querySelectorAll('img').forEach((ele) => {
+      const base = 'https://imsclick2cert.blob.core.windows.net/imsitemimages/'
+      const link = ele.src.split('/')
+      const newLink = base + link[link.length - 1]
+      ele.src = newLink
+    })
+  }
+
   setQuestionStatus (status: Status): void {
     this.question.status = status
   }

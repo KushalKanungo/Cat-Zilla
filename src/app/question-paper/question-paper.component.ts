@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { Component, OnInit } from '@angular/core'
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core'
 import { type Section } from 'src/_models/section'
 import { Status } from 'src/_enums/status'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
@@ -13,7 +13,7 @@ import { QuestionPaperService } from '../_services/question-paper.service'
   templateUrl: './question-paper.component.html',
   styleUrls: ['./question-paper.component.scss']
 })
-export class QuestionPaperComponent implements OnInit {
+export class QuestionPaperComponent implements OnInit, OnDestroy {
   constructor (private readonly breakpointObserver: BreakpointObserver, private readonly activateRoute: ActivatedRoute, private readonly questionPaperService: QuestionPaperService) {
 
   }
@@ -26,7 +26,17 @@ export class QuestionPaperComponent implements OnInit {
   currentQuestionIndex: number = 0
   attemptId: string
 
+  checkLoad (event: any): void {
+    if (this.questionPaperService.isPaperInProgress()) {
+      event.preventDefault()
+      event.returnValue = 'Are you sure you want to leave?'
+      return event
+    }
+  }
+
   ngOnInit (): void {
+    window.addEventListener('beforeunload', this.checkLoad, false)
+
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
       .subscribe((state) => {
         console.log(state.matches)
@@ -34,6 +44,9 @@ export class QuestionPaperComponent implements OnInit {
       })
 
     this.questionPaper = this.activateRoute.snapshot.data['questionPaper'].sections
+    this.attemptId = this.activateRoute.snapshot.data['questionPaper'].attemptId
+    this.questionPaperService.setCurrectPaperStatusOnLocal(this.attemptId)
+
     this.allSections = this.questionPaper.map((sec: Section, idx) => ({ label: sec.label, index: idx }))
     this.questionPaper[this.currentSectionIndex].status = Status.IN_PROGRESS
     this.timeTaken = setInterval(() => {
@@ -43,6 +56,10 @@ export class QuestionPaperComponent implements OnInit {
         this.changeToSection(this.currentSectionIndex + 1)
       }
     }, 1000)
+  }
+
+  ngOnDestroy (): void {
+    window.removeEventListener('beforeunload', this.checkLoad, false)
   }
 
   nextQuestion (): void {
@@ -56,13 +73,10 @@ export class QuestionPaperComponent implements OnInit {
   }
 
   changeToQuestion (idx: number): void {
-    debugger
-
     if (idx < 0 || idx >= this.questionPaper[this.currentSection()].questions.length) return
     const currentQuestion = this.questionPaper[this.currentSection()].questions[this.currentQuestionIndex]
-    if (currentQuestion.userResponse === undefined && currentQuestion.status !== Status.REVIEW)  
-      currentQuestion.status = Status.NOT_ANSWERED 
-    this.questionPaperService.postUserResponse(this.questionPaper[this.currentSection()].questions[this.currentQuestionIndex]).subscribe({ next: () => {} })
+    if (currentQuestion.userResponse === undefined && currentQuestion.status !== Status.REVIEW) { currentQuestion.status = Status.NOT_ANSWERED }
+    this.questionPaperService.postUserResponse(this.questionPaper[this.currentSection()].questions[this.currentQuestionIndex], this.attemptId).subscribe({ next: () => {} })
     this.currentQuestionIndex = idx
   }
 

@@ -3,7 +3,7 @@
 <!-- <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu> -->
 
 <div class="d-flex justify-content-center flex-column align-items-center gap-3">
-  <button class="nav-link" (click)="link?.command()" [pTooltip]="link.label"  *ngFor="let link of navItems" [ngClass]="this.activeRoute.routeConfig?.path == link.path ? 'active' : ''" >
+  <button class="nav-link" (click)="link?.command()" [pTooltip]="link.label"  *ngFor="let link of navItems" [ngClass]="this.currentPath == link.path ? 'active' : ''" >
     <i [class]="link.icon" ></i>
   </button>
 </div>

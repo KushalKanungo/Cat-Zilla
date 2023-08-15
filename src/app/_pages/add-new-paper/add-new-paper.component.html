@@ -1,0 +1,28 @@
+<section class="main px-3">
+  <div class="bg mt-4 p-4">
+    <div class="heading mb-2">Add a question paper</div>
+    <input class="fs-5 p-3 p-3 rounded" type="text" pInputText placeholder="Paper Name" [(ngModel)]="label" />
+    <br />
+    <label class="ms-2 fs-5 equal-width p-3" for="">
+      <i class="bi bi-file-earmark-excel text-red" *ngIf="fileName === ''"></i> 
+      <i class="bi bi-file-earmark-check text-green" *ngIf="fileName !== ''"></i>
+      {{ fileName ? fileName : 'No file selected'  }}
+    </label>
+    <br>
+    <input
+      type="file"
+      id="files"
+      class="d-none"
+      [(ngModel)]="file"
+      (change)="onFileChange($event)"
+    />
+    <label for="files" class="theme-btn mt-2 text-truncate equal-width p-3">Select file <i class="bi bi-file-earmark-text"></i></label
+    >
+    <br />
+
+    <button class="theme-btn mt-2 equal-width p-3 d-flex justify-content-center" (click)="onAdd()" [disabled]="isLoading"> 
+       <span *ngIf="!isLoading">Add Question <i class="bi bi-upload"></i> </span>
+       <app-bar-loading *ngIf="isLoading"></app-bar-loading>  
+    </button>
+  </div>
+</section>

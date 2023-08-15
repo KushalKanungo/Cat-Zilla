@@ -13,6 +13,7 @@ import { type Section } from 'src/_models/section'
 export class SidebarComponent {
   @Output() changeToQuestion = new EventEmitter()
   @Output() changeToSection = new EventEmitter()
+  @Output() submitPaper = new EventEmitter()
   @Input() currentQuestionIndex: number
   @Input() currentSectionIndex: number
   @Input() questions: Question[]
@@ -53,6 +54,10 @@ export class SidebarComponent {
 
   changeToSectionHandeler (sectionIdx: number): void {
     this.changeToSection.emit(sectionIdx)
+  }
+
+  submitPaperHandeler (): void {
+    this.submitPaper.emit()
   }
 
   setQuestionStatus (status: Status): void {

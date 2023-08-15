@@ -10,14 +10,32 @@ import { ResultService } from 'src/app/_services/result.service'
 })
 export class MiniDashboardComponent implements OnInit {
   constructor (private readonly resultService: ResultService, private readonly router: Router, private readonly route: ActivatedRoute) { }
-  attempts: any[]
-  filter: Filter = { per: 8, page: 1 }
+  attempts: any[] = []
+  filter: Filter = { per: 10, page: 1 }
   total: number
   attemptId = ''
+  throttle = 250
+  scrollDistance = 4
+  scrollUpDistance = 2
 
   ngOnInit (): void {
-    console.log('minidashboardInit')
+    this.fetchResults()
+    this.route.params.subscribe({ next: ({ id }) => { this.attemptId = id } })
+  }
 
+  onScrollDown (ev: any): void {
+    console.log('scrolled')
+    this.filter.page = this.filter.page !== undefined ? this.filter.page + 1 : 1
+    this.resultService.getAllResults(this.filter).subscribe(
+      {
+        next: (data) => {
+          this.attempts.concat(data.attempts)
+          this.total = data.total
+        }
+      })
+  }
+
+  fetchResults (): void {
     this.resultService.getAllResults(this.filter).subscribe(
       {
         next: (data) => {
@@ -25,7 +43,10 @@ export class MiniDashboardComponent implements OnInit {
           this.total = data.total
         }
       })
-    this.route.params.subscribe({ next: ({ id }) => { this.attemptId = id } })
+  }
+
+  deleteResult (event: MouseEvent, attemptId: string): void {
+    this.resultService.deleteResultByAttemptId(attemptId).subscribe({ next: () => { this.fetchResults() } })
   }
 
   goToResult (event: MouseEvent, id: string): void {

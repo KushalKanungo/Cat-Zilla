@@ -1,0 +1,26 @@
+.main{
+  margin-left: 80px;
+  .bg{
+    background-color: var(--white);
+    height: calc(100vh - 40px);
+    border-radius: 10px;
+    
+  }
+}
+
+.heading {
+  font-size: 2.4rem;
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+.equal-width{
+  display: inline-block;
+  width: 14rem !important;
+  text-align: center;
+}
+
+textarea{
+  all: unset;
+  background-color: var(--gray);
+}

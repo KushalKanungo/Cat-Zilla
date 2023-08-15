@@ -1,0 +1,23 @@
+.main{
+  margin-left: 80px;
+  .bg{
+    background-color: var(--white);
+    height: calc(100vh - 40px);
+    border-radius: 10px;
+    overflow-y: scroll;
+    
+  }
+}
+
+
+.color-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100;
+}
+
+.color-box{
+  height: 40px !important;
+  width: 100% !important;
+  display: inline-block;
+}

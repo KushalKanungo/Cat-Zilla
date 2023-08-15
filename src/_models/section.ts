@@ -2,7 +2,7 @@ import { type Status } from 'src/_enums/status'
 import { type Question } from './questionsModel'
 
 export interface Section {
-  sectionId: number
+  id: string
   label: string
   questions: Question[]
   maxTime: number

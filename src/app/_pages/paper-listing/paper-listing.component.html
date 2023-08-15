@@ -38,12 +38,7 @@
           >
           <div class="paper-card p-4 mx-4 mx-sm-0">
             <div class="label-wrapper">
-              <div class="like">
-                <div class="placement">
-                  <div id="like" class="heart" (click)="onLike($event)"></div>
-                </div>
-              </div>
-              <div class="label text-truncate" [pTooltip]="paper.label" >{{paper.label}}</div>
+              <div class="label text-truncate" [pTooltip]="paper.label" ><i *ngIf="paper.attempted" class="bi bi-check2-all"></i> {{paper.label}}</div>
               <p class="desc text-muted text-truncate">
                 {{paper.description}}
               </p>
@@ -54,12 +49,12 @@
                   <div class="my-3 text-red  hard">{{paper.hard}} Hard</div>
                   <div class="my-3 text-red" *ngIf="paper.unknown">{{paper.unknown}} Unknown</div>
                 </div>
-                <div class="col d-flex align-items-end justify-content-center">
-                  <div class="pb-2 text-blue hard text-center total-ques">{{ paper.questionsCount }}</div>
+                <div class="col d-flex align-items-center justify-content-center">
+                  <div class="pb-2 text-accent hard text-center total-ques">{{ paper.questionsCount }}</div>
                 </div>
               </div>
             </div>
-            <button class="theme-btn text-center d-block m-auto py-2 mt-2" style="width: 60%; text-transform: uppercase;" (click)="showDialog($event, paper)"> Start </button>
+            <button class="theme-btn text-center d-block m-auto py-2 mt-2" style="width: 60%; text-transform: uppercase;" (click)="showDialog($event, paper)"> Start </button> 
           
             <div class="attempts">
               <div class="text-center" >Date Added: {{paper.createdAt | date}} </div>

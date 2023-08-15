@@ -7,6 +7,8 @@ import { DashboardComponent } from './_pages/dashboard/dashboard.component'
 import { PaperListingComponent } from './_pages/paper-listing/paper-listing.component'
 import { authGuard } from './_guards/auth.guard'
 import { paperLeaveGuard } from './_guards/paper-leave.guard'
+import { AddNewPaperComponent } from './_pages/add-new-paper/add-new-paper.component'
+import { SettingsComponent } from './_pages/settings/settings.component'
 
 const routes: Routes = [{
   path: 'paper',
@@ -18,6 +20,8 @@ const routes: Routes = [{
 { path: 'dashboard', component: DashboardComponent, canActivate: [authGuard] },
 { path: 'dashboard/:id', component: DashboardComponent, canActivate: [authGuard] },
 { path: 'papers', component: PaperListingComponent, canActivate: [authGuard] },
+{ path: 'add-paper', component: AddNewPaperComponent, canActivate: [authGuard] },
+{ path: 'settings', component: SettingsComponent, canActivate: [authGuard] },
 { path: '**', redirectTo: 'papers', pathMatch: 'full' }
 
 ]

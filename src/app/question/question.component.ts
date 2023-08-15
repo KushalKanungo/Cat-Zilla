@@ -15,6 +15,7 @@ import { QuestionPaperService } from '../_services/question-paper.service'
 export class QuestionComponent implements OnInit {
   @Input() question: Question
   @Input() questionNumber: number
+  @Input() attemptId: string
 
   formGroup: FormGroup
   statusEnum = Status
@@ -30,15 +31,13 @@ export class QuestionComponent implements OnInit {
 
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
       .subscribe((state) => {
-        console.log(state.matches)
         this.isMobile = state.matches
       })
   }
 
   setUserResponse (response: number): void {
     this.question.userResponse = response
-    this.questionPaperService.postUserResponse(this.question).subscribe({ next: () => {} })
-    console.log(this.question.userResponse)
+    this.questionPaperService.postUserResponse('question', this.attemptId, this.question).subscribe({ next: () => {} })
   }
 
   fixImages (): void {

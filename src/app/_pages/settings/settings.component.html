@@ -1,0 +1,11 @@
+<section class="main px-3">
+  <div class="bg mt-4 p-4">
+    <div class="colors-view row row-cols-6 g-0">
+      <div class="color-wrapper m-3 col" *ngFor="let color of colors; let idx = index" (click)="changeTheme($event, idx)">
+        <span class="color-box" [style.background-color]="item.value" *ngFor="let item of color | keyvalue">
+
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

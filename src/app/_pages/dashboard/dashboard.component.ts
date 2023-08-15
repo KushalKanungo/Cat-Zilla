@@ -126,6 +126,11 @@ export class DashboardComponent {
         }
         this.initialDataFill(data)
         this.loading = false
+        this.showResultChooseMessage = false
+      },
+      error: () => {
+        this.showResultChooseMessage = true
+        this.loading = false
       }
     })
 
@@ -388,7 +393,6 @@ export class DashboardComponent {
       }, 0))
 
       wrongData = sections.map(({ sectionId }) => questions.reduce((sum, ques) => {
-
         return (!ques.isCorrect && ques.userResponse !== null && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
       }, 0))
 

@@ -11,6 +11,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
 import { TagModule } from 'primeng/tag'
 import { DialogModule } from 'primeng/dialog'
+import { InfiniteScrollModule } from 'ngx-infinite-scroll'
+import { ToastModule } from 'primeng/toast'
 import { ChartModule } from 'primeng/chart'
 import { ConfirmDialogModule } from 'primeng/confirmdialog'
 import { AppRoutingModule } from './app-routing.module'
@@ -38,6 +40,10 @@ import { MiniDashboardComponent } from './_components/mini-dashboard/mini-dashbo
 import { InsightsComponent } from './_components/insights/insights.component'
 import { QuestionPreviewComponent } from './_components/question-preview/question-preview.component'
 import { PaperListingComponent } from './_pages/paper-listing/paper-listing.component'
+import { AddNewPaperComponent } from './_pages/add-new-paper/add-new-paper.component'
+import { SettingsComponent } from './_pages/settings/settings.component'
+import { BarLoadingComponent } from './_components/bar-loading/bar-loading.component'
+import { MessageService } from 'primeng/api'
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +59,10 @@ import { PaperListingComponent } from './_pages/paper-listing/paper-listing.comp
     MiniDashboardComponent,
     InsightsComponent,
     QuestionPreviewComponent,
-    PaperListingComponent
+    PaperListingComponent,
+    AddNewPaperComponent,
+    SettingsComponent,
+    BarLoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -79,9 +88,11 @@ import { PaperListingComponent } from './_pages/paper-listing/paper-listing.comp
     DialogModule,
     SkeletonModule,
     ChartModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    InfiniteScrollModule,
+    ToastModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

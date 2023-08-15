@@ -12,11 +12,11 @@
 
   <p class="mt-3 p-2 " *ngIf="question?.userResponse !== null && question?.isCorrect !== true" >
     <strong>Your Response </strong><br>
-   <span *ngIf="question?.questionType.label === 'MCQ'" [ngClass]="{'text-red': question?.userResponse !== question?.correctOption, 'text-green' : question?.userResponse === question?.correctOption }"  class="correct" [innerHTML]="question?.options[question?.userResponse].option"> </span>
-   <span *ngIf="question?.questionType.label === 'NE'"  class="text-red">{{ question?.userResponse }}</span>
+   <span *ngIf="question?.questionType.label.toUpperCase() === 'MCQ'" [ngClass]="{'text-red': question?.userResponse !== question?.correctOption, 'text-green' : question?.userResponse === question?.correctOption }"  class="correct" [innerHTML]="question?.options[question?.userResponse].option"> </span>
+   <span *ngIf="question?.questionType.label.toUpperCase() === 'NE'"  class="text-red">{{ question?.userResponse }}</span>
   </p>
 
-  <div class="mt-3 p-2 explanation">
+  <div class="mt-3 p-2 explanation py-3">
     <div class="mb-3"> <strong> Explanation: </strong> </div>
     <span [innerHTML]="question?.explanation"></span>
   </div>

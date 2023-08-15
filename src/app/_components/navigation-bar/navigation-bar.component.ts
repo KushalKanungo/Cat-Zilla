@@ -13,9 +13,9 @@ export class NavigationBarComponent {
   navItems = [
     { path: 'papers', label: 'Home', icon: 'bi bi-house', command: () => { void this.router.navigate(['papers']) } },
     { path: 'dashboard', label: 'Results', icon: 'bi bi-graph-up-arrow', command: () => { void this.router.navigate(['dashboard']) } },
-    { path: '', label: 'Settings', icon: 'bi bi-gear' },
+    { path: 'settings', label: 'Settings', icon: 'bi bi-gear', command: () => { void this.router.navigate(['settings']) }  },
     { path: '', label: 'Feedback', icon: 'bi bi-chat-dots' },
-    { path: '', label: 'Add question', icon: 'bi bi-file-earmark-plus' },
+    { path: 'add-paper', label: 'Add question', icon: 'bi bi-file-earmark-plus', command: () => { void this.router.navigate(['add-paper']) } },
     { path: '', label: 'Log out', icon: 'bi bi-box-arrow-left', command: () => { this.authService.logOut() } }
   ]
 }

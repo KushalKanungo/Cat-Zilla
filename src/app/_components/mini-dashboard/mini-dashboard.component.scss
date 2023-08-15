@@ -22,6 +22,14 @@
   color: var(--dark-accent);
 }
 
+.delete-icon{
+  z-index: 5;
+  color: var(--dark-accent);
+  position: relative;
+  &:hover{
+    color: var(--danger)
+  }
+}
 .date, .time{
   position: relative;
   z-index: 2;
@@ -30,7 +38,7 @@
 }
 
 .result-card-parent{
-  height: 90%;
+  max-height: 86%;
   overflow-y: scroll;
 }
 

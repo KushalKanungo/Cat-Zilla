@@ -33,6 +33,10 @@
   // }
 }
 
+.paper-card-wrapper{
+  height: 19rem;
+}
+
 .paper-card {
   font-family: 'Montserrat';
   position: relative;
@@ -54,8 +58,10 @@
     }
   }
   .total-ques{
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.2rem;
+    font-weight: 300;
+    font-family: 'Montserrat';
+    transform: rotate(90deg);
   }
 
   .like{

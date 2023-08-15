@@ -13,7 +13,7 @@ import { Status } from 'src/_enums/status'
 })
 export class QuestionPaperService {
   constructor (private readonly http: HttpClient) { }
-  private readonly BASE_URL = ENV.BASE_URL
+  private readonly BASE_URL = ENV.BASE_URL + '/question-papers'
 
   /**
    * @param questionPaperId : string
@@ -26,15 +26,25 @@ export class QuestionPaperService {
       sections: sectionIds.map(id => ({ id })),
       maxTime
     }
-    return this.http.post<any>(this.BASE_URL + '/question-papers/paper', params)
+    return this.http.post<any>(this.BASE_URL + '/paper', params)
   }
 
-  postUserResponse (question: Question, attemptId: string = '64c60dd55d0e5b0253e5dcf7'): Observable<any> {
-    const { id, status, timeSpent, userResponse } = question
-    const params = {
-      attemptId, questionId: id, status, timeSpent, userResponse
+  addQuestionPaper (questionPaper: { label: string, questions: any[], description: string | null }): Observable<any> {
+    return this.http.post<any>(this.BASE_URL, questionPaper)
+  }
+
+  postUserResponse (type: 'section' | 'question' | 'questionPaper' = 'question', attemptId: string, question: Question | null = null, sectionId: string | null = null, sectionTime: number | null = null): Observable<any> {
+    let params: any = { type }
+    if (type === 'question' && question != null) {
+      const { id, status, timeSpent, userResponse } = question
+      params = { ...params, attemptId, questionId: id, status, timeSpent, userResponse }
+    } else if (type === 'section' && sectionId !== null) {
+      params = { ...params, sectionId, attemptId, timeSpent: sectionTime }
+    } else if (type === 'questionPaper') {
+      params = { ...params, attemptId }
     }
-    return this.http.post<any>(this.BASE_URL + '/question-papers/paper-answer', params)
+    console.log(params)
+    return this.http.post<any>(this.BASE_URL + '/paper-response', params)
   }
 
   getAllQuestionPapers (params: Filter): Observable<any> {
@@ -47,7 +57,7 @@ export class QuestionPaperService {
       responseType: 'json'
     }
 
-    return this.http.get<any>(this.BASE_URL + '/question-papers', httpOptions)
+    return this.http.get<any>(this.BASE_URL + '', httpOptions)
   }
 
   setCurrectPaperStatusOnLocal (attemptId: string, status: Status = Status.IN_PROGRESS): void {

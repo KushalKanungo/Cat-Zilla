@@ -1,8 +1,16 @@
 <section class="mini-dashboard shadow">
 <div class="header text-center pt-4">Results</div>
-<div class="result-card-parent">
-  <div class="result-card px-4 py-3 btn btn-2 hover-slide-right" *ngFor="let result of attempts" (click)="goToResult($event, result.id)" [ngClass]=" result.id === attemptId ? 'active': ''">
-    <div class="title">{{ result.questionPaperName }}</div>
+<div class="result-card-parent" 
+infiniteScroll
+[infiniteScrollDistance]="scrollDistance"
+[infiniteScrollThrottle]="throttle"
+(scrolled)="onScrollDown($event)"
+>
+  <div class="result-card px-4 py-3 btn btn-2 hover-slide-right" *ngFor="let result of attempts"  [ngClass]=" result.id === attemptId ? 'active': ''">
+    <div class="d-flex justify-content-between">
+      <span class="title" (click)="goToResult($event, result.id)" >{{ result.questionPaperName }} </span>
+      <i class="bi bi-trash delete-icon" (click)="deleteResult($event, result.id)"></i>
+    </div>
     <div class="mt-1 d-flex justify-content-between">
       <p class="date">{{ result.createdAt | date:'dd MMM yyyy' }}</p>
       <p class="time">{{ result.createdAt | date:'hh:mm a' }}</p>

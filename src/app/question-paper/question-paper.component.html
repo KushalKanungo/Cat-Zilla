@@ -16,11 +16,12 @@
   [currentSectionTime]="questionPaper[this.currentSectionIndex].maxTime"
   (changeToQuestion)="changeToQuestion($event)"
   (changeToSection)="changeToSection($event)"
-
+  (submitPaper)="submitPaper()"
 ></app-sidebar>
 <app-question
   [questionNumber]="currentQuestionIndex + 1"
   [question]="
     questionPaper[currentSectionIndex].questions[currentQuestionIndex]
   "
+  [attemptId]="attemptId"
 ></app-question>

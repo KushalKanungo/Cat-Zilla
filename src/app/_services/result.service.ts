@@ -11,8 +11,12 @@ import { Filter } from 'src/_models/filter'
 export class ResultService {
   constructor (private readonly http: HttpClient) { }
   BASE_URL = ENV.BASE_URL + '/attempts'
-  getResultByAttemptId (attemptId: string | null = ''): Observable<any> {
+  getResultByAttemptId (attemptId: string = ''): Observable<any> {
     return this.http.get<any>(this.BASE_URL + `/${attemptId}`)
+  }
+
+  deleteResultByAttemptId (attemptId: string = ''): Observable<any> {
+    return this.http.delete<any>(this.BASE_URL + `/${attemptId}`)
   }
 
   getAllResults (filter: Filter): Observable<any> {

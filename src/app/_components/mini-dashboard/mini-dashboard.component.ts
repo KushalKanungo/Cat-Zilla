@@ -17,6 +17,7 @@ export class MiniDashboardComponent implements OnInit {
   throttle = 250
   scrollDistance = 4
   scrollUpDistance = 2
+  isListLoading: boolean = true
 
   ngOnInit (): void {
     this.fetchResults()
@@ -36,11 +37,13 @@ export class MiniDashboardComponent implements OnInit {
   }
 
   fetchResults (): void {
+    this.isListLoading = true
     this.resultService.getAllResults(this.filter).subscribe(
       {
         next: (data) => {
           this.attempts = data.attempts
           this.total = data.total
+          this.isListLoading = false
         }
       })
   }

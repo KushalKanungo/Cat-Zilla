@@ -16,7 +16,7 @@ export interface SignInResponse {
 export class AuthService {
   private readonly ACCESS_TOKEN_KEY_NAME = ENV.ACCESS_TOKEN_KEY_NAME
   private readonly AUTH_FAILED_REDIRECT_URL = '/login'
-  private readonly BASE_URL = ENV.BASE_URL + '/users/'
+  private readonly BASE_URL = ENV.BASE_URL + '/users'
 
   constructor (private readonly http: HttpClient, private readonly router: Router) {}
 

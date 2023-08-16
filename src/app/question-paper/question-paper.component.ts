@@ -14,7 +14,7 @@ import { MessageService } from 'primeng/api'
   templateUrl: './question-paper.component.html',
   styleUrls: ['./question-paper.component.scss']
 })
-export class QuestionPaperComponent implements OnInit, OnDestroy {
+export class QuestionPaperComponent implements OnInit {
   constructor (private readonly breakpointObserver: BreakpointObserver, private readonly activateRoute: ActivatedRoute, private readonly questionPaperService: QuestionPaperService, private readonly messageService: MessageService, private readonly router: Router) {
 
   }
@@ -36,11 +36,9 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit (): void {
-    window.addEventListener('beforeunload', this.checkLoad, false)
     this.openFullscreen()
     this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
       .subscribe((state) => {
-        console.log(state.matches)
         this.isMobile = state.matches
       })
 
@@ -59,9 +57,6 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
     }, 1000)
   }
 
-  ngOnDestroy (): void {
-    window.removeEventListener('beforeunload', this.checkLoad, false)
-  }
 
   nextQuestion (): void {
     if (this.currentQuestionIndex >= this.questionPaper[this.currentSectionIndex].questions.length - 1) return

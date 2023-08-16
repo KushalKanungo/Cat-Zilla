@@ -13,9 +13,19 @@ export class LoginComponent {
     password: '12345'
   }
 
+  isLoading = false
   constructor (private readonly authService: AuthService) { }
 
   onSubmit (): void {
-    this.authService.login(this.formdata).subscribe({ next: () => {} })
+    this.isLoading = true
+    this.authService.login(this.formdata).subscribe({
+      next: () => {
+        this.isLoading = false
+      },
+      error: (err) => {
+        this.isLoading = false
+        throw err
+      }
+    })
   }
 }

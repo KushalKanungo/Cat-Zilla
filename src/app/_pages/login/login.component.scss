@@ -30,7 +30,7 @@ input{
   border-radius: 0.4rem;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   &:active, &:focus{
-    border-bottom: 4px solid var(--success);
+    border-bottom: 4px solid var(--dark-accent);
   }
 }
 
@@ -39,6 +39,7 @@ input{
 button{
   all: unset;
   font-size: 2rem;
+  height: 2.4rem;
   border-radius: 0.6rem;
   color: var(--light-accent);
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
@@ -48,9 +49,9 @@ button{
   background-color: var(--dark-accent);
   transition: all 0.2s ease-out;
   &:hover{
-      transform: scale(1.1);
+    //   transform: scale(1.1);
       color: var(--dark-accent);
-      background-color: var(--light-accent); 
+      background-color: var(--medium-accent); 
     }
     
     &:disabled{

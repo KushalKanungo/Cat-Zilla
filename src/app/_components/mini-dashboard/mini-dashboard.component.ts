@@ -18,6 +18,7 @@ export class MiniDashboardComponent implements OnInit {
   scrollDistance = 4
   scrollUpDistance = 2
   isListLoading: boolean = true
+  deletedId: string | null = null
 
   ngOnInit (): void {
     this.fetchResults()
@@ -49,7 +50,13 @@ export class MiniDashboardComponent implements OnInit {
   }
 
   deleteResult (event: MouseEvent, attemptId: string): void {
-    this.resultService.deleteResultByAttemptId(attemptId).subscribe({ next: () => { this.fetchResults() } })
+    this.deletedId = attemptId
+    this.resultService.deleteResultByAttemptId(attemptId).subscribe({
+      next: () => {
+        this.deletedId = null
+        this.fetchResults()
+      }
+    })
   }
 
   goToResult (event: MouseEvent, id: string): void {

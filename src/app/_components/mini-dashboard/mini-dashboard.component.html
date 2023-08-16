@@ -7,7 +7,7 @@ infiniteScroll
 (scrolled)="onScrollDown($event)"
 >
 <ng-template [ngIf]="!isListLoading" class="wrapper">
-  <div  class="result-card px-4 py-3 btn btn-2 hover-slide-right" *ngFor="let result of attempts"  [ngClass]=" result.id === attemptId ? 'active': ''">
+  <div  class="result-card px-4 py-3 btn btn-2 hover-slide-right" [ngClass]="{ 'rainbow': result.id === deletedId, 'active': result.id === attemptId }" *ngFor="let result of attempts">
     <div class="d-flex justify-content-between">
         <span class="title" (click)="goToResult($event, result.id)" >{{ result.questionPaperName }} </span>
         <i class="bi bi-trash delete-icon" (click)="deleteResult($event, result.id)"></i>

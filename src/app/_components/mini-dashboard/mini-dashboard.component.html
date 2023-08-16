@@ -6,15 +6,20 @@ infiniteScroll
 [infiniteScrollThrottle]="throttle"
 (scrolled)="onScrollDown($event)"
 >
-  <div class="result-card px-4 py-3 btn btn-2 hover-slide-right" *ngFor="let result of attempts"  [ngClass]=" result.id === attemptId ? 'active': ''">
+<ng-template [ngIf]="!isListLoading" class="wrapper">
+  <div  class="result-card px-4 py-3 btn btn-2 hover-slide-right" [ngClass]="{ 'rainbow': result.id === deletedId, 'active': result.id === attemptId }" *ngFor="let result of attempts">
     <div class="d-flex justify-content-between">
-      <span class="title" (click)="goToResult($event, result.id)" >{{ result.questionPaperName }} </span>
-      <i class="bi bi-trash delete-icon" (click)="deleteResult($event, result.id)"></i>
+        <span class="title" (click)="goToResult($event, result.id)" >{{ result.questionPaperName }} </span>
+        <i class="bi bi-trash delete-icon" (click)="deleteResult($event, result.id)"></i>
+      </div>
+      <div class="mt-1 d-flex justify-content-between">
+        <p class="date">{{ result.createdAt | date:'dd MMM yyyy' }}</p>
+        <p class="time">{{ result.createdAt | date:'hh:mm a' }}</p>
+      </div>
     </div>
-    <div class="mt-1 d-flex justify-content-between">
-      <p class="date">{{ result.createdAt | date:'dd MMM yyyy' }}</p>
-      <p class="time">{{ result.createdAt | date:'hh:mm a' }}</p>
-    </div>
+  </ng-template>
+  <div class="loading-body mt-4 px-4" *ngIf="isListLoading">
+    <p-skeleton styleClass="my-2" height="4rem" width="100%" *ngFor="let item of [1,1,1,1,1,1,1,1,1]"></p-skeleton>
   </div>
 </div>
 </section>

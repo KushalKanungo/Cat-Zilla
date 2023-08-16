@@ -15,7 +15,7 @@
   <label class="ms-3" [for]="section.label">{{ section.label }}</label>
 </div>
 
-<button class="theme-btn px-4 py-2 mx-auto mt-4 d-flex align-self-center" (click)="startPaper()" [disabled]="selectedSections.length < 1 || !timePerSection">Start Test</button>
+<button class="theme-btn px-4 py-2 mx-auto mt-4 d-flex align-self-center" (click)="startPaper()" [disabled]="selectedSections.length < 1 || !timePerSection"> <span *ngIf="!isLoadingForStart"> Start Test </span> <app-bar-loading *ngIf="isLoadingForStart" [height]="'1em'" ></app-bar-loading> </button>
 
 </p-dialog>
 <section class="main px-4">

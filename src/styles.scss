@@ -39,10 +39,10 @@
   // --medium-accent: #A2D0C1;
   // --light-accent: #EFF7E1;
 
-  --dark-accent: #422a77;
-  --normal-accent: #a076f9;
-  --medium-accent: #d7bbf5;
-  --light-accent: #ede4ff;
+  // --dark-accent: #422a77;
+  // --normal-accent: #a076f9;
+  // --medium-accent: #d7bbf5;
+  // --light-accent: #ede4ff;
 
   // <======== Yello Brown =======>
   // --dark-accent: #4C3D3D;
@@ -51,11 +51,11 @@
   // --light-accent: #FFF7D4;
 
   // Dark Pink Fav
-  // --dark-accent: #251b37;
-  // --normal-accent: #372948;
-  // --primary-color: #372948;
-  // --medium-accent: #ffcaca;
-  // --light-accent: #ffecef;
+  --dark-accent: #251b37;
+  --normal-accent: #372948;
+  --primary-color: #372948;
+  --medium-accent: #ffcaca;
+  --light-accent: #ffecef;
 
   // FAV Blue
   // --dark-accent: #0078AA;
@@ -383,4 +383,55 @@ p-tag {
 
 .p-tooltip .p-tooltip-text {
   background-color: var(--light-accent) !important;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+// .blink-soft {
+//   animation: blinker 1.5s linear infinite;
+// }
+// @keyframes blinker {
+//   33% {
+//     background-color: var(--light-accent);
+//   }
+//   66%{
+//     background-color: var(--white);
+//   }
+// }
+
+@-webkit-keyframes blink {
+  50% {
+      background: var(--light-accent);
+  }
+}
+@-moz-keyframes blink {
+  50% {
+      background: var(--light-accent);
+  }
+}
+@keyframes blink {
+  50% {
+      background: var(--light-accent);
+  }
+}
+.blink-soft {
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: blink;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-direction: normal;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: blink;
+  -moz-animation-timing-function: linear;
+  animation-direction: normal;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  animation-name: blink;
+  animation-timing-function: linear;
 }

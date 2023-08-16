@@ -5,6 +5,7 @@ import { QuestionService } from 'src/app/_services/question.service'
 import { ResultService } from 'src/app/_services/result.service'
 import { switchMap } from 'rxjs/operators'
 import { of } from 'rxjs'
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-dashboard',
@@ -15,13 +16,15 @@ export class DashboardComponent {
   constructor (
     private readonly questionService: QuestionService,
     private readonly resultService: ResultService,
-    private readonly route: ActivatedRoute
+    private readonly route: ActivatedRoute,
+    private readonly http: HttpClient
   ) {}
 
   query = ''
   attemptId: string
   questions = []
   sectionsData = []
+  currQuestion: string | null = null
   showResultChooseMessage: boolean = true
   barChartData: any = []
   selectedQuestions: any[] = []
@@ -254,8 +257,9 @@ export class DashboardComponent {
     // this.selectedQuestionTableHeaders = [...this.selectedQuestionTableHeaders]
   }
 
-  onPreview (event: any, questionId: string, userResponse: any, isCorrect: boolean) {
+  onPreview (event: any, questionId: string, userResponse: any, isCorrect: boolean): void {
     // console.log(userResponse);
+    this.currQuestion = questionId
     let correctOption = 0
     this.questionService.getQuestionById(questionId).subscribe({
       next: (data) => {
@@ -266,7 +270,7 @@ export class DashboardComponent {
           correctOption,
           isCorrect
         }
-        console.log(this.previewedQuestion.questionType.label)
+        this.currQuestion = null
 
         this.isPreviewVisible = true
       }
@@ -409,5 +413,14 @@ export class DashboardComponent {
     }
 
     return [correctData, wrongData, unansweredData]
+  }
+
+  fixImages (): void {
+    document.querySelectorAll('img').forEach((ele) => {
+      const base = 'https://imsclick2cert.blob.core.windows.net/imsitemimages/'
+      const link = ele.src.split('/')
+      const newLink = base + link[link.length - 1]
+      ele.src = newLink
+    })
   }
 }

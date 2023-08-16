@@ -17,6 +17,7 @@
 <ng-template pTemplate="minimizeicon">
   <i class="bi bi-fullscreen-exit"></i>
 </ng-template>
+  <button class="theme-btn" (click)="fixImages()"><i class="bi bi-arrow-repeat"></i></button>
   <app-question-preview [question]="previewedQuestion"></app-question-preview>
 </p-dialog>
 
@@ -235,6 +236,7 @@
             <ng-template pTemplate="body" let-question>
               <tr>
                 <td
+                  [ngClass]="currQuestion === question.id ? 'blink-soft': ''"
                   *ngFor="let header of selectedQuestionTableHeaders"
                   (click)="
                     onPreview($event, question.id, question.userResponse, question.isCorrect)

@@ -14,6 +14,7 @@ export class PaperListingComponent implements OnInit {
   questionPapers: any
   sections: Array<{ label: string, id: string }>
   isLoading = true
+  isLoadingForStart = false
   timePerSection = 40
   isDialogVisible = false
   selectedPaper: any
@@ -67,6 +68,7 @@ export class PaperListingComponent implements OnInit {
   }
 
   startPaper (): void {
+    this.isLoadingForStart = true
     void this.router.navigateByUrl('/paper', { state: { id: this.selectedPaper.id, sections: this.selectedSections, maxTime: this.timePerSection } })
   }
 }

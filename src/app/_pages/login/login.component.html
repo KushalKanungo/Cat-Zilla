@@ -5,7 +5,7 @@
       <div class="heading ">CatZilla</div>
       <input type="text" name="email" [(ngModel)]="formdata.email" placeholder="Registered Email" class="mb-3" required>
       <input type="password" name="password" [(ngModel)]="formdata.password" placeholder="Password" class="mb-3" required>
-      <button [disabled]="!loginForm.valid">Login <i class="bi bi-door-open"></i></button>
+      <button [disabled]="!loginForm.valid"> <app-bar-loading *ngIf="isLoading" height="1em" > </app-bar-loading> <span *ngIf="!isLoading"> Login <i class="bi bi-door-open"></i> </span></button>
     </section>
   </form>
   

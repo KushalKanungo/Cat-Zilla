@@ -44,6 +44,7 @@ import { AddNewPaperComponent } from './_pages/add-new-paper/add-new-paper.compo
 import { SettingsComponent } from './_pages/settings/settings.component'
 import { BarLoadingComponent } from './_components/bar-loading/bar-loading.component'
 import { MessageService } from 'primeng/api'
+import { TopBarLoadingComponent } from './_components/top-bar-loading/top-bar-loading.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +63,8 @@ import { MessageService } from 'primeng/api'
     PaperListingComponent,
     AddNewPaperComponent,
     SettingsComponent,
-    BarLoadingComponent
+    BarLoadingComponent,
+    TopBarLoadingComponent
   ],
   imports: [
     BrowserModule,

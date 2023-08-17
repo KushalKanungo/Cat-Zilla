@@ -34,6 +34,7 @@ export class DashboardComponent {
   resultCardData: Array<{ label: string, data: any }>
   result: any
   isPreviewVisible = false
+  resultById$ = this.resultService.getResultByAttemptId()
   filter: {
     sections: string[]
     areas: string[]

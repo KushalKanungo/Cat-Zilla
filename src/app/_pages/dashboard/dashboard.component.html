@@ -56,8 +56,8 @@
           <div class="row" *ngIf="!loading">
             <div class="col-12 p-2">
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
-                <div class="col p-3" *ngFor="let resultData of resultCardData">
-                  <div class="result-small-card" >
+                <div class="col p-3" *ngFor="let resultData of resultCardData; let idx = index">
+                  <div class="result-small-card animate slide-down" [ngClass]="'delay-'+idx">
                     <div class="label"> {{resultData.label}} </div>
                     <div class="data">{{resultData.data}}</div>
                   </div>

@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 import { Filter } from 'src/_models/filter'
@@ -7,11 +8,29 @@ import { SectionsService } from 'src/app/_services/sections.service'
 @Component({
   selector: 'app-paper-listing',
   templateUrl: './paper-listing.component.html',
-  styleUrls: ['./paper-listing.component.scss']
+  styleUrls: ['./paper-listing.component.scss'],
+  animations: [
+    trigger('inOutPaneAnimation', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(-100%)' }), // apply default styles before animation starts
+        animate(
+          '750ms ease-in-out',
+          style({ opacity: 1, transform: 'translateX(0)' })
+        )
+      ]),
+      transition(':leave', [
+        style({ opacity: 1, transform: 'translateX(0)' }), // apply default styles before animation starts
+        animate(
+          '600ms ease-in-out',
+          style({ opacity: 0, transform: 'translateX(-100%)' })
+        )
+      ])
+    ])
+  ]
 })
 export class PaperListingComponent implements OnInit {
   filter: Filter = { query: '' }
-  questionPapers: any
+  questionPapers: any = []
   sections: Array<{ label: string, id: string }>
   isLoading = true
   isLoadingForStart = false

@@ -19,8 +19,8 @@ const routes: Routes = [{
 { path: 'login', component: LoginComponent, canActivate: [authGuard] },
 { path: 'dashboard', component: DashboardComponent, canActivate: [authGuard] },
 { path: 'dashboard/:id', component: DashboardComponent, canActivate: [authGuard] },
-{ path: 'papers', component: PaperListingComponent, canActivate: [authGuard] },
-{ path: 'add-paper', component: AddNewPaperComponent, canActivate: [authGuard] },
+{ path: 'papers', component: PaperListingComponent, canActivate: [authGuard], data: { animation: 'isTop' } },
+{ path: 'add-paper', component: AddNewPaperComponent, canActivate: [authGuard], data: { animation: 'isBottom' } },
 { path: 'settings', component: SettingsComponent, canActivate: [authGuard] },
 { path: '**', redirectTo: 'papers', pathMatch: 'full' }
 

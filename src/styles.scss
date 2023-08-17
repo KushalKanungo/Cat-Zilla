@@ -435,3 +435,60 @@ p-tag {
   animation-name: blink;
   animation-timing-function: linear;
 }
+
+
+.animate {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-delay: .5s;
+  animation-fill-mode: backwards;
+}
+
+.slide { animation-name: animate-slide; }
+
+
+/* Slide Left */
+.slide-left { animation-name: animate-slide-left; }
+
+/* Slide down  */
+.slide-down { animation-name: animate-slide-down; }
+
+@keyframes animate-slide {
+  0% {
+    opacity: 0;
+    transform: translate(0, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes animate-slide-left {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes animate-slide-down {
+  0% {
+    opacity: 0;
+    transform: translate(0, -40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+@for $i from 0 through 14 {
+  .delay-#{$i} {
+    animation-delay: #{0.05 * $i}s;
+  }
+}

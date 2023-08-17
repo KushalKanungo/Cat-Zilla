@@ -1,11 +1,12 @@
 import { Component } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
-import { Header } from 'primeng/api'
 import { QuestionService } from 'src/app/_services/question.service'
 import { ResultService } from 'src/app/_services/result.service'
 import { switchMap } from 'rxjs/operators'
 import { of } from 'rxjs'
 import { HttpClient } from '@angular/common/http'
+import { Chart } from 'chart.js'
+import ChartDataLabels from 'chartjs-plugin-datalabels'
 
 @Component({
   selector: 'app-dashboard',
@@ -18,7 +19,9 @@ export class DashboardComponent {
     private readonly resultService: ResultService,
     private readonly route: ActivatedRoute,
     private readonly http: HttpClient
-  ) {}
+  ) {
+    Chart.register(ChartDataLabels)
+  }
 
   query = ''
   attemptId: string
@@ -47,6 +50,14 @@ export class DashboardComponent {
 
   options = {
     plugins: {
+      datalabels: {
+        color: 'white',
+        display: true,
+        font: {
+          weight: 'bold'
+        },
+        formatter: Math.round
+      },
       legend: {
         labels: {
           usePointStyle: true
@@ -145,9 +156,20 @@ export class DashboardComponent {
       maintainAspectRatio: false,
       aspectRatio: 0.8,
       plugins: {
-        tooltips: {
-          mode: 'index',
-          intersect: false
+        datalabels: {
+          color: 'white',
+          align: 'center',
+          anchor: 'center',
+          display: function (context: any): boolean {
+            return context.dataset.data[context.dataIndex] > 0
+          },
+          font: {
+            weight: 'bold',
+            size: '18px',
+            family: 'Montserrat'
+
+          },
+          formatter: Math.round
         },
         legend: {
           labels: {

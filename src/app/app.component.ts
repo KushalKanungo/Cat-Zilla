@@ -1,11 +1,13 @@
 
 import { Component, type OnInit } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, RouterOutlet } from '@angular/router'
 import { Location } from '@angular/common'
+import { fadeIn, fader, slider } from './route-animations'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [slider]
 })
 export class AppComponent implements OnInit {
   title = 'CATzilla'
@@ -16,5 +18,9 @@ export class AppComponent implements OnInit {
     this.location.onUrlChange(url => {
       this.currentPath = url.split('/')?.[1]
     })
+  }
+
+  prepareRoute (outlet: RouterOutlet): any {
+    return outlet?.activatedRouteData?.['animation']
   }
 }

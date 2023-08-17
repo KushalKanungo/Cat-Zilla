@@ -1,9 +1,28 @@
+import { trigger, transition, style, animate } from '@angular/animations'
 import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.scss']
+  styleUrls: ['./settings.component.scss'],
+  animations: [
+    trigger('inOutPaneAnimation', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(-100%)' }), // apply default styles before animation starts
+        animate(
+          '750ms ease-in-out',
+          style({ opacity: 1, transform: 'translateX(0)' })
+        )
+      ]),
+      transition(':leave', [
+        style({ opacity: 1, transform: 'translateX(0)' }), // apply default styles before animation starts
+        animate(
+          '600ms ease-in-out',
+          style({ opacity: 0, transform: 'translateX(-100%)' })
+        )
+      ])
+    ])
+  ]
 })
 export class SettingsComponent {
   colors = [

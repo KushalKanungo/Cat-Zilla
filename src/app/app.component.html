@@ -1,7 +1,10 @@
+<!-- <app-top-bar-loading></app-top-bar-loading> -->
 <p-toast position="bottom-center"></p-toast>
 <!-- <app-sidebar [questions]="verbalQuestions"></app-sidebar>
 <app-question [question]="first"></app-question>
 <app-bottom-bar></app-bottom-bar> -->
 <app-navigation-bar [currentPath]="currentPath" *ngIf="currentPath !== 'paper' && currentPath !== 'login' "></app-navigation-bar>
-<router-outlet>
-</router-outlet>
+<div [@routeAnimations] = "prepareRoute(outlet)">
+  <router-outlet #outlet="outlet">
+  </router-outlet>
+</div>

@@ -16,6 +16,7 @@ export class QuestionComponent implements OnInit {
   @Input() question: Question
   @Input() questionNumber: number
   @Input() attemptId: string
+  @Input() isInPreviewMode: boolean
 
   formGroup: FormGroup
   statusEnum = Status

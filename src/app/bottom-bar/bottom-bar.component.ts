@@ -14,6 +14,7 @@ export class BottomBarComponent {
   @Input() currentSectionIndex: number
   @Input() questionPaper: Section[]
   @Input() allSections: Array<{ label: string, index: any }>
+  @Input() isInPreviewMode: boolean
 
   statusEnum = Status
 

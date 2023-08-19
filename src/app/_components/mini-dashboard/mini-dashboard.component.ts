@@ -42,6 +42,7 @@ export class MiniDashboardComponent implements OnInit {
     this.resultService.getAllResults(this.filter).subscribe(
       {
         next: (data) => {
+          debugger
           this.attempts = data.attempts
           this.total = data.total
           this.isListLoading = false

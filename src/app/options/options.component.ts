@@ -14,32 +14,52 @@ export class OptionsComponent {
   @Input() questionType: string
   @Input() question: Question
   @Input() optionsType: string
-  @Input() userResponse: number | undefined
+  // @Input() isInPreviewMode: boolean
 
+  @Input() userResponse: number | undefined
+  isInPreviewMode: boolean = false
+  correctOption: any
+  isExplanationVisible = false
   ngOnInit (): void {
-    console.log(this.questionType)
+    this.isInPreviewMode = (this.options[0].isCorrect === true || this.options[0].isCorrect === false)
+    console.log(this.isInPreviewMode)
+
     // this.userResponse = this.question.userResponse
+  }
+
+  showExplanation (): void {
+    this.isExplanationVisible = true
   }
 
   onOptionSelect (event: any): void {
     console.log(this.userResponse)
-    this.setQuestionStatus.emit(Status.ANSWERED)
-    this.setUserResponse.emit(event.target.value)
-    this.options[event.target.value].userResponse = true
+    if (!this.isInPreviewMode) {
+      this.setUserResponse.emit(event.target.value)
+      this.setQuestionStatus.emit(Status.ANSWERED)
+      this.options[event.target.value].userResponse = true
+    }
   }
 
   onAnswering (event: Event): void {
     this.question.userResponse !== null ? this.setQuestionStatus.emit(Status.ANSWERED) : this.setQuestionStatus.emit(Status.NOT_ANSWERED)
   }
 
-  onChange(event: any){
-    if(event.target.value !== ''){
-      this.setQuestionStatus.emit(Status.ANSWERED)
-      this.setUserResponse.emit(event.target.value)
+  onClear (event: any): void {
+    this.question.userResponse = undefined
+    this.setQuestionStatus.emit(Status.NOT_ANSWERED)
+    this.setUserResponse.emit(null)
+    this.options.forEach(opt => { opt.userResponse = false })
+  }
+
+  onChange (event: any): void {
+    if (!this.isInPreviewMode) {
+      if (event.target.value !== '') {
+        this.setQuestionStatus.emit(Status.ANSWERED)
+        this.setUserResponse.emit(event.target.value)
+      } else if ((event.target.value === '')) {
+        this.setQuestionStatus.emit(Status.NOT_ANSWERED)
+        this.setUserResponse.emit(null)
+      }
     }
-    else if((event.target.value === '')){
-      this.setQuestionStatus.emit(Status.NOT_ANSWERED)
-      this.setUserResponse.emit(null)
-    } 
   }
 }

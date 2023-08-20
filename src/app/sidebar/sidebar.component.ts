@@ -21,6 +21,8 @@ export class SidebarComponent {
   @Input() isMobile: boolean
   @Input() currentSectionTime: number
   @Input() isLastSection: boolean
+  @Input() isInPreviewMode: boolean
+
   statusEnum = Status
 
   constructor (private readonly confirmationService: ConfirmationService) {}

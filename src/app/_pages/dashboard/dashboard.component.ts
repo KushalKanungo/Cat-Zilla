@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { QuestionService } from 'src/app/_services/question.service'
 import { ResultService } from 'src/app/_services/result.service'
 import { switchMap } from 'rxjs/operators'
@@ -18,6 +18,7 @@ export class DashboardComponent {
     private readonly questionService: QuestionService,
     private readonly resultService: ResultService,
     private readonly route: ActivatedRoute,
+    private readonly router: Router,
     private readonly http: HttpClient
   ) {
     Chart.register(ChartDataLabels)
@@ -32,7 +33,7 @@ export class DashboardComponent {
   barChartData: any = []
   selectedQuestions: any[] = []
   resultCardData: Array<{ label: string, data: any }>
-  result: any
+  result: { maximumMarks: number, marks: number, correct: number, wrong: number, unanswered: number, total: number }
   isPreviewVisible = false
   resultById$ = this.resultService.getResultByAttemptId()
   filter: {
@@ -67,7 +68,7 @@ export class DashboardComponent {
     }
   }
 
-  chartBy = ['Number', 'Time Spent', 'Average Time']
+  chartBy = ['Number', 'Time Spent(min)', 'Average Time(sec)']
 
   chartByChange (event: any) {
     this.barChartData = this.createDataForBarChart(this.sectionsData, this.questions, event.value)
@@ -140,6 +141,7 @@ export class DashboardComponent {
           return
         }
         this.initialDataFill(data)
+        this.attemptId = data.attempt
         this.loading = false
         this.showResultChooseMessage = false
       },
@@ -209,13 +211,13 @@ export class DashboardComponent {
     this.fillDropDowns()
     this.loading = false
     this.data = this.createDataForPieChart(sections)
+    this.result = result as unknown as any
     console.log(result)
 
     // this.data = this.createDataForBarChart([result])
     this.barChartData = this.createDataForBarChart(sections, questions)
     this.resultCardData = this.createResultCardData(result, sections, questions)
     this.sectionsData = sections
-    this.result = result
   }
 
   fillDropDowns () {
@@ -329,9 +331,9 @@ export class DashboardComponent {
         {
           data: [unansweredQuestions, correctQuestions, wrongQuestions],
           backgroundColor: [
-            documentStyle.getPropertyValue('--warning'),
+            documentStyle.getPropertyValue('--warning-graph'),
             documentStyle.getPropertyValue('--success'),
-            documentStyle.getPropertyValue('--danger')
+            documentStyle.getPropertyValue('--danger-graph')
           ],
           hoverBackgroundColor: [
             documentStyle.getPropertyValue('--warning-lite'),
@@ -361,14 +363,14 @@ export class DashboardComponent {
         {
           type: 'bar',
           label: 'Wrong',
-          backgroundColor: documentStyle.getPropertyValue('--danger'),
+          backgroundColor: documentStyle.getPropertyValue('--danger-graph'),
           data: wrongData
           // data: sectionsArray.map(sec => sec.wrong)
         },
         {
           type: 'bar',
           label: 'Unanswered',
-          backgroundColor: documentStyle.getPropertyValue('--warning'),
+          backgroundColor: documentStyle.getPropertyValue('--warning-graph'),
           data: unansweredData
           // data: sectionsArray.map(sec => sec.unanswered)
         }
@@ -399,12 +401,12 @@ export class DashboardComponent {
     }, 0) / result.unanswered).toFixed(0)
 
     const tempdata = [
-      { label: 'Marks', data: result.marks },
+      { label: 'Marks', data: `${result.marks} / ${this.result.maximumMarks}` },
       { label: 'Avg. Correct', data: `${avgCorrect}s` },
-      { label: 'Wrong', data: `${avgWrong}s` },
-      { label: 'Unanswered', data: `${avgUnanswered}s` },
-      { label: 'Percentage', data: (Math.round(result.marks) * 100 / result.maximumMarks).toFixed(2) },
-      { label: 'Attempted %', data: (Math.round(result.correct + result.wrong) * 100 / result.total).toFixed(2) }
+      { label: 'Avg. Wrong', data: `${avgWrong}s` },
+      { label: 'Avg. Unanswered', data: `${avgUnanswered}s` },
+      { label: 'Percentage', data: `${(Math.round(result.marks) * 100 / result.maximumMarks).toFixed(1)} %` },
+      { label: 'Attempted %', data: `${(Math.round(result.correct + result.wrong) * 100 / result.total).toFixed(1)} %` }
     ]
     return tempdata
   }
@@ -414,7 +416,7 @@ export class DashboardComponent {
     let correctData: number[] = sections.map(({ correct }) => correct)
     let wrongData: number[] = sections.map(({ wrong }) => wrong)
     let unansweredData: number[] = sections.map(({ unanswered }) => unanswered)
-    if (groupBy === 'Time Spent' || groupBy === 'Average Time') {
+    if (groupBy === 'Time Spent(min)' || groupBy === 'Average Time(sec)') {
       correctData = sections.map(({ sectionId }) => questions.reduce((sum, ques) => {
         return (ques.isCorrect && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
       }, 0))
@@ -427,13 +429,20 @@ export class DashboardComponent {
         return ((ques.isCorrect === undefined || ques.isCorrect === null) && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
       }, 0))
     }
-    if (groupBy === 'Average Time') {
+    if (groupBy === 'Average Time(sec)') {
       sections.forEach(({ correct, wrong, unanswered }, idx) => {
         correctData[idx] = Math.round(correctData[idx] / correct).toFixed(0) as unknown as number
         wrongData[idx] = Math.round(wrongData[idx] / wrong).toFixed(0) as unknown as number
         unansweredData[idx] = Math.round(unansweredData[idx] / unanswered).toFixed(0) as unknown as number
       })
     }
+    // if (groupBy === 'Time Spent(min)') {
+    //   sections.forEach(({ correct, wrong, unanswered }, idx) => {
+    //     correctData[idx] = Math.round(correctData[idx] / correct).toFixed(0) as unknown as number
+    //     wrongData[idx] = Math.round(wrongData[idx] / wrong).toFixed(0) as unknown as number
+    //     unansweredData[idx] = Math.round(unansweredData[idx] / unanswered).toFixed(0) as unknown as number
+    //   })
+    // }
 
     return [correctData, wrongData, unansweredData]
   }
@@ -445,5 +454,9 @@ export class DashboardComponent {
       const newLink = base + link[link.length - 1]
       ele.src = newLink
     })
+  }
+
+  navigateToPaperMode (): void {
+    void this.router.navigateByUrl(`results/preview/${this.attemptId}`)
   }
 }

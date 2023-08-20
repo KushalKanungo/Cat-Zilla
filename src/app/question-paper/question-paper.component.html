@@ -5,6 +5,7 @@
   (changeToSection)="changeToSection($event)"
   [currentSectionIndex]="currentSectionIndex"
   [questionPaper]="questionPaper"
+  [isInPreviewMode]="isInPreviewMode"
 ></app-bottom-bar>
 <app-sidebar
   [isMobile]="isMobile"
@@ -14,6 +15,7 @@
   [currentSectionIndex]="currentSectionIndex"
   [currentQuestionIndex]="currentQuestionIndex"
   [currentSectionTime]="questionPaper[this.currentSectionIndex].maxTime"
+  [isInPreviewMode]="isInPreviewMode"
   (changeToQuestion)="changeToQuestion($event)"
   (changeToSection)="changeToSection($event)"
   (submitPaper)="submitPaper()"
@@ -23,5 +25,6 @@
   [question]="
     questionPaper[currentSectionIndex].questions[currentQuestionIndex]
   "
+  [isInPreviewMode]="isInPreviewMode"
   [attemptId]="attemptId"
 ></app-question>

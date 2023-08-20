@@ -1,8 +1,9 @@
 <div class="">
   <ng-template [ngIf]="question.quesType.toUpperCase()  === 'NE'">
     <div class="d-flex align-items-center">
-      <label class="me-2 fs-5 mb-0" for=""> Your Response </label> <input type="number" pInputText [(ngModel)]="question.userResponse" (keyup)="onChange($event)"/>
+      <label class="me-2 fs-5 mb-0" for=""> Your Response </label> <input [disabled]="isInPreviewMode" type="number" pInputText [(ngModel)]="question.userResponse" (keyup)="onChange($event)"/>
     </div>
+    <div *ngIf="isInPreviewMode" class="me-2 fs-5 mb-2 my-3 bg-green p-4 rounded" >Correct Answer <span *ngFor="let item of options"> <p *ngIf="item.isCorrect" [innerHTML]="item.value"></p> </span> </div>
   </ng-template>
   <ng-template [ngIf]="question.quesType.toUpperCase() === 'MCQ'">
     <!-- <label *ngFor="let option of options" class="m-4"
@@ -16,16 +17,28 @@
         ><span class="inside"></span></span
       ><span class="" [innerHtml]="option.value"></span
     ></label> -->
-    <label *ngFor="let option of options" class="my-4">
+    <label *ngFor="let option of options; let idx = index" class="my-4 rounded" [ngClass]="{'bg-green':option.isCorrect, 'bg-red': question.userResponse === idx && !option.isCorrect }">
 			<input         
       type="radio"
       class="radio-inline"
       name="radios"
+      [disabled]="isInPreviewMode"
       (click)="onOptionSelect($event)"
-      [checked]="option.userResponse"
+      [checked]="option.userResponse || question.userResponse === idx"
       [value]="option.id" />
 			<span [innerHtml]="option.value" >HTML</span>
 		</label>
   </ng-template>
+  <button class="explanation-btn bg-medium" *ngIf="!isInPreviewMode" (click)="onClear($event)">Clear <i class="bi bi-x-circle"></i></button>
+  <button class="explanation-btn bg-medium" *ngIf="isInPreviewMode" (click)="showExplanation()">Explanation <i class="bi bi-eye"></i></button>
+
   
 </div>
+<p-sidebar class="custombar bg-medium" position="bottom" [(visible)]="isExplanationVisible">
+  <ng-template pTemplate="header"><strong class="fs-5 fw-thin text-uppercase overflow-scroll">Explanation</strong></ng-template>
+<section *ngIf="isInPreviewMode" class="px-3 py-2 ">
+  
+  <p class="" [innerHTML]="question.explanation"></p>
+</section>
+</p-sidebar>
+

@@ -25,6 +25,7 @@
           *ngIf="question.passage == null"
           [innerHtml]="question.question"
         ></div>
+        
       </p-scrollPanel>
     </ng-template>
     <ng-template pTemplate>
@@ -121,6 +122,7 @@
           [userResponse]="question.userResponse"
           [questionType]="'MCQ'"
           [options]="question.options"
+
         ></app-options>
       </div>
       <!-- <form class="flex flex-column gap-3" [formGroup]="formGroup">

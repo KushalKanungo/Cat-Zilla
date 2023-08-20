@@ -70,3 +70,31 @@ label {
 		}
 	}
 }
+::ng-deep .custombar{
+	.p-sidebar{
+		height: 60vh !important;
+		top: unset !important;
+		background-color: var(--light-accent) !important;
+		color: var(--dark-accent);
+		.p-sidebar-footer{
+			display: none;
+		}
+
+	}
+}
+
+.explanation-btn{
+	all: unset;
+	padding: 12px;
+	border-radius: 10px;
+	text-align: center;
+
+	&:hover{
+		background-color: var(--medium-accent) !important;
+	}
+
+	&:active{
+		background-color: var(--dark-accent) !important;
+		color: var(--light-accent) !important;
+	}
+}

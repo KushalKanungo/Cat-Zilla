@@ -13,7 +13,8 @@ export class BottomBarComponent {
   @Input() currentQuestionIndex: number
   @Input() currentSectionIndex: number
   @Input() questionPaper: Section[]
-  @Input() allSections: Array<{ label: string, index: any }>
+  @Input() allSections: Array<{ label: string, index: any, marks?: number }>
+  @Input() isInPreviewMode: boolean
 
   statusEnum = Status
 

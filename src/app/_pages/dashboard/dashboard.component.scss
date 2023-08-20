@@ -179,3 +179,22 @@ p-sorticon{
 }
 
 
+.test-view-btn{
+  all: unset;
+  padding: 6px 10px;
+  top: -18px;
+  left: 20px;
+  font-size: 1rem;
+  position: absolute;
+  background: var(--gray);
+  border-radius: 14px;
+  transition: all 0.4s ease-out;
+  &:hover{
+    background: var(--dark-accent);
+    color: var(--light-accent);
+  }
+  &:active{
+    transform: scale(0.95);
+  }
+
+}

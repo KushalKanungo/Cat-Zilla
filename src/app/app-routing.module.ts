@@ -10,6 +10,7 @@ import { paperLeaveGuard } from './_guards/paper-leave.guard'
 import { AddNewPaperComponent } from './_pages/add-new-paper/add-new-paper.component'
 import { SettingsComponent } from './_pages/settings/settings.component'
 import { attemptPreviewResolver } from './_resolver/attempt-preview.resolver'
+import { resultResolver } from './_resolver/result.resolver'
 
 const routes: Routes = [
   {
@@ -23,7 +24,7 @@ const routes: Routes = [
   {
     path: 'results/preview/:id',
     component: QuestionPaperComponent,
-    resolve: { questionPaper: attemptPreviewResolver },
+    resolve: { questionPaper: attemptPreviewResolver, result: resultResolver },
     data: { isInPreviewMode: true }
   },
   { path: 'login', component: LoginComponent, canActivate: [authGuard] },

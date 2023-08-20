@@ -14,11 +14,13 @@ export interface Question {
   question: string
   quesType: string
   passage: string | null
-  marks: number
+  marks?: number
   negativeMarks: number
   options: Array<{ id: number, value: string, userResponse?: boolean, isCorrect?: boolean | undefined }>
   userResponse?: number
   timeSpent: number
+  explanation?: any
   status?: Status
+  isCorrect?: boolean
 
 }

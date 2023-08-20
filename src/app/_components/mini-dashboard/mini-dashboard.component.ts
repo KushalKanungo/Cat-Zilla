@@ -55,7 +55,7 @@ export class MiniDashboardComponent implements OnInit {
     this.resultService.deleteResultByAttemptId(attemptId).subscribe({
       next: () => {
         this.deletedId = null
-        this.fetchResults()
+        void this.router.navigate(['dashboard'])
       }
     })
   }

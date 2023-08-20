@@ -26,6 +26,8 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit (): void {
+    console.log(this.isInPreviewMode)
+
     this.formGroup = new FormGroup({
       selectedOption: new FormControl('', [])
     })

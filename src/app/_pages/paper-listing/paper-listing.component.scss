@@ -18,13 +18,20 @@
   }
 }
 
-.test-papers{
-  height: calc(100vh - 110px);
+.result-sections{
   margin: 10px 0 20px 0;
+  height: calc(100vh - 110px);
   background-color: var(--white);
-  overflow: scroll;
-  scroll-snap-align: start;
   border-radius: 10px;
+  overflow: scroll;
+
+
+}
+
+.test-papers{
+  scroll-snap-align: start;
+  background-color: transparent;
+  // width: 100% ;
   // .row{
   //   height: 100%;
   //   .col, .col-3, .col-4{
@@ -34,7 +41,7 @@
 }
 
 .paper-card-wrapper{
-  height: 19rem;
+  height: auto;
 }
 
 .paper-card {

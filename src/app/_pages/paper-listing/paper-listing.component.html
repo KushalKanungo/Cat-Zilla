@@ -32,8 +32,8 @@
         />
         <button class="theme-btn text-center" style="height: 26px; width: 26px;"><i class="bi bi-check2-all"></i></button>
       </div>
-      <div class="result-sections">
-        <section *ngIf="!isLoading" class="test-papers shadow row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 pt-4  px-sm-1 px-md-3">
+      <div class="result-sections shadow pt-4 px-3">
+        <section *ngIf="!isLoading" class="test-papers row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
           <div
         class="paper-card-wrapper p-1 p-md-2"
           *ngFor="let paper of questionPapers; let idx = index"

@@ -45,6 +45,7 @@ import { SettingsComponent } from './_pages/settings/settings.component'
 import { BarLoadingComponent } from './_components/bar-loading/bar-loading.component'
 import { MessageService } from 'primeng/api'
 import { TopBarLoadingComponent } from './_components/top-bar-loading/top-bar-loading.component'
+import { ErrorInterceptor } from 'src/_interceptors/error.interceptor'
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +95,7 @@ import { TopBarLoadingComponent } from './_components/top-bar-loading/top-bar-lo
     InfiniteScrollModule,
     ToastModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, MessageService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, MessageService, { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

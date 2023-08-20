@@ -23,7 +23,7 @@ export class QuestionPaperService {
   getQuestionPaper (questionPaperId: string, sectionIds: string[], maxTime: number): Observable<any> {
     const params = {
       id: questionPaperId,
-      sections: sectionIds.map(id => ({ id })),
+      sections: sectionIds,
       maxTime
     }
     return this.http.post<any>(this.BASE_URL + '/paper', params)

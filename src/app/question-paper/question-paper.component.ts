@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { Component, OnInit } from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
 import { type Section } from 'src/_models/section'
 import { Status } from 'src/_enums/status'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
@@ -14,7 +14,7 @@ import { MessageService } from 'primeng/api'
   templateUrl: './question-paper.component.html',
   styleUrls: ['./question-paper.component.scss']
 })
-export class QuestionPaperComponent implements OnInit {
+export class QuestionPaperComponent implements OnInit, OnDestroy {
   constructor (
     private readonly breakpointObserver: BreakpointObserver,
     private readonly activateRoute: ActivatedRoute,
@@ -30,17 +30,29 @@ export class QuestionPaperComponent implements OnInit {
   currentSectionIndex: number = 0
   currentQuestionIndex: number = 0
   attemptId: string
+  result: any
   isInPreviewMode: boolean = false
 
   ngOnInit (): void {
-    this.openFullscreen()
     this.breakpointObserver
       .observe([Breakpoints.Small, Breakpoints.XSmall])
       .subscribe((state) => {
         this.isMobile = state.matches
       })
     this.initializeQuestionPaper()
-    if (!this.isInPreviewMode) { this.startTimer() }
+    if (!this.isInPreviewMode) {
+      this.startTimer()
+      this.openFullscreen()
+    }
+  }
+
+  ngOnDestroy (): void {
+    if (!this.isInPreviewMode) {
+      clearInterval(this.timeTrackingInterval)
+      if (this.questionPaperService.isPaperInProgress()) {
+        this.submitPaper()
+      }
+    }
   }
 
   /**
@@ -51,7 +63,8 @@ export class QuestionPaperComponent implements OnInit {
         this.activateRoute.snapshot.data['questionPaper'].sections
     this.attemptId = this.activateRoute.snapshot.data['questionPaper'].attemptId
     this.isInPreviewMode = this.activateRoute.snapshot.data['isInPreviewMode']
-    debugger
+    this.result = this.activateRoute.snapshot.data['result']
+
     this.questionPaperService.setCurrectPaperStatusOnLocal(this.attemptId)
     if (!this.isInPreviewMode) {
       this.questionPaper[this.currentSectionIndex].status = Status.IN_PROGRESS
@@ -60,6 +73,37 @@ export class QuestionPaperComponent implements OnInit {
       label: sec.label,
       index: idx
     }))
+    if (this.isInPreviewMode) {
+      this.mergeQuestionWithResult()
+      this.allSections = this.result.sections.map((sec: any, idx: number) => ({
+        label: sec.sectionName,
+        index: idx,
+        marks: sec.marks
+      }))
+    }
+  }
+
+  /**
+   * Merge result with question
+   */
+  mergeQuestionWithResult (): void {
+    this.result.questions = this.result.questions.map((ques: any) => {
+      const { id, ...data } = ques
+      return [id, data]
+    })
+    const mappedQuestion = new Map<string, { timeSpent: number, isCorrect: boolean, userResponse: any }>(this.result.questions)
+    this.questionPaper.forEach((sec: Section) => {
+      sec.questions.forEach(que => {
+        // delete que.timeSpent
+        // delete que.marks
+        que.timeSpent = (mappedQuestion.get(que.id) ?? { timeSpent: 0 }).timeSpent
+        que.userResponse = (mappedQuestion.get(que.id) ?? { userResponse: null }).userResponse
+        que.status = mappedQuestion.get(que.id)?.isCorrect === true ? Status.ANSWERED : (mappedQuestion.get(que.id)?.isCorrect === false ? Status.NOT_ANSWERED : Status.REVIEW)
+
+        const newObj = { ...que, ...mappedQuestion.get(que.id) }
+        return newObj
+      })
+    })
   }
 
   /**
@@ -88,6 +132,10 @@ export class QuestionPaperComponent implements OnInit {
         this.questionPaper[this.currentSectionIndex].timeSpent ===
         this.questionPaper[this.currentSectionIndex].maxTime
       ) {
+        if (this.currentSectionIndex === this.questionPaper.length - 1) {
+          localStorage.removeItem('attempt')
+          this.submitPaper()
+        }
         this.changeToSection(this.currentSectionIndex + 1)
       }
     }, 1000)
@@ -195,6 +243,9 @@ export class QuestionPaperComponent implements OnInit {
             .subscribe({
               next: () => {
                 // window.removeEventListener('beforeunload', this.checkLoad, false)
+                if (!this.isInPreviewMode) {
+                  clearInterval(this.timeTrackingInterval)
+                }
                 void this.router.navigate(['papers'])
                 this.messageService.add({
                   severity: 'success',

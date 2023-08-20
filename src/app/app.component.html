@@ -3,7 +3,7 @@
 <!-- <app-sidebar [questions]="verbalQuestions"></app-sidebar>
 <app-question [question]="first"></app-question>
 <app-bottom-bar></app-bottom-bar> -->
-<app-navigation-bar [currentPath]="currentPath" *ngIf="currentPath !== 'paper' && currentPath !== 'login' "></app-navigation-bar>
+<app-navigation-bar [currentPath]="currentPath" *ngIf="currentPath !== 'results' &&currentPath !== 'paper' && currentPath !== 'login' "></app-navigation-bar>
 <div [@routeAnimations] = "prepareRoute(outlet)">
   <router-outlet #outlet="outlet">
   </router-outlet>

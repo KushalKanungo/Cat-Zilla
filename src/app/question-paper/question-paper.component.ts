@@ -49,6 +49,7 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
   ngOnDestroy (): void {
     if (!this.isInPreviewMode) {
       clearInterval(this.timeTrackingInterval)
+      this.submitPaper()
       if (this.questionPaperService.isPaperInProgress()) {
         this.submitPaper()
       }

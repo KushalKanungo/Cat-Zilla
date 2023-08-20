@@ -68,7 +68,7 @@ export class DashboardComponent {
     }
   }
 
-  chartBy = ['Number', 'Time Spent', 'Average Time']
+  chartBy = ['Number', 'Time Spent(min)', 'Average Time(sec)']
 
   chartByChange (event: any) {
     this.barChartData = this.createDataForBarChart(this.sectionsData, this.questions, event.value)
@@ -416,7 +416,7 @@ export class DashboardComponent {
     let correctData: number[] = sections.map(({ correct }) => correct)
     let wrongData: number[] = sections.map(({ wrong }) => wrong)
     let unansweredData: number[] = sections.map(({ unanswered }) => unanswered)
-    if (groupBy === 'Time Spent' || groupBy === 'Average Time') {
+    if (groupBy === 'Time Spent(min)' || groupBy === 'Average Time(sec)') {
       correctData = sections.map(({ sectionId }) => questions.reduce((sum, ques) => {
         return (ques.isCorrect && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
       }, 0))
@@ -429,13 +429,20 @@ export class DashboardComponent {
         return ((ques.isCorrect === undefined || ques.isCorrect === null) && ques.sectionId === sectionId) ? sum + ques.timeSpent : sum
       }, 0))
     }
-    if (groupBy === 'Average Time') {
+    if (groupBy === 'Average Time(sec)') {
       sections.forEach(({ correct, wrong, unanswered }, idx) => {
         correctData[idx] = Math.round(correctData[idx] / correct).toFixed(0) as unknown as number
         wrongData[idx] = Math.round(wrongData[idx] / wrong).toFixed(0) as unknown as number
         unansweredData[idx] = Math.round(unansweredData[idx] / unanswered).toFixed(0) as unknown as number
       })
     }
+    // if (groupBy === 'Time Spent(min)') {
+    //   sections.forEach(({ correct, wrong, unanswered }, idx) => {
+    //     correctData[idx] = Math.round(correctData[idx] / correct).toFixed(0) as unknown as number
+    //     wrongData[idx] = Math.round(wrongData[idx] / wrong).toFixed(0) as unknown as number
+    //     unansweredData[idx] = Math.round(unansweredData[idx] / unanswered).toFixed(0) as unknown as number
+    //   })
+    // }
 
     return [correctData, wrongData, unansweredData]
   }

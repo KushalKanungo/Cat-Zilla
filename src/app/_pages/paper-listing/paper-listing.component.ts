@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations'
+import { animate, style, transition, trigger } from '@angular/animations'
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 import { Filter } from 'src/_models/filter'
@@ -29,7 +29,7 @@ import { SectionsService } from 'src/app/_services/sections.service'
   ]
 })
 export class PaperListingComponent implements OnInit {
-  filter: Filter = { query: '' }
+  filter: Filter = { query: '', per: 12, page: 0, includeAttempted: true }
   questionPapers: any = []
   sections: Array<{ label: string, id: string }>
   isLoading = true
@@ -38,6 +38,10 @@ export class PaperListingComponent implements OnInit {
   isDialogVisible = false
   selectedPaper: any
   selectedSections: string[] = []
+  throttle = 300
+  scrollDistance = 1
+  scrollUpDistance = 2
+  direction = ''
 
   constructor (
     private readonly questionPaperService: QuestionPaperService,
@@ -47,6 +51,8 @@ export class PaperListingComponent implements OnInit {
 
   onSearch (): void {
     console.log(this.filter.query)
+    this.isLoading = true
+    this.fetchQuestionPapers(0, true)
   }
 
   ngOnInit (): void {
@@ -54,10 +60,14 @@ export class PaperListingComponent implements OnInit {
     this.fetchSections()
   }
 
-  fetchQuestionPapers (): void {
+  fetchQuestionPapers (page = 0, clearPreviousQuestionPapers = false): void {
+    this.filter.page = this.filter.page !== undefined ? page + 1 : page
     this.questionPaperService.getAllQuestionPapers(this.filter).subscribe({
       next: (data) => {
-        this.questionPapers = data.questionPapers
+        if (clearPreviousQuestionPapers) { this.questionPapers = [] }
+        this.questionPapers.push(...data.questionPapers)
+        // this.questionPapers = data.questionPapers
+
         this.isLoading = false
         console.log(typeof data)
       }
@@ -89,5 +99,11 @@ export class PaperListingComponent implements OnInit {
   startPaper (): void {
     this.isLoadingForStart = true
     void this.router.navigateByUrl('/paper', { state: { id: this.selectedPaper.id, sections: this.selectedSections, maxTime: this.timePerSection } })
+  }
+
+  onScrollDown (ev: any): void {
+    console.log('scrolled down!!', ev)
+    this.fetchQuestionPapers(this.filter.page)
+    this.direction = 'down'
   }
 }

@@ -74,4 +74,11 @@ export class QuestionPaperService {
     const attempt = localStorage.getItem('attempt')
     return Boolean(attempt !== undefined && attempt !== null && JSON.parse(attempt).status === Status.IN_PROGRESS)
   }
+
+  /**
+   * This function removes progress paper from local storage
+   */
+  paperSubmitted (): void {
+    localStorage.removeItem('attempt')
+  }
 }

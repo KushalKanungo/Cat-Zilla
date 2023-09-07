@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ScrollPanelModule } from 'primeng/scrollpanel'
 import { DropdownModule } from 'primeng/dropdown'
 import { OverlayPanelModule } from 'primeng/overlaypanel'
+import { ToggleButtonModule } from 'primeng/togglebutton'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
 import { TagModule } from 'primeng/tag'
@@ -93,7 +94,8 @@ import { ErrorInterceptor } from 'src/_interceptors/error.interceptor'
     ChartModule,
     ConfirmDialogModule,
     InfiniteScrollModule,
-    ToastModule
+    ToastModule,
+    ToggleButtonModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, MessageService, { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }],
   bootstrap: [AppComponent]

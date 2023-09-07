@@ -26,7 +26,7 @@
       (click)="onOptionSelect($event)"
       [checked]="option.userResponse || question.userResponse === idx"
       [value]="option.id" />
-			<span [innerHtml]="option.value" >HTML</span>
+			<span ><div [innerHtml]="option.value"  ></div></span>
 		</label>
   </ng-template>
   <button class="explanation-btn bg-medium" *ngIf="!isInPreviewMode" (click)="onClear($event)">Clear <i class="bi bi-x-circle"></i></button>

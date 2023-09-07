@@ -15,7 +15,7 @@ export class MiniDashboardComponent implements OnInit {
   total: number
   attemptId = ''
   throttle = 250
-  scrollDistance = 4
+  scrollDistance = 1
   scrollUpDistance = 2
   isListLoading: boolean = true
   deletedId: string | null = null

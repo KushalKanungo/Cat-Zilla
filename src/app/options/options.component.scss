@@ -45,6 +45,7 @@ label {
 	}
 	span {
 		display: flex;
+		flex-wrap: nowrap;
 		align-items: center;
 		padding: 0.375em 0.75em 0.375em 0.375em;
 		border-radius: 99em; // or something higher...

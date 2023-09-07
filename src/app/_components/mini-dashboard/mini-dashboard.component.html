@@ -1,10 +1,10 @@
-<section class="mini-dashboard shadow">
-<div class="header text-center pt-4">Results</div>
-<div class="result-card-parent" 
-infiniteScroll
+<section class="mini-dashboard shadow" infiniteScroll
 [infiniteScrollDistance]="scrollDistance"
 [infiniteScrollThrottle]="throttle"
-(scrolled)="onScrollDown($event)"
+(scrolled)="onScrollDown($event)">
+<div class="header text-center pt-4">Results</div>
+<div class="result-card-parent" 
+
 >
 <ng-template [ngIf]="attempts.length > 0" class="wrapper">
   <div  class="result-card px-4 py-3 btn btn-2 hover-slide-right animate slide-left delay-0" [ngClass]="{ 'rainbow': result.id === deletedId, 'active': result.id === attemptId }" *ngFor="let result of attempts; let idx = index">

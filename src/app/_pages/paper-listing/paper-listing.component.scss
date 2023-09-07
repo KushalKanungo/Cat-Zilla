@@ -6,6 +6,9 @@
   margin-top: 20px;
   background-color: var(--white);
   height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
   border-radius: 10px;
   display: flex;
   padding-left: 20px;
@@ -20,8 +23,8 @@
 
 .result-sections{
   margin: 10px 0 20px 0;
-  height: calc(100vh - 110px);
-  background-color: var(--white);
+  // height: calc(100vh - 110px);
+  // background-color: var(--white);
   border-radius: 10px;
   overflow: scroll;
 

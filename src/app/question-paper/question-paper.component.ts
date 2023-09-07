@@ -49,7 +49,6 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
   ngOnDestroy (): void {
     if (!this.isInPreviewMode) {
       clearInterval(this.timeTrackingInterval)
-      this.submitPaper()
       if (this.questionPaperService.isPaperInProgress()) {
         this.submitPaper()
       }
@@ -246,6 +245,7 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
                 // window.removeEventListener('beforeunload', this.checkLoad, false)
                 if (!this.isInPreviewMode) {
                   clearInterval(this.timeTrackingInterval)
+                  this.questionPaperService.paperSubmitted()
                 }
                 void this.router.navigate(['papers'])
                 this.messageService.add({

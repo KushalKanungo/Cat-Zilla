@@ -30,15 +30,23 @@
           [style.width] = "'90%'"
           type="text"
         />
-        <button class="theme-btn text-center" style="height: 26px; width: 26px;"><i class="bi bi-check2-all"></i></button>
+        
+      <p-toggleButton [(ngModel)]="filter.includeAttempted" onIcon="bi bi-check-all" offIcon="bi bi-x-square"></p-toggleButton>
+        <!-- <button class="theme-btn text-center" style="height: 26px; width: 26px;"><i class="bi bi-check2-all"></i></button> -->
       </div>
-      <div class="result-sections shadow pt-4 px-3">
-        <section *ngIf="!isLoading" class="test-papers row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
+      <div class="result-sections pt-0
+       pt-sm-2 px-1 px-sm-3">
+        <section *ngIf="!isLoading" class="test-papers row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5" infinite-scroll
+        [infiniteScrollDistance]="scrollDistance"
+        [infiniteScrollUpDistance]="scrollUpDistance"
+        [infiniteScrollThrottle]="throttle"
+        (scrolled)="onScrollDown($event)"
+        >
           <div
         class="paper-card-wrapper p-1 p-md-2"
           *ngFor="let paper of questionPapers; let idx = index"
           >
-          <div class="paper-card p-4 mx-4 mx-sm-0 animate slide" [ngClass]="'delay-'+idx">
+          <div class="paper-card p-4  mx-sm-0 animate slide" [ngClass]="'delay-'+idx">
             <div class="label-wrapper">
               <div class="label text-truncate" [pTooltip]="paper.label" ><i *ngIf="paper.attempted" class="bi bi-check2-all"></i> {{paper.label}}</div>
               <p class="desc text-muted text-truncate">

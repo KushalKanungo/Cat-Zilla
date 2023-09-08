@@ -227,7 +227,7 @@ input[type='button'] {
 }
 
 *::-webkit-scrollbar {
-  width: 4px;
+  width: 10px !important;
   background-color: transparent;
   border-radius: 6px;
 }

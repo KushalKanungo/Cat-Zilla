@@ -8,6 +8,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 import { ActivatedRoute, Router } from '@angular/router'
 import { QuestionPaperService } from '../_services/question-paper.service'
 import { MessageService } from 'primeng/api'
+import { filter, fromEvent } from 'rxjs'
 
 @Component({
   selector: 'app-question-paper',
@@ -34,6 +35,23 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
   isInPreviewMode: boolean = false
 
   ngOnInit (): void {
+    const nextKeyPress$ = fromEvent(document, 'keydown').pipe(
+      filter((event: any) => ['ArrowLeft', 'ArrowRight', 'Space', '1', '2', '3'].includes(event.key))
+    )
+
+    nextKeyPress$.subscribe(({ key }) => {
+      if (key === 'ArrowRight') {
+        this.changeToQuestion(this.currentQuestionIndex + 1)
+      } else if (key === 'ArrowLeft') {
+        this.changeToQuestion(this.currentQuestionIndex - 1)
+      } else if (key === 'Space') {
+        this.changeToQuestion(this.currentQuestionIndex - 1)
+      } else if (['1', '2', '3'].includes(key)) {
+        console.log(key)
+        this.changeToSection(Number(key) - 1)
+      }
+    })
+
     this.breakpointObserver
       .observe([Breakpoints.Small, Breakpoints.XSmall])
       .subscribe((state) => {
@@ -189,7 +207,9 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
     }
     this.changeToQuestion(0)
     this.currentSectionIndex = idx
-    this.questionPaper[this.currentSectionIndex].status = Status.IN_PROGRESS
+    if (!this.isInPreviewMode) {
+      this.questionPaper[this.currentSectionIndex].status = Status.IN_PROGRESS
+    }
   }
 
   /**

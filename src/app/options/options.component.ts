@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { filter, fromEvent } from 'rxjs'
 import { Status } from 'src/_enums/status'
 import { type Question } from 'src/_models/questionsModel'
 
@@ -22,7 +23,19 @@ export class OptionsComponent {
   isExplanationVisible = false
   ngOnInit (): void {
     this.isInPreviewMode = (this.options[0].isCorrect === true || this.options[0].isCorrect === false)
-    console.log(this.isInPreviewMode)
+    const nextKeyPress$ = fromEvent(document, 'keydown').pipe(
+      filter((event: any) => ['e'].includes(event.key))
+    )
+
+    nextKeyPress$.subscribe(({ key }) => {
+      if (key === 'e' && this.isInPreviewMode) {
+        if (this.isExplanationVisible) {
+          this.isExplanationVisible = false
+        } else {
+          this.showExplanation()
+        }
+      }
+    })
 
     // this.userResponse = this.question.userResponse
   }

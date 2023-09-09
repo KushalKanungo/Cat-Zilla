@@ -25,5 +25,6 @@ module.exports = {
     rules: {
         indent: ['warn', 2],
         '@typescript-eslint/consistent-type-imports': 0,
+        '@typescript-eslint/explicit-function-return-type': 0
     },
 };

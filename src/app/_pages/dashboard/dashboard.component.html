@@ -65,15 +65,20 @@
                 </div>
               </div>
             </div>
-            <div class="col-6"></div>
+            <!-- <div class="col-6"></div>
             <div class="col-6">
-              <p-dropdown [options]="chartBy" (onChange)="chartByChange($event)"></p-dropdown></div>
-            <div class="col-6">
-              <p-chart type="bar" [data]="data" [options]="barChartOptions"></p-chart>
+              <p-dropdown [options]="chartBy" (onChange)="chartByChange($event)" [style]="{ width: '200px', margin: '10px', padding: '4px' }"
+              [panelStyle]="{ width: '240px' }"></p-dropdown></div> -->
+            <div class="col-12 col-md-6">
+              <p-dropdown [options]="chartBy" (onChange)="chartByChange($event)" [style]="{ width: '200px', margin: '10px', padding: '4px' }"
+              [panelStyle]="{ width: '240px' }" [disabled]="true" ></p-dropdown>
+              <p-chart type="bar" [data]="data" [options]="basicChartOptions"></p-chart>
 
             </div>
             
-            <div class="col-6">
+            <div class="col-12 col-md-6">
+              <p-dropdown [options]="chartBy" (onChange)="chartByChange($event)" [style]="{ width: '200px', margin: '10px', padding: '4px' }"
+              [panelStyle]="{ width: '240px' }"></p-dropdown>
               <p-chart type="bar" [data]="barChartData" [options]="barChartOptions"></p-chart>
             </div>
             

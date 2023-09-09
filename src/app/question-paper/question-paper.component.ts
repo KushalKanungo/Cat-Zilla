@@ -47,7 +47,7 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
       } else if (key === 'Space') {
         this.changeToQuestion(this.currentQuestionIndex - 1)
       } else if (['1', '2', '3'].includes(key)) {
-        console.log(key)
+        
         this.changeToSection(Number(key) - 1)
       }
     })

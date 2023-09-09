@@ -19060,5 +19060,5 @@ fs.writeFile("data.json", jsonData, (err) => {
     console.error(err);
     return;
   }
-  console.log("Data written to file");
+  ;
 });

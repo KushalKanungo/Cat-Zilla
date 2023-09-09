@@ -43,7 +43,7 @@ export class QuestionPaperService {
     } else if (type === 'questionPaper') {
       params = { ...params, attemptId }
     }
-    console.log(params)
+    
     return this.http.post<any>(this.BASE_URL + '/paper-response', params)
   }
 

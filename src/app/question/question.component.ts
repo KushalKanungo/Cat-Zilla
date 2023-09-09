@@ -6,6 +6,7 @@ import { type Question } from 'src/_models/questionsModel'
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { QuestionPaperService } from '../_services/question-paper.service'
+import { DomSanitizer } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-question',
@@ -21,13 +22,11 @@ export class QuestionComponent implements OnInit {
   formGroup: FormGroup
   statusEnum = Status
   isMobile = false
-  constructor (private readonly breakpointObserver: BreakpointObserver, private readonly questionPaperService: QuestionPaperService) {
+  constructor (private readonly breakpointObserver: BreakpointObserver, private readonly questionPaperService: QuestionPaperService, public sanitizer: DomSanitizer) {
 
   }
 
   ngOnInit (): void {
-    console.log(this.isInPreviewMode)
-
     this.formGroup = new FormGroup({
       selectedOption: new FormControl('', [])
     })

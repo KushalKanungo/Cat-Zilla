@@ -26,7 +26,7 @@ export class MiniDashboardComponent implements OnInit {
   }
 
   onScrollDown (ev: any): void {
-    console.log('scrolled')
+    
     this.filter.page = this.filter.page !== undefined ? this.filter.page + 1 : 1
     this.resultService.getAllResults(this.filter).subscribe(
       {

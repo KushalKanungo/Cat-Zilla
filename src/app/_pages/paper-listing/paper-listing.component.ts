@@ -50,7 +50,7 @@ export class PaperListingComponent implements OnInit {
   ) {}
 
   onSearch (): void {
-    console.log(this.filter.query)
+    
     this.isLoading = true
     this.fetchQuestionPapers(0, true)
   }
@@ -69,7 +69,7 @@ export class PaperListingComponent implements OnInit {
         // this.questionPapers = data.questionPapers
 
         this.isLoading = false
-        console.log(typeof data)
+        
       }
     })
   }
@@ -93,7 +93,7 @@ export class PaperListingComponent implements OnInit {
   }
 
   onSectionSelect (event: any): void {
-    console.log(this.selectedSections)
+    
   }
 
   startPaper (): void {
@@ -102,7 +102,7 @@ export class PaperListingComponent implements OnInit {
   }
 
   onScrollDown (ev: any): void {
-    console.log('scrolled down!!', ev)
+    
     this.fetchQuestionPapers(this.filter.page)
     this.direction = 'down'
   }

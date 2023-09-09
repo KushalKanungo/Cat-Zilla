@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   ngOnInit (): void {
     this.location.onUrlChange(url => {
       this.currentPath = url.split('/')?.[1]
-      console.log(this.currentPath)
+      
     })
   }
 

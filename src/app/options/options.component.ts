@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { DomSanitizer } from '@angular/platform-browser'
 import { filter, fromEvent } from 'rxjs'
 import { Status } from 'src/_enums/status'
 import { type Question } from 'src/_models/questionsModel'
@@ -16,6 +17,8 @@ export class OptionsComponent {
   @Input() question: Question
   @Input() optionsType: string
   // @Input() isInPreviewMode: boolean
+
+  constructor(public sanitizer: DomSanitizer) {}
 
   @Input() userResponse: number | undefined
   isInPreviewMode: boolean = false
@@ -45,7 +48,7 @@ export class OptionsComponent {
   }
 
   onOptionSelect (event: any): void {
-    console.log(this.userResponse)
+    
     if (!this.isInPreviewMode) {
       this.setUserResponse.emit(event.target.value)
       this.setQuestionStatus.emit(Status.ANSWERED)

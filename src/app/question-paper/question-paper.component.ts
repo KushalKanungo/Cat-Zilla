@@ -34,9 +34,27 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
   result: any
   isInPreviewMode: boolean = false
 
+  scrollToTop () {
+    document.querySelectorAll('.p-scrollpanel')?.forEach((ele) => {
+      ele.scroll({ top: 0 })
+    })
+  }
+
+  reloadEvent (event: any) {
+    event.preventDefault()
+    console.log('Trying to exit')
+    event.returnValue = ''
+  }
+
+  reloadYesEvent (event: any) {
+    console.log('reloading')
+    this.submitPaper()
+    window.location.replace('http://localhost:4200/dashboard')
+  }
+
   ngOnInit (): void {
     const nextKeyPress$ = fromEvent(document, 'keydown').pipe(
-      filter((event: any) => ['ArrowLeft', 'ArrowRight', 'Space', '1', '2', '3'].includes(event.key))
+      filter((event: any) => this.isInPreviewMode && ['ArrowLeft', 'ArrowRight', 'Space', '1', '2', '3'].includes(event.key))
     )
 
     nextKeyPress$.subscribe(({ key }) => {
@@ -44,10 +62,9 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
         this.changeToQuestion(this.currentQuestionIndex + 1)
       } else if (key === 'ArrowLeft') {
         this.changeToQuestion(this.currentQuestionIndex - 1)
-      } else if (key === 'Space') {
+      } else if (key === 'Space' && this.isInPreviewMode) {
         this.changeToQuestion(this.currentQuestionIndex - 1)
-      } else if (['1', '2', '3'].includes(key)) {
-        
+      } else if (['1', '2', '3'].includes(key) && this.isInPreviewMode) {
         this.changeToSection(Number(key) - 1)
       }
     })
@@ -61,10 +78,16 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
     if (!this.isInPreviewMode) {
       this.startTimer()
       this.openFullscreen()
+      window.addEventListener('beforeunload', this.reloadEvent)
+      // window.addEventListener('unload', this.reloadYesEvent)
     }
   }
 
   ngOnDestroy (): void {
+    console.log('destroy ran')
+    if (!this.questionPaperService.isPaperInProgress()) {
+      window.removeEventListener('beforeunload', this.reloadEvent)
+    }
     if (!this.isInPreviewMode) {
       clearInterval(this.timeTrackingInterval)
       if (this.questionPaperService.isPaperInProgress()) {
@@ -189,8 +212,9 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
       ) {
         currentQuestion.status = Status.NOT_ANSWERED
       }
-      this.postQuestionResponse(currentQuestion)
+      this.postQuestionResponse(currentQuestion, this.attemptId)
     }
+    this.scrollToTop()
     this.currentQuestionIndex = idx
   }
 
@@ -203,7 +227,7 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
   changeToSection (idx: number): void {
     if (!this.isInPreviewMode) {
       if (this.questionPaper[idx].status === Status.DONE) { return }
-      this.postSectionResponse(this.questionPaper[this.currentSectionIndex])
+      this.postSectionResponse(this.questionPaper[this.currentSectionIndex], this.attemptId)
     }
     this.changeToQuestion(0)
     this.currentSectionIndex = idx
@@ -218,12 +242,12 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
    * @param sectionIds
    * @param timesSpent
    */
-  postSectionResponse ({ id, timeSpent }: { id: string, timeSpent: number }): void {
+  postSectionResponse ({ id, timeSpent }: { id: string, timeSpent: number }, attemptId: string): void {
     this.questionPaper[this.currentSectionIndex].status = Status.DONE
     this.questionPaperService
       .postUserResponse(
         'section',
-        this.attemptId,
+        attemptId,
         null,
         id,
         timeSpent
@@ -236,11 +260,11 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
    *
    * @param currentQuestion
    */
-  postQuestionResponse (currentQuestion: any): void {
+  postQuestionResponse (currentQuestion: any, attemptId: string): void {
     this.questionPaperService
       .postUserResponse(
         'question',
-        this.attemptId,
+        attemptId,
         currentQuestion
       )
       .subscribe({ next: () => {} })
@@ -266,6 +290,7 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
                 if (!this.isInPreviewMode) {
                   clearInterval(this.timeTrackingInterval)
                   this.questionPaperService.paperSubmitted()
+                  this.attemptId = ''
                 }
                 void this.router.navigate(['papers'])
                 this.messageService.add({

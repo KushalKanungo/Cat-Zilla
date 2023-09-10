@@ -7,8 +7,9 @@
     *ngIf="!isMobile"
   >
     <ng-template pTemplate>
-      <p-scrollPanel
+      <div class="p-scrollpanel question-panel"
         [style]="{
+          overflow: 'auto',
           width: '100%',
           height: 'calc(100vh - 100px)',
           paddingBottom: '8px'
@@ -26,11 +27,11 @@
           [innerHtml]="question.question"
         ></div>
         
-      </p-scrollPanel>
+      </div>
     </ng-template>
     <ng-template pTemplate>
-      <p-scrollPanel
-        [style]="{ height: 'calc(100vh - 100px)' }"
+      <div class="p-scrollpanel"
+        [style]="{ height: 'calc(100vh - 100px)', overflow: 'auto', backgroundColor: 'var(--normal-accent)', color: 'var(--white)', width: '100%' }"
         styleClass="custombar1"
       >
         <div
@@ -71,7 +72,7 @@
             </div>
           </label>
         </div> -->
-      </p-scrollPanel>
+      </div>
     </ng-template>
   </p-splitter>
   <div *ngIf="isMobile" class="row row-cols-1 mobile-question ">

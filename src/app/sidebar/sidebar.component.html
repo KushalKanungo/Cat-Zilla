@@ -21,7 +21,7 @@
       class="bi bi-caret-left prev-next-buttons"
       (click)="prevQuestionHandeler()"
     ></i>
-    <h3 class="text-center">QUES {{currentQuestionIndex + 1}} <span (click)="setQuestionStatus(statusEnum.REVIEW)"
+    <h3 class="text-center">QUES {{currentQuestionIndex + 1}} <span *ngIf="!isInPreviewMode" (click)="setQuestionStatus(statusEnum.REVIEW)"
       ><i
         [ngClass]="{
           'bi bi-bookmark-star-fill': questions[currentQuestionIndex].status === 'review' || questions[currentQuestionIndex].status === 'answeredReview',

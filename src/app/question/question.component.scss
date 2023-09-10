@@ -1,18 +1,23 @@
-::ng-deep .p-scrollpanel{
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+::ng-deep .p-scrollpanel {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
   border-radius: 10px;
   background-color: white;
 }
 
-::ng-deep .custombar1{
+::ng-deep .custombar1 {
   // background-color: var(--normal-accent) !important;
-  background: linear-gradient(180deg, var(--normal-accent) 0%, var(--normal-accent) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--normal-accent) 0%,
+    var(--normal-accent) 100%
+  );
   color: white;
   width: 100%;
 }
 
 @media (max-width: 960px) {
-	::ng-deep .custombar1{
+  ::ng-deep .custombar1 {
     background-color: var(--normal-accent) !important;
     color: white;
     width: 100%;
@@ -24,21 +29,26 @@
   background: transparent;
 }
 
-p-scrollpanel{
+.p-scrollpanel {
   width: 100%;
 }
 
+::ng-deep .p-splitter-panel{
+  &:focus-visible {
+    outline: none !important;
+}
+}
 
 .question-number {
-  font-family: "Montserrat" !important;
+  font-family: 'Montserrat' !important;
   font-size: 2rem;
   font-weight: 500;
   color: var(--normal-accent);
 }
 .question {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
-  font-family: 'Space Grotesk', sans-serif; 
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .option {
@@ -78,17 +88,26 @@ p-scrollpanel{
 }
 
 ::ng-deep .passage {
-  b{
-    font-size: 20px;
+  b {
+    font-size: 16px;
     font-weight: 500;
   }
-  font-family: 'Space Grotesk', sans-serif; 
+  p,
+  span,
+  div {
+    font-family: 'Merriweather', serif !important;
+    * {
+      font-family: 'Merriweather', serif !important;
+    }
+  }
+  font-size: 14px;
+  font-family: 'Merriweather', serif !important;
   text-align: justify !important;
   line-height: 24px;
 }
 
-::ng-deep .passage strong{
-  font-size: 20px;
+::ng-deep .passage strong {
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -97,26 +116,24 @@ p-scrollpanel{
   width: 4px;
 }
 
-::ng-deep *::-webkit-scrollbar
-{
-	width: 4px !important;
-	background-color: #F5F5F5 !important;
+::ng-deep *::-webkit-scrollbar {
+  width: 8px !important;
+  background-color: #f5f5f5 !important;
 }
 
-*::-webkit-scrollbar-thumb
-{
-  width: 4px !important;
-	background-color: #000000 !important;
-	border: 0px solid #555555 !important;
+*::-webkit-scrollbar-thumb {
+  width: 8px !important;
+  background-color: var(--normal-accent);
 }
 
-.mobile-question{
+.mobile-question {
   height: 100% !important;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
   border-radius: 20px;
-  p-scrollpanel{
+  p-scrollpanel {
     scroll-snap-align: start;
   }
 }

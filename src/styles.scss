@@ -5,6 +5,8 @@
 @import '~bootstrap/dist/css/bootstrap-grid.css';
 @import '~bootstrap-icons/font/bootstrap-icons.css';
 @import '~bootstrap/dist/css/bootstrap-utilities.css';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 
 // @font-face {
 //   font-family: Montserrat;
@@ -507,6 +509,10 @@ p-tag {
   .delay-#{$i} {
     animation-delay: #{0.05 * $i}s;
   }
+}
+
+.p-splitter {
+  border: none !important;
 }
 
 .p-toast .p-toast-message.p-toast-message-warn {

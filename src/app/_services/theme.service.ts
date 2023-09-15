@@ -80,13 +80,35 @@ export class ThemeService {
       '--medium-accent': '#F4BBD3',
       '--light-accent': '#F1E4F3'
     },
-
     {
       '--dark-accent': '#393E41',
       '--normal-accent': '#E7BB41',
       '--medium-accent': '#44BBA4',
       '--light-accent': '#E7E5DF'
+    },
+    {
+      '--dark-accent': '#27005D',
+      '--normal-accent': '#9400FF',
+      '--medium-accent': '#AED2FF',
+      '--light-accent': '#E4F1FF'
+    },
+    {
+      '--dark-accent': '#27374D',
+      '--normal-accent': '#526D82',
+      '--medium-accent': '#9DB2BF',
+      '--light-accent': '#DDE6ED'
+    },
+    {
+      '--dark-accent': '#424874',
+      '--normal-accent': '#A6B1E1',
+      '--medium-accent': '#DCD6F7',
+      '--light-accent': '#F4EEFF'
+    },
+    {
+      '--dark-accent': '#1B262C',
+      '--normal-accent': '#0F4C75',
+      '--medium-accent': '#3282B8',
+      '--light-accent': '#BBE1FA'
     }
   ]
-  
 }

@@ -353,9 +353,9 @@ export class DashboardComponent {
           label: 'Result',
           data: [unansweredQuestions, correctQuestions, wrongQuestions],
           backgroundColor: [
-            documentStyle.getPropertyValue('--warning-graph'),
+            documentStyle.getPropertyValue('--medium-accent'),
             documentStyle.getPropertyValue('--success'),
-            documentStyle.getPropertyValue('--danger-graph')
+            documentStyle.getPropertyValue('--dark-accent')
           ],
           hoverBackgroundColor: [
             documentStyle.getPropertyValue('--warning-lite'),
@@ -379,20 +379,24 @@ export class DashboardComponent {
           type: 'bar',
           label: 'Correct',
           backgroundColor: documentStyle.getPropertyValue('--success'),
+          hoverBackgroundColor: documentStyle.getPropertyValue('--success-lite'),
           data: correctData
           // data: sectionsArray.map(sec => sec.correct)
         },
         {
           type: 'bar',
           label: 'Wrong',
-          backgroundColor: documentStyle.getPropertyValue('--danger-graph'),
+          backgroundColor: documentStyle.getPropertyValue('--dark-accent'),
+          hoverBackgroundColor: documentStyle.getPropertyValue('--danger-lite'),
+
           data: wrongData
           // data: sectionsArray.map(sec => sec.wrong)
         },
         {
           type: 'bar',
           label: 'Unanswered',
-          backgroundColor: documentStyle.getPropertyValue('--warning-graph'),
+          backgroundColor: documentStyle.getPropertyValue('--medium-accent'),
+          hoverBackgroundColor: documentStyle.getPropertyValue('--warning-lite'),
           data: unansweredData
           // data: sectionsArray.map(sec => sec.unanswered)
         }

@@ -109,6 +109,24 @@ export class ThemeService {
       '--normal-accent': '#0F4C75',
       '--medium-accent': '#3282B8',
       '--light-accent': '#BBE1FA'
+    },
+    {
+      '--dark-accent': '#06113C',
+      '--normal-accent': '#FF8C32',
+      '--medium-accent': '#DDDDDD',
+      '--light-accent': '#EEEEEE'
+    },
+    {
+      '--dark-accent': '#1A374D',
+      '--normal-accent': '#406882',
+      '--medium-accent': '#6998AB',
+      '--light-accent': '#B1D0E0'
+    },
+    {
+      '--dark-accent': '#14274E',
+      '--normal-accent': '#394867',
+      '--medium-accent': '#9BA4B4',
+      '--light-accent': '#F1F6F9'
     }
   ]
 

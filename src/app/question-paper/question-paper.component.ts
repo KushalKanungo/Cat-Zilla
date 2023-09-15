@@ -8,7 +8,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 import { ActivatedRoute, Router } from '@angular/router'
 import { QuestionPaperService } from '../_services/question-paper.service'
 import { MessageService } from 'primeng/api'
-import { filter, fromEvent } from 'rxjs'
+import { Subscription, filter, fromEvent } from 'rxjs'
 
 @Component({
   selector: 'app-question-paper',
@@ -24,6 +24,7 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
     private readonly router: Router
   ) {}
 
+  keyPressSubscription$: Subscription
   isMobile = false
   timeTrackingInterval: any
   questionPaper: Section[]
@@ -54,10 +55,10 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
 
   ngOnInit (): void {
     const nextKeyPress$ = fromEvent(document, 'keydown').pipe(
-      filter((event: any) => this.isInPreviewMode && ['ArrowLeft', 'ArrowRight', 'Space', '1', '2', '3'].includes(event.key))
+      filter((event: any) => ['ArrowLeft', 'ArrowRight', 'Space', '1', '2', '3'].includes(event.key))
     )
 
-    nextKeyPress$.subscribe(({ key }) => {
+    this.keyPressSubscription$ = nextKeyPress$.subscribe(({ key }) => {
       if (key === 'ArrowRight') {
         this.changeToQuestion(this.currentQuestionIndex + 1)
       } else if (key === 'ArrowLeft') {
@@ -85,6 +86,7 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
 
   ngOnDestroy (): void {
     console.log('destroy ran')
+    this.keyPressSubscription$.unsubscribe()
     if (!this.questionPaperService.isPaperInProgress()) {
       window.removeEventListener('beforeunload', this.reloadEvent)
     }
@@ -94,6 +96,28 @@ export class QuestionPaperComponent implements OnInit, OnDestroy {
         this.submitPaper()
       }
     }
+  }
+
+  /**
+   * It toggles the status of current question
+   */
+  toggleQuestionStatus (): void {
+    let newStatus: Status = Status.REVIEW
+
+    switch (this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status) {
+      case Status.ANSWERED:
+        newStatus = Status.ANSWERED_REVIEW
+        break
+      case Status.ANSWERED_REVIEW:
+        newStatus = Status.ANSWERED
+        break
+      case Status.REVIEW:
+        newStatus = Status.NOT_ANSWERED
+        break
+      default:
+        newStatus = Status.REVIEW
+    }
+    this.questionPaper[this.currentSectionIndex].questions[this.currentQuestionIndex].status = newStatus
   }
 
   /**

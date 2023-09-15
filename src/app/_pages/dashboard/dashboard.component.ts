@@ -70,7 +70,7 @@ export class DashboardComponent {
     }
   }
 
-  chartBy = ['Number', 'Time Spent(min)', 'Average Time(sec)', 'Section Marks']
+  chartBy = ['Count', 'Time Spent(min)', 'Average Time(sec)', 'Section Marks']
 
   chartByChange (event: any) {
     this.barChartData = this.createDataForBarChart(this.sectionsData, this.questions, event.value)
@@ -353,9 +353,9 @@ export class DashboardComponent {
           label: 'Result',
           data: [unansweredQuestions, correctQuestions, wrongQuestions],
           backgroundColor: [
-            documentStyle.getPropertyValue('--warning-graph'),
+            documentStyle.getPropertyValue('--medium-accent'),
             documentStyle.getPropertyValue('--success'),
-            documentStyle.getPropertyValue('--danger-graph')
+            documentStyle.getPropertyValue('--dark-accent')
           ],
           hoverBackgroundColor: [
             documentStyle.getPropertyValue('--warning-lite'),
@@ -368,7 +368,7 @@ export class DashboardComponent {
     return tempData
   }
 
-  createDataForBarChart (sectionsArray: any[], questions: any[] = [], groupBy: string = 'Number') {
+  createDataForBarChart (sectionsArray: any[], questions: any[] = [], groupBy: string = 'Count') {
     const documentStyle = getComputedStyle(document.documentElement)
 
     const [correctData, wrongData, unansweredData] = this.calculateChartData(sectionsArray, questions, groupBy)
@@ -379,20 +379,24 @@ export class DashboardComponent {
           type: 'bar',
           label: 'Correct',
           backgroundColor: documentStyle.getPropertyValue('--success'),
+          hoverBackgroundColor: documentStyle.getPropertyValue('--success-lite'),
           data: correctData
           // data: sectionsArray.map(sec => sec.correct)
         },
         {
           type: 'bar',
           label: 'Wrong',
-          backgroundColor: documentStyle.getPropertyValue('--danger-graph'),
+          backgroundColor: documentStyle.getPropertyValue('--dark-accent'),
+          hoverBackgroundColor: documentStyle.getPropertyValue('--danger-lite'),
+
           data: wrongData
           // data: sectionsArray.map(sec => sec.wrong)
         },
         {
           type: 'bar',
           label: 'Unanswered',
-          backgroundColor: documentStyle.getPropertyValue('--warning-graph'),
+          backgroundColor: documentStyle.getPropertyValue('--medium-accent'),
+          hoverBackgroundColor: documentStyle.getPropertyValue('--warning-lite'),
           data: unansweredData
           // data: sectionsArray.map(sec => sec.unanswered)
         }
@@ -433,7 +437,7 @@ export class DashboardComponent {
     return tempdata
   }
 
-  calculateChartData (sections: any[], questions: any[], groupBy: string = 'Number'): number[][] {
+  calculateChartData (sections: any[], questions: any[], groupBy: string = 'Count'): number[][] {
     // If group by is Time Spent
     let correctData: number[] = sections.map(({ correct }) => correct)
     let wrongData: number[] = sections.map(({ wrong }) => wrong)

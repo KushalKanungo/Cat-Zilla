@@ -80,13 +80,75 @@ export class ThemeService {
       '--medium-accent': '#F4BBD3',
       '--light-accent': '#F1E4F3'
     },
-
     {
       '--dark-accent': '#393E41',
       '--normal-accent': '#E7BB41',
       '--medium-accent': '#44BBA4',
       '--light-accent': '#E7E5DF'
+    },
+    {
+      '--dark-accent': '#27005D',
+      '--normal-accent': '#9400FF',
+      '--medium-accent': '#AED2FF',
+      '--light-accent': '#E4F1FF'
+    },
+    {
+      '--dark-accent': '#27374D',
+      '--normal-accent': '#526D82',
+      '--medium-accent': '#9DB2BF',
+      '--light-accent': '#DDE6ED'
+    },
+    {
+      '--dark-accent': '#424874',
+      '--normal-accent': '#A6B1E1',
+      '--medium-accent': '#DCD6F7',
+      '--light-accent': '#F4EEFF'
+    },
+    {
+      '--dark-accent': '#1B262C',
+      '--normal-accent': '#0F4C75',
+      '--medium-accent': '#3282B8',
+      '--light-accent': '#BBE1FA'
+    },
+    {
+      '--dark-accent': '#06113C',
+      '--normal-accent': '#FF8C32',
+      '--medium-accent': '#DDDDDD',
+      '--light-accent': '#EEEEEE'
+    },
+    {
+      '--dark-accent': '#1A374D',
+      '--normal-accent': '#406882',
+      '--medium-accent': '#6998AB',
+      '--light-accent': '#B1D0E0'
+    },
+    {
+      '--dark-accent': '#14274E',
+      '--normal-accent': '#394867',
+      '--medium-accent': '#9BA4B4',
+      '--light-accent': '#F1F6F9'
     }
   ]
-  
+
+  setTheme (id: number) {
+    for (const col in this.colors[id]) {
+      document.documentElement.style.setProperty(col, (this.colors[id] as any)[col])
+    }
+    this.saveThemeInLocalStorage(this.colors[id])
+  }
+
+  saveThemeInLocalStorage (theme: any) {
+    localStorage.setItem('theme', JSON.stringify(theme))
+  }
+
+  setUserDefinedTheme () {
+    const userTheme = localStorage.getItem('theme')
+    if (userTheme === undefined || userTheme === null) {
+      return
+    }
+    const themeColors = JSON.parse(userTheme)
+    for (const col in themeColors) {
+      document.documentElement.style.setProperty(col, (themeColors)[col])
+    }
+  }
 }

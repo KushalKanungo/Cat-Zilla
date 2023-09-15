@@ -70,7 +70,7 @@ export class DashboardComponent {
     }
   }
 
-  chartBy = ['Number', 'Time Spent(min)', 'Average Time(sec)', 'Section Marks']
+  chartBy = ['Count', 'Time Spent(min)', 'Average Time(sec)', 'Section Marks']
 
   chartByChange (event: any) {
     this.barChartData = this.createDataForBarChart(this.sectionsData, this.questions, event.value)
@@ -368,7 +368,7 @@ export class DashboardComponent {
     return tempData
   }
 
-  createDataForBarChart (sectionsArray: any[], questions: any[] = [], groupBy: string = 'Number') {
+  createDataForBarChart (sectionsArray: any[], questions: any[] = [], groupBy: string = 'Count') {
     const documentStyle = getComputedStyle(document.documentElement)
 
     const [correctData, wrongData, unansweredData] = this.calculateChartData(sectionsArray, questions, groupBy)
@@ -433,7 +433,7 @@ export class DashboardComponent {
     return tempdata
   }
 
-  calculateChartData (sections: any[], questions: any[], groupBy: string = 'Number'): number[][] {
+  calculateChartData (sections: any[], questions: any[], groupBy: string = 'Count'): number[][] {
     // If group by is Time Spent
     let correctData: number[] = sections.map(({ correct }) => correct)
     let wrongData: number[] = sections.map(({ wrong }) => wrong)

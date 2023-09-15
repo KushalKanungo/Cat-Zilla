@@ -13,6 +13,7 @@ import { type Section } from 'src/_models/section'
 export class SidebarComponent {
   @Output() changeToQuestion = new EventEmitter()
   @Output() changeToSection = new EventEmitter()
+  @Output() toggleQuestionStatus = new EventEmitter()
   @Output() submitPaper = new EventEmitter()
   @Input() currentQuestionIndex: number
   @Input() currentSectionIndex: number
@@ -62,12 +63,8 @@ export class SidebarComponent {
     this.submitPaper.emit()
   }
 
-  setQuestionStatus (status: Status): void {
-    if (this.questions[this.currentQuestionIndex].status === Status.ANSWERED) {
-      this.questions[this.currentQuestionIndex].status = Status.ANSWERED_REVIEW
-    } else {
-      this.questions[this.currentQuestionIndex].status = status
-    }
+  setQuestionStatus (): void {
+    this.toggleQuestionStatus.emit()
   }
 
   toHoursMinutesSeconds = (totalSeconds: number): string => {

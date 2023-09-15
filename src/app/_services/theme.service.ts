@@ -111,4 +111,26 @@ export class ThemeService {
       '--light-accent': '#BBE1FA'
     }
   ]
+
+  setTheme (id: number) {
+    for (const col in this.colors[id]) {
+      document.documentElement.style.setProperty(col, (this.colors[id] as any)[col])
+    }
+    this.saveThemeInLocalStorage(this.colors[id])
+  }
+
+  saveThemeInLocalStorage (theme: any) {
+    localStorage.setItem('theme', JSON.stringify(theme))
+  }
+
+  setUserDefinedTheme () {
+    const userTheme = localStorage.getItem('theme')
+    if (userTheme === undefined || userTheme === null) {
+      return
+    }
+    const themeColors = JSON.parse(userTheme)
+    for (const col in themeColors) {
+      document.documentElement.style.setProperty(col, (themeColors)[col])
+    }
+  }
 }

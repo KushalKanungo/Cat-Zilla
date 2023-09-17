@@ -1,7 +1,10 @@
-<section class="mini-dashboard shadow" infiniteScroll
-[infiniteScrollDistance]="scrollDistance"
-[infiniteScrollThrottle]="throttle"
-(scrolled)="onScrollDown($event)">
+<p-sidebar
+  styleClass="mini-dashboard"
+  [visible]="isMiniDashBoardVisible"
+  [modal]="true"
+  (onHide)="hideMiniDashboard()"
+  [position]="'right'"
+>
 <div class="header text-center pt-4">Results</div>
 <div class="result-card-parent" 
 
@@ -22,4 +25,4 @@
     <p-skeleton styleClass="my-2" height="4rem" width="100%" *ngFor="let item of [1,1,1,1,1,1,1,1,1]"></p-skeleton>
   </div>
 </div>
-</section>
+</p-sidebar>

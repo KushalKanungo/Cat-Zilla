@@ -1,6 +1,6 @@
 <section class="main px-3">
   <div class="bg mt-4 p-4">
-    <div class="colors-view row row-cols-6 g-0 ">
+    <div class="colors-view row row-cols-md-6 row-cols-1 g-0 ">
       <div class="col p-2" *ngFor="let color of colors; let idx = index">
         <div class="color-wrapper" [ngClass]="themeService.isThisCurrentTheme(color) ? 'active-theme' : ''"  (click)="changeTheme($event, idx)">
           <!-- <span class="theme-name">THEME {{ idx }}</span> -->

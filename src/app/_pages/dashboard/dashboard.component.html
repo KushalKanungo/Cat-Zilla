@@ -41,15 +41,17 @@
 
 <section class="main px-4">
   <div class="row" >
-    <div class="col-12 col-lg-9 g-0" >
+    <div class="col-12" >
       <div class="search-bar shadow-theme">
         <input
+          style="width: 70%;"
           class="search-field"
           [(ngModel)]="query"
           (keydown.enter)="onSearch()"
           placeholder="Search"
           type="text"
         />
+        <button class="theme-btn me-2 px-3" (click)="miniDashboard.showMiniDashboard()"> <i class="bi bi-bar-chart-steps"></i> <span class="d-none d-md-inline"> Results </span> </button>
       </div>
       <div class="result-sections" *ngIf="!showResultChooseMessage">
         <section class="test-papers shadow-theme row row-cols-1 pt-4">
@@ -78,7 +80,7 @@
             
             <div class="col-12 col-md-6">
               <p-dropdown [options]="chartBy" (onChange)="chartByChange($event)" [style]="{ width: '200px', margin: '10px', padding: '4px' }"
-              [panelStyle]="{ width: '240px' }"></p-dropdown>
+              [panelStyle]="{ width: '240px' }" appendTo="body"></p-dropdown>
               <p-chart type="bar" [data]="barChartData" [options]="barChartOptions"></p-chart>
             </div>
             
@@ -291,8 +293,8 @@
     </div>
     
 
-    <div class="col-lg-3">
-      <app-mini-dashboard></app-mini-dashboard>
-    </div>
+    <!-- <div class="col-lg-3">
+    </div> -->
   </div>
+  <app-mini-dashboard #miniDashboard></app-mini-dashboard>
 </section>

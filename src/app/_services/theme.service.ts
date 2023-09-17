@@ -127,6 +127,24 @@ export class ThemeService {
       '--normal-accent': '#394867',
       '--medium-accent': '#9BA4B4',
       '--light-accent': '#F1F6F9'
+    },
+    {
+      '--dark-accent': '#2A2F4F',
+      '--normal-accent': '#917FB3',
+      '--medium-accent': '#E5BEEC',
+      '--light-accent': '#FDE2F3'
+    },
+    {
+      '--dark-accent': '#2B3A55',
+      '--normal-accent': '#CE7777',
+      '--medium-accent': '#E8C4C4',
+      '--light-accent': '#F2E5E5'
+    },
+    {
+      '--dark-accent': '#8D8DAA',
+      '--normal-accent': '#F56D91',
+      '--medium-accent': '#DFDFDE',
+      '--light-accent': '#F7F5F2'
     }
   ]
 
@@ -150,5 +168,13 @@ export class ThemeService {
     for (const col in themeColors) {
       document.documentElement.style.setProperty(col, (themeColors)[col])
     }
+  }
+
+  isThisCurrentTheme (theme: any): boolean {
+    const documentStyle = document.documentElement.style
+    return documentStyle.getPropertyValue('--light-accent') === theme['--light-accent'] &&
+            documentStyle.getPropertyValue('--normal-accent') === theme['--normal-accent'] &&
+            documentStyle.getPropertyValue('--medium-accent') === theme['--medium-accent'] &&
+            documentStyle.getPropertyValue('--dark-accent') === theme['--dark-accent']
   }
 }

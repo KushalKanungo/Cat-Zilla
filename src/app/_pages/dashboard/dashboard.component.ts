@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http'
 import { Chart } from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels'
 import { Question } from 'src/_models/questionsModel'
+import { ResultTimeline } from 'src/_models/resultTimeline'
 
 @Component({
   selector: 'app-dashboard',
@@ -31,12 +32,21 @@ export class DashboardComponent {
   sectionsData = []
   currQuestion: string | null = null
   showResultChooseMessage: boolean = true
+  resultTimeline: ResultTimeline[] = []
+  timelineChartData: any
+  chartTypes = [
+    { label: 'Bar', value: 'bar' },
+    { label: 'Line', value: 'line' }
+  ]
+
+  chartType: string
   barChartData: any
   selectedQuestions: any[] = []
   resultCardData: Array<{ label: string, data: any }>
   result: { maximumMarks: number, marks: number, correct: number, wrong: number, unanswered: number, total: number }
   isPreviewVisible = false
   basicChartOptions: any
+  lineChartOptions: any
   resultById$ = this.resultService.getResultByAttemptId()
   filter: {
     sections: string[]
@@ -59,8 +69,8 @@ export class DashboardComponent {
         display: true,
         font: {
           weight: 'bold'
-        },
-        formatter: Math.round
+        }
+        // formatter: Math.round
       },
       legend: {
         labels: {
@@ -124,7 +134,7 @@ export class DashboardComponent {
     this.columns = this.QUESTION_TABLE_HEADERS.map(({ header }) => header)
     this.selectedColumns = [...this.columns]
     this.selectedQuestionTableHeaders = [...this.QUESTION_TABLE_HEADERS]
-
+    this.fetchTimeline()
     this.route.paramMap.pipe(
       switchMap(params => {
         const id = params.get('id')
@@ -162,23 +172,68 @@ export class DashboardComponent {
       aspectRatio: 0.8,
       plugins: {
         datalabels: {
-          color: 'white',
+          color: documentStyle.getPropertyValue('--white'),
           align: 'center',
           anchor: 'center',
-          display: function (context: any): boolean {
-            return context.dataset.data[context.dataIndex] > 0
-          },
+          display: true,
           font: {
             weight: 'bold',
             size: '18px',
             family: 'Montserrat'
 
-          },
-          formatter: Math.round
+          }
+          // formatter: Math.round
         },
         legend: {
           labels: {
             color: textColor
+          }
+        }
+      }
+    }
+    this.lineChartOptions = {
+      maintainAspectRatio: false,
+      aspectRatio: 0.8,
+      plugins: {
+        datalabels: {
+          color: documentStyle.getPropertyValue('--normal-accent'),
+          align: 'top',
+          anchor: 'top',
+          display: function (context: any): boolean {
+            return context.dataset.data[context.dataIndex]
+          },
+          font: {
+            weight: 'bold',
+            size: '14px',
+            family: 'Montserrat'
+
+          }
+          // formatter: Math.round
+        },
+        legend: {
+          labels: {
+            color: textColor
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: textColorSecondary
+          },
+          grid: {
+            color: surfaceBorder,
+            backgroundColor: documentStyle.getPropertyValue('--light-accent')
+          }
+        },
+        y: {
+          ticks: {
+            color: textColorSecondary,
+            backgroundColor: documentStyle.getPropertyValue('--light-accent')
+          },
+          grid: {
+            color: surfaceBorder,
+            backgroundColor: documentStyle.getPropertyValue('--light-accent')
           }
         }
       }
@@ -199,8 +254,8 @@ export class DashboardComponent {
             size: '18px',
             family: 'Montserrat'
 
-          },
-          formatter: Math.round
+          }
+          // formatter: Math.round
         },
         legend: {
           labels: {
@@ -355,7 +410,7 @@ export class DashboardComponent {
           backgroundColor: [
             documentStyle.getPropertyValue('--medium-accent'),
             documentStyle.getPropertyValue('--success'),
-            documentStyle.getPropertyValue('--dark-accent')
+            documentStyle.getPropertyValue('--normal-accent')
           ],
           hoverBackgroundColor: [
             documentStyle.getPropertyValue('--warning-lite'),
@@ -386,7 +441,7 @@ export class DashboardComponent {
         {
           type: 'bar',
           label: 'Wrong',
-          backgroundColor: documentStyle.getPropertyValue('--dark-accent'),
+          backgroundColor: documentStyle.getPropertyValue('--normal-accent'),
           hoverBackgroundColor: documentStyle.getPropertyValue('--danger-lite'),
 
           data: wrongData
@@ -399,6 +454,76 @@ export class DashboardComponent {
           hoverBackgroundColor: documentStyle.getPropertyValue('--warning-lite'),
           data: unansweredData
           // data: sectionsArray.map(sec => sec.unanswered)
+        }
+      ]
+    }
+  }
+
+  createDataForTimeLineChart (timelineData: ResultTimeline[]) {
+    const documentStyle = getComputedStyle(document.documentElement)
+
+    return {
+      labels: timelineData.map(({ questionPaper }) => questionPaper),
+      datasets: [
+        {
+          datalabels: {
+            color: documentStyle.getPropertyValue('--dark-accent'),
+            font: {
+              weight: 'bold',
+              size: '12px',
+              family: 'Montserrat'
+
+            },
+            align: 'top',
+            anchor: 'top',
+            formatter: function (value: any, context: any): string {
+              return String(context.dataset.data[context.dataIndex]) + '%'
+            }
+          },
+          label: 'Percentage',
+          data: timelineData.map(data => Number(((data.marks / data.maximumMarks) * 100).toFixed(2))),
+          fill: false,
+          borderColor: documentStyle.getPropertyValue('--warning'),
+          backgroundColor: documentStyle.getPropertyValue('--warning'),
+
+          tension: 0.4
+        },
+        {
+          datalabels: {
+            align: 'bottom',
+            anchor: 'bottom',
+            color: documentStyle.getPropertyValue('--dark-accent'),
+            font: {
+              weight: 'bold',
+              size: '12px',
+              family: 'Montserrat'
+
+            },
+          },
+          label: 'Correct Answeres',
+          data: timelineData.map(({ correct }) => correct),
+          fill: false,
+          borderColor: documentStyle.getPropertyValue('--success'),
+          backgroundColor: documentStyle.getPropertyValue('--success'),
+          tension: 0.4
+        },
+        {
+          datalabels: {
+            color: documentStyle.getPropertyValue('--dark-accent'),
+            font: {
+              weight: 'bold',
+              size: '12px',
+              family: 'Montserrat'
+
+            }
+          },
+          label: 'Marks',
+          data: timelineData.map(({ marks }) => marks),
+          fill: false,
+          borderColor: documentStyle.getPropertyValue('--medium-accent'),
+          backgroundColor: documentStyle.getPropertyValue('--medium-accent'),
+
+          tension: 0.4
         }
       ]
     }
@@ -492,5 +617,15 @@ export class DashboardComponent {
 
   navigateToPaperMode (): void {
     void this.router.navigateByUrl(`results/preview/${this.attemptId}`)
+  }
+
+  fetchTimeline () {
+    this.resultService.getResultTimeline().subscribe({
+      next: ({ results, total }) => {
+        console.log(results)
+        this.resultTimeline = results
+        this.timelineChartData = this.createDataForTimeLineChart(results)
+      }
+    })
   }
 }

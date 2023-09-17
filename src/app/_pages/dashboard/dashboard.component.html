@@ -42,7 +42,7 @@
 <section class="main px-4">
   <div class="row" >
     <div class="col-12 col-lg-9 g-0" >
-      <div class="search-bar shadow">
+      <div class="search-bar shadow-theme">
         <input
           class="search-field"
           [(ngModel)]="query"
@@ -52,7 +52,7 @@
         />
       </div>
       <div class="result-sections" *ngIf="!showResultChooseMessage">
-        <section class="test-papers shadow row row-cols-1 pt-4">
+        <section class="test-papers shadow-theme row row-cols-1 pt-4">
           <div class="row" style="position: relative;" *ngIf="!loading">
             <button class="test-view-btn" (click)="navigateToPaperMode()">Test View  <i class="bi bi-play-circle"></i></button>
             <div class="col-12 p-2">
@@ -105,7 +105,7 @@
 
           </div>
         </section>
-        <section class="test-papers shadow row row-cols-1 pt-4">
+        <section class="test-papers shadow-theme row row-cols-1 pt-4">
   
           <p-table
             [value]="selectedQuestions"
@@ -280,9 +280,14 @@
           </p-table>
         </section>
       </div>
-      <div class="result-sections bg-white shadow mt-2 rounded" *ngIf="showResultChooseMessage">
-          <div class="message  fs-1 d-flex justify-content-center align-items-center"> <span>Select a result to show details <i class="bi bi-caret-right"> </i> </span></div>
-      </div>
+      <div class="result-sections bg-white shadow-theme mt-2 rounded" *ngIf="showResultChooseMessage">
+        <p-dropdown [options]="chartTypes" [(ngModel)]="chartType" [style]="{ width: '200px', margin: '10px', padding: '4px' }"
+        [panelStyle]="{ width: '240px' }"></p-dropdown>
+          <!-- <div class="message  fs-1 d-flex justify-content-center align-items-center"> <span>Select a result to show details <i class="bi bi-caret-right"> </i> </span></div> -->
+          <p-chart *ngIf="chartType==='bar'" type="bar" [data]="timelineChartData" [options]="basicChartOptions"></p-chart>
+          <p-chart *ngIf="chartType==='line'" type="line" [data]="timelineChartData" [options]="lineChartOptions"></p-chart>
+
+        </div>
     </div>
     
 

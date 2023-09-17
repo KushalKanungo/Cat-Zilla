@@ -11,9 +11,10 @@
 
 .color-wrapper{
   background-color: var(--white);
+  border: 12px solid var(--white);
   display: flex;
   // flex-direction: column;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   overflow: hidden;
   width: 100;
@@ -33,6 +34,11 @@
 // .theme-name{
 //   transform: rotate(-90deg);
 // }
+
+.active-theme{
+  border: 12px solid var(--success);
+  border-radius: 8px;
+}
 
 .color-box{
   height: 100px !important;

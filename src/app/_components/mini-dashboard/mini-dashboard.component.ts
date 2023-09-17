@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { Filter } from 'src/_models/filter'
 import { ResultService } from 'src/app/_services/result.service'
@@ -12,6 +12,7 @@ export class MiniDashboardComponent implements OnInit {
   constructor (private readonly resultService: ResultService, private readonly router: Router, private readonly route: ActivatedRoute) { }
   attempts: any[] = []
   filter: Filter = { per: 10, page: 1 }
+  isMiniDashBoardVisible: boolean = false
   total: number
   attemptId = ''
   throttle = 250
@@ -22,11 +23,23 @@ export class MiniDashboardComponent implements OnInit {
 
   ngOnInit (): void {
     this.fetchResults()
-    this.route.params.subscribe({ next: ({ id }) => { this.attemptId = id } })
+    this.route.params.subscribe({
+      next: ({ id }) => {
+        this.attemptId = id
+        this.hideMiniDashboard()
+      }
+    })
+  }
+
+  showMiniDashboard () {
+    this.isMiniDashBoardVisible = true
+  }
+
+  hideMiniDashboard () {
+    this.isMiniDashBoardVisible = false
   }
 
   onScrollDown (ev: any): void {
-    
     this.filter.page = this.filter.page !== undefined ? this.filter.page + 1 : 1
     this.resultService.getAllResults(this.filter).subscribe(
       {

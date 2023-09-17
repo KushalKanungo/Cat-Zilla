@@ -1,5 +1,5 @@
 .main{
-  margin-left: 80px;
+  // margin-left: 80px;
 }
 
 .result-sections{
@@ -52,6 +52,7 @@
   display: flex;
   padding-left: 20px;
   align-items: center;
+  justify-content: space-between;
   .search-field{
     all: unset;
     font-size: 2rem;

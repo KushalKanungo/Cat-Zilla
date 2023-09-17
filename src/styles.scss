@@ -387,6 +387,14 @@ p-multiselectitem, p-dropdownitem {
   }
 }
 
+.p-togglebutton.p-button.p-highlight {
+  background-color: var(--normal-accent);
+  border-color: var(--normal-accent);
+  &:hover, &:active{
+    background-color: var(--dark-accent);
+  }
+}
+
 p-tag {
   padding: 4px;
   border-radius: 4px;
@@ -527,4 +535,11 @@ p-tag {
 
 .p-toast .p-toast-message.p-toast-message-warn .p-toast-message-icon, .p-toast .p-toast-message.p-toast-message-warn .p-toast-icon-close {
   color: var(--dark-accent);
+}
+
+@media only screen and (min-width: 600px) {
+  /* CSS styles for mobile devices */
+  .main{
+    margin-left: 80px;
+  }
 }

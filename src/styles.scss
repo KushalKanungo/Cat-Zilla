@@ -215,8 +215,9 @@ input[type='button'] {
     cursor: not-allowed;
   }
 }
-.shadow {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+.shadow-theme {
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 
 /*
@@ -423,17 +424,17 @@ p-tag {
 
 @-webkit-keyframes blink {
   50% {
-      background: var(--light-accent);
+      background: var(--medium-accent);
   }
 }
 @-moz-keyframes blink {
   50% {
-      background: var(--light-accent);
+      background: var(--medium-accent);
   }
 }
 @keyframes blink {
   50% {
-      background: var(--light-accent);
+      background: var(--medium-accent);
   }
 }
 .blink-soft {

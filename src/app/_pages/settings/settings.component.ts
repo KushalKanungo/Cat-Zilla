@@ -28,7 +28,7 @@ import { ThemeService } from 'src/app/_services/theme.service'
 export class SettingsComponent implements OnInit {
   colors!: any[]
 
-  constructor (private readonly themeService: ThemeService) { }
+  constructor (public readonly themeService: ThemeService) { }
 
   ngOnInit (): void {
     this.colors = this.themeService.colors

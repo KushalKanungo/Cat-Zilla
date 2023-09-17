@@ -19,6 +19,10 @@ export class ResultService {
     return this.http.get<any>(this.BASE_URL + `/preview/${attemptId}`).pipe(shareReplay({ bufferSize: 1, refCount: true }))
   }
 
+  getResultTimeline () {
+    return this.http.get<any>(this.BASE_URL + '/timeline').pipe(shareReplay({ bufferSize: 1, refCount: true }))
+  }
+
   deleteResultByAttemptId (attemptId: string = ''): Observable<any> {
     return this.http.delete<any>(this.BASE_URL + `/${attemptId}`)
   }

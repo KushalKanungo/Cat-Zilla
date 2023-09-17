@@ -121,7 +121,8 @@
   font-size: 0.8rem;
 }
 
-:host ::ng-deep .p-datatable .p-sortable-column:not(.p-highlight):hover, :host ::ng-deep .p-datatable .p-sortable-column.p-highlight:hover {
+:host ::ng-deep .p-datatable .p-sortable-column:not(.p-highlight):hover, 
+:host ::ng-deep .p-datatable .p-sortable-column.p-highlight:hover {
   background-color: var(--dark-accent) !important;
   color: var(--light-accent);
 }
@@ -155,7 +156,7 @@ p-sorticon{
   color: var(--dark-accent);
   .label{
     font-family: 'Montserrat';
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 300;
     
   }
